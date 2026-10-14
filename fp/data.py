@@ -72,7 +72,7 @@ def download_results(refresh_current: bool = True) -> pd.DataFrame:
     config.RAW_DIR.mkdir(parents=True, exist_ok=True)
     frames = []
     for season in config.SEASONS:
-        for div in config.LEAGUES:
+        for div in config.TRAIN_LEAGUES:
             path = config.RAW_DIR / f"{season}_{div}.csv"
             fresh = season == config.CURRENT_SEASON and refresh_current
             if fresh or not path.exists():

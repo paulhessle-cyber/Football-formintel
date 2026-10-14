@@ -1,7 +1,7 @@
 """Project configuration."""
 from pathlib import Path
 
-VERSION = "0.1"
+VERSION = "0.2"
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -15,6 +15,16 @@ LEAGUES = {
     "E3": "League Two",
     "EC": "National League",
 }
+
+# Leagues used for TRAINING only (not predicted or shown). Including the
+# divisions above ours means teams relegated from the Championship (or
+# further) arrive with up-to-date ratings instead of stale or no history,
+# and keeps every team on one strength scale.
+TRAIN_ONLY_LEAGUES = {
+    "E0": "Premier League",
+    "E1": "Championship",
+}
+TRAIN_LEAGUES = {**TRAIN_ONLY_LEAGUES, **LEAGUES}
 
 # Seasons to download (football-data.co.uk "yyYY" codes). The first three are
 # history; the last is the season in progress and is re-downloaded every run.

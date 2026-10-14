@@ -33,7 +33,9 @@ def brier(p, outcome_idx):
 
 
 def run(matches: pd.DataFrame, start_season: str) -> pd.DataFrame:
-    test = matches[matches["season"] >= start_season]
+    # train on every league, but only score the leagues we actually predict
+    test = matches[(matches["season"] >= start_season) &
+                   (matches["div"].isin(config.LEAGUES))]
     start = test["date"].min().normalize()
     start -= pd.Timedelta(days=start.weekday())          # back to Monday
     end = test["date"].max()
