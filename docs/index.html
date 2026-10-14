@@ -47,7 +47,7 @@ table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:ta
 th,td{text-align:left;padding:7px 4px;border-bottom:1px solid var(--line)}
 th{color:var(--muted);font-weight:500;font-size:12px}
 td.n,th.n{text-align:right}
-.stat{display:grid;grid-template-columns:1fr auto auto;gap:4px 14px;font-size:13px;font-variant-numeric:tabular-nums}
+.stat{display:grid;grid-template-columns:1fr auto auto auto auto;gap:4px 14px;font-size:13px;font-variant-numeric:tabular-nums}
 .stat .h{color:var(--muted);font-size:12px}
 .good{color:var(--home);font-weight:600}.bad{color:var(--value);font-weight:600}
 .empty{color:var(--muted);text-align:center;padding:40px 0}
@@ -113,6 +113,7 @@ function card(f){
       <span class="h">Fair</span><span>${odd(f.fair.h)}</span><span>${odd(f.fair.d)}</span><span>${odd(f.fair.a)}</span>
       <span class="h">Best</span><span>${odd(o.h)}</span><span>${odd(o.d)}</span><span>${odd(o.a)}</span>
       <span class="h">Edge</span><span class="${cls(e.h)}">${sgn(e.h)}</span><span class="${cls(e.d)}">${sgn(e.d)}</span><span class="${cls(e.a)}">${sgn(e.a)}</span>
+      <span class="h">Model</span><span>${pct(f.prob_model.h)}</span><span>${pct(f.prob_model.d)}</span><span>${pct(f.prob_model.a)}</span>
       ${mk ? `<span class="h">Market</span><span>${pct(mk.h)}</span><span>${pct(mk.d)}</span><span>${pct(mk.a)}</span>` : ""}
     </div>
     <div class="extra">
@@ -123,6 +124,7 @@ function card(f){
   const names = {h:"Home",d:"Draw",a:"Away",o25:"Over 2.5",u25:"Under 2.5",ah_home:"AH Home",ah_away:"AH Away"};
   if (val) html += f.value.map(v => `<span class="tag">Value: ${names[v]||v}</span>`).join("");
   if (f.news.length) html += `<div class="news">📰 ${f.news.map(esc).join("<br>📰 ")}</div>`;
+  if (f.no_market) html += `<div class="warn">No bookmaker prices yet — showing the team model alone.</div>`;
   if (f.unknown_team.length) html += `<div class="warn">No history for ${f.unknown_team.map(esc).join(", ")} — rated as a weak side in this league.</div>`;
   return html + `</div>`;
 }
@@ -151,14 +153,14 @@ function ratings(){
 }
 
 function statBlock(title, s){
-  const cmp = (m,k) => m==null||k==null ? "" : (m<k ? "good" : "bad");
+  const v = x => x == null ? "–" : x.toFixed(4);
+  const row = (label, m, o, b, c) => `<span>${label}</span><span>${v(m)}</span><span>${v(o)}</span><span><b>${v(b)}</b></span><span>${v(c)}</span>`;
   const vb = s.value_bets || {bets:0};
   return `<div class="card"><div class="teams" style="margin-top:0">${esc(title)} <span class="xg">${s.matches} matches</span></div>
    <div class="stat">
-    <span class="h">Lower is better</span><span class="h">Model</span><span class="h">Closing line</span>
-    <span>1X2 log loss</span><span class="${cmp(s.logloss_1x2_model,s.logloss_1x2_market)}">${s.logloss_1x2_model??"–"}</span><span>${s.logloss_1x2_market??"–"}</span>
-    <span>1X2 Brier</span><span class="${cmp(s.brier_1x2_model,s.brier_1x2_market)}">${s.brier_1x2_model??"–"}</span><span>${s.brier_1x2_market??"–"}</span>
-    <span>O/U 2.5 log loss</span><span class="${cmp(s.logloss_ou25_model,s.logloss_ou25_market)}">${s.logloss_ou25_model??"–"}</span><span>${s.logloss_ou25_market??"–"}</span>
+    <span class="h">Log loss</span><span class="h">Model</span><span class="h">Market</span><span class="h">Blend</span><span class="h">Close</span>
+    ${row("1X2", s.logloss_1x2_model, s.logloss_1x2_open, s.logloss_1x2_blend, s.logloss_1x2_close)}
+    ${row("O/U 2.5", s.logloss_ou25_model, s.logloss_ou25_open, s.logloss_ou25_blend, s.logloss_ou25_close)}
    </div>
    <div class="extra" style="margin-top:10px">
     <span>Value bets <b>${vb.bets}</b></span>
@@ -172,8 +174,14 @@ function statBlock(title, s){
 function backtest(){
   if (!B) return `<div class="empty">No backtest yet — run the backtest workflow.</div>`;
   return `<p class="note">Walk-forward test ${B.from} → ${B.to}: refitted weekly, each match predicted using only earlier results.
-   Benchmark is the de-vigged Pinnacle closing price. Value bets = edge ≥ ${Math.round(B.min_edge*100)}% at the best pre-match price.
-   Closing-line value (CLV) is the most reliable sign of a real edge; ROI over a few hundred bets is mostly noise.</p>`
+   Lower log loss is better. <b>Market</b> = bookmakers' pre-match price, <b>Blend</b> = what this site shows,
+   <b>Close</b> = Betfair Exchange closing price (the sharpest benchmark).
+   Value bets = blended edge ≥ ${Math.round(B.min_edge*100)}% at the best pre-match price.
+   Closing-line value (CLV) is the reliable sign of a real edge; ROI over a few hundred bets is mostly luck.</p>`
+   + (B.weights ? `<div class="card"><div class="teams" style="margin-top:0">Model weight</div>
+   <div class="extra" style="margin-top:0"><span>1X2 <b>${pct(B.weights.w_1x2)}</b></span><span>Over/Under <b>${pct(B.weights.w_ou25)}</b></span></div>
+   <p class="note" style="margin-bottom:0">How much the team model is trusted over the market, learned from past results.
+   0% means it currently adds nothing the bookies don't already know. New layers (xG, news, lineups) raise this only if they improve predictions.</p></div>` : "")
    + statBlock("All leagues", B.overall)
    + Object.values(B.leagues).map(l => statBlock(l.name, l)).join("");
 }

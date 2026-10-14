@@ -27,6 +27,13 @@ ODDS_COLS = {
     "AHCh": "ahc_line", "PCAHH": "pc_ahh", "PCAHA": "pc_aha",
     "AvgCAHH": "avgc_ahh", "AvgCAHA": "avgc_aha",
     "MaxCAHH": "maxc_ahh", "MaxCAHA": "maxc_aha",
+    # Betfair Exchange (sharp, still published after Pinnacle stopped in 2025)
+    "BFEH": "bfe_h", "BFED": "bfe_d", "BFEA": "bfe_a",
+    "BFECH": "bfec_h", "BFECD": "bfec_d", "BFECA": "bfec_a",
+    "BFE>2.5": "bfe_o25", "BFE<2.5": "bfe_u25",
+    "BFEC>2.5": "bfec_o25", "BFEC<2.5": "bfec_u25",
+    # match xG (football-data added this in 2026/27)
+    "HxG": "hxg", "AxG": "axg",
 }
 
 
