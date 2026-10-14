@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lower League Predictor</title>
+<style>
+:root{
+  --bg:#f4f2ee;--card:#fff;--ink:#1b1d1f;--muted:#6b6f75;--line:#e3e0da;
+  --home:#2f6f4f;--draw:#9a8f7a;--away:#3a5a8c;--value:#c2410c;--value-bg:#fff1e8;
+  --news:#7c3aed;--chip:#ebe8e2;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#141516;--card:#1e2022;--ink:#ecebe8;--muted:#9a9ea4;--line:#2d3033;
+  --home:#4fae7f;--draw:#a89f8c;--away:#6d93d1;--value:#fb923c;--value-bg:#3a2516;
+  --news:#a78bfa;--chip:#2a2c2f;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+header{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 16px 8px;border-bottom:1px solid var(--line)}
+h1{font-size:19px;margin:0;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:12px;margin-top:2px}
+nav{display:flex;gap:6px;margin-top:10px}
+nav button,.chip{white-space:nowrap;flex-shrink:0;border:0;background:var(--chip);color:var(--ink);padding:7px 12px;border-radius:999px;font:inherit;font-size:13px}
+nav button.on,.chip.on{background:var(--ink);color:var(--bg)}
+.filters{display:flex;gap:6px;overflow-x:auto;padding:10px 16px 0;scrollbar-width:none}
+main{padding:8px 16px 40px;max-width:720px;margin:0 auto}
+.day{font-size:13px;font-weight:600;color:var(--muted);margin:18px 2px 8px;text-transform:uppercase;letter-spacing:.04em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:10px}
+.card.val{border-color:var(--value)}
+.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.teams{display:flex;justify-content:space-between;align-items:baseline;margin:6px 0 8px;font-weight:600;font-size:16px;gap:8px}
+.teams .xg{font-weight:400;color:var(--muted);font-size:12px;white-space:nowrap}
+.bar{display:flex;height:26px;border-radius:7px;overflow:hidden;font-size:12px;font-weight:600;color:#fff}
+.bar div{display:flex;align-items:center;justify-content:center;min-width:28px}
+.grid{display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:3px 10px;font-size:12.5px;margin-top:10px;font-variant-numeric:tabular-nums}
+.grid .h{color:var(--muted)}
+.grid .pos{color:var(--value);font-weight:700}
+.extra{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.extra b{color:var(--ink);font-weight:600}
+.tag{display:inline-block;background:var(--value-bg);color:var(--value);border-radius:6px;padding:2px 7px;font-size:11.5px;font-weight:700;margin:8px 4px 0 0}
+.news{margin-top:8px;font-size:12.5px;color:var(--news)}
+.warn{font-size:12px;color:var(--muted);margin-top:6px;font-style:italic}
+table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 4px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:500;font-size:12px}
+td.n,th.n{text-align:right}
+.stat{display:grid;grid-template-columns:1fr auto auto;gap:4px 14px;font-size:13px;font-variant-numeric:tabular-nums}
+.stat .h{color:var(--muted);font-size:12px}
+.good{color:var(--home);font-weight:600}.bad{color:var(--value);font-weight:600}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+p.note{color:var(--muted);font-size:12.5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Lower League Predictor</h1>
+  <div class="sub" id="sub">Loading…</div>
+  <nav>
+    <button data-tab="fixtures" class="on">Fixtures</button>
+    <button data-tab="ratings">Ratings</button>
+    <button data-tab="backtest">Track record</button>
+  </nav>
+</header>
+<div class="filters" id="filters"></div>
+<main id="main"><div class="empty">Loading…</div></main>
+
+<script>
+const LEAGUES = {E2:"League One",E3:"League Two",EC:"National League"};
+let P = null, B = null, tab = "fixtures", league = "all", valueOnly = false;
+
+const pct = x => x == null ? "–" : Math.round(x*100) + "%";
+const odd = x => x == null ? "–" : x.toFixed(2);
+const sgn = x => x == null ? "–" : (x>0?"+":"") + (x*100).toFixed(1) + "%";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const line = l => l == null ? "–" : (l>0?"+":"") + l;
+
+async function load(){
+  try { P = await (await fetch("data/predictions.json",{cache:"no-store"})).json(); } catch(e) {}
+  try { B = await (await fetch("data/backtest.json",{cache:"no-store"})).json(); } catch(e) {}
+  document.getElementById("sub").textContent = P
+    ? `v${P.version} · updated ${new Date(P.generated).toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"})}`
+    : "No predictions yet — run the daily workflow";
+  render();
+}
+
+function filters(){
+  const el = document.getElementById("filters");
+  if (tab === "backtest") { el.innerHTML = ""; return; }
+  const chips = [["all","All"], ...Object.entries(LEAGUES)];
+  el.innerHTML = chips.map(([k,v]) => `<button class="chip ${league===k?"on":""}" data-lg="${k}">${v}</button>`).join("")
+    + (tab==="fixtures" ? `<button class="chip ${valueOnly?"on":""}" data-val="1">Value only</button>` : "");
+}
+
+function card(f){
+  const val = f.value.length > 0;
+  const e = f.edge, o = f.odds, p = f.prob;
+  const cls = x => x != null && x >= P.min_edge ? "pos" : "";
+  const mk = f.prob_market;
+  let html = `<div class="card ${val?"val":""}">
+    <div class="meta"><span>${esc(f.league)}</span><span>${esc(f.time)}</span></div>
+    <div class="teams"><span>${esc(f.home)} <span class="xg">${f.xg.home} xG</span></span>
+      <span style="text-align:right"><span class="xg">${f.xg.away} xG</span> ${esc(f.away)}</span></div>
+    <div class="bar">
+      <div style="width:${p.h*100}%;background:var(--home)">${pct(p.h)}</div>
+      <div style="width:${p.d*100}%;background:var(--draw)">${pct(p.d)}</div>
+      <div style="width:${p.a*100}%;background:var(--away)">${pct(p.a)}</div>
+    </div>
+    <div class="grid">
+      <span class="h"></span><span class="h">Home</span><span class="h">Draw</span><span class="h">Away</span>
+      <span class="h">Fair</span><span>${odd(f.fair.h)}</span><span>${odd(f.fair.d)}</span><span>${odd(f.fair.a)}</span>
+      <span class="h">Best</span><span>${odd(o.h)}</span><span>${odd(o.d)}</span><span>${odd(o.a)}</span>
+      <span class="h">Edge</span><span class="${cls(e.h)}">${sgn(e.h)}</span><span class="${cls(e.d)}">${sgn(e.d)}</span><span class="${cls(e.a)}">${sgn(e.a)}</span>
+      ${mk ? `<span class="h">Market</span><span>${pct(mk.h)}</span><span>${pct(mk.d)}</span><span>${pct(mk.a)}</span>` : ""}
+    </div>
+    <div class="extra">
+      <span>O2.5 <b>${pct(p.o25)}</b> (fair ${odd(f.fair.o25)}, best ${odd(o.o25)}<span class="${cls(e.o25)}"> ${sgn(e.o25)}</span>)</span>
+      <span>AH fair <b>${line(f.ah_fair.line)}</b> @ ${odd(f.ah_fair.home)}/${odd(f.ah_fair.away)}</span>
+      ${f.ah_market ? `<span>AH mkt <b>${line(f.ah_market.line)}</b> @ ${odd(f.ah_market.home_odds)}/${odd(f.ah_market.away_odds)}</span>` : ""}
+    </div>`;
+  const names = {h:"Home",d:"Draw",a:"Away",o25:"Over 2.5",u25:"Under 2.5",ah_home:"AH Home",ah_away:"AH Away"};
+  if (val) html += f.value.map(v => `<span class="tag">Value: ${names[v]||v}</span>`).join("");
+  if (f.news.length) html += `<div class="news">📰 ${f.news.map(esc).join("<br>📰 ")}</div>`;
+  if (f.unknown_team.length) html += `<div class="warn">No history for ${f.unknown_team.map(esc).join(", ")} — rated as a weak side in this league.</div>`;
+  return html + `</div>`;
+}
+
+function fixtures(){
+  if (!P || !P.fixtures.length) return `<div class="empty">${P && P.error ? esc(P.error) : "No upcoming fixtures."}</div>`;
+  let fx = P.fixtures.filter(f => (league==="all"||f.div===league) && (!valueOnly || f.value.length));
+  if (!fx.length) return `<div class="empty">Nothing matches this filter.</div>`;
+  let out = "", day = "";
+  for (const f of fx) {
+    if (f.date !== day) {
+      day = f.date;
+      out += `<div class="day">${new Date(day+"T12:00").toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"short"})}</div>`;
+    }
+    out += card(f);
+  }
+  return out;
+}
+
+function ratings(){
+  if (!P) return `<div class="empty">No ratings yet.</div>`;
+  const rows = P.ratings.filter(r => league==="all" || r.div===league);
+  return `<p class="note">Team strength from the baseline model (time-weighted, all three leagues on one scale). Positive = better than average.</p>
+  <table><tr><th>#</th><th>Team</th><th>Lg</th><th class="n">Att</th><th class="n">Def</th><th class="n">Overall</th></tr>
+  ${rows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.team)}</td><td>${r.div}</td><td class="n">${r.attack.toFixed(2)}</td><td class="n">${r.defence.toFixed(2)}</td><td class="n"><b>${r.overall.toFixed(2)}</b></td></tr>`).join("")}</table>`;
+}
+
+function statBlock(title, s){
+  const cmp = (m,k) => m==null||k==null ? "" : (m<k ? "good" : "bad");
+  const vb = s.value_bets || {bets:0};
+  return `<div class="card"><div class="teams" style="margin-top:0">${esc(title)} <span class="xg">${s.matches} matches</span></div>
+   <div class="stat">
+    <span class="h">Lower is better</span><span class="h">Model</span><span class="h">Closing line</span>
+    <span>1X2 log loss</span><span class="${cmp(s.logloss_1x2_model,s.logloss_1x2_market)}">${s.logloss_1x2_model??"–"}</span><span>${s.logloss_1x2_market??"–"}</span>
+    <span>1X2 Brier</span><span class="${cmp(s.brier_1x2_model,s.brier_1x2_market)}">${s.brier_1x2_model??"–"}</span><span>${s.brier_1x2_market??"–"}</span>
+    <span>O/U 2.5 log loss</span><span class="${cmp(s.logloss_ou25_model,s.logloss_ou25_market)}">${s.logloss_ou25_model??"–"}</span><span>${s.logloss_ou25_market??"–"}</span>
+   </div>
+   <div class="extra" style="margin-top:10px">
+    <span>Value bets <b>${vb.bets}</b></span>
+    ${vb.bets ? `<span>ROI <b class="${vb.roi>0?"good":"bad"}">${sgn(vb.roi)}</b></span>
+    <span>Avg CLV <b class="${vb.avg_clv>0?"good":"bad"}">${sgn(vb.avg_clv)}</b></span>
+    <span>Beat close <b>${pct(vb.beat_close_pct)}</b></span>
+    <span>Avg odds <b>${vb.avg_odds}</b></span>` : ""}
+   </div></div>`;
+}
+
+function backtest(){
+  if (!B) return `<div class="empty">No backtest yet — run the backtest workflow.</div>`;
+  return `<p class="note">Walk-forward test ${B.from} → ${B.to}: refitted weekly, each match predicted using only earlier results.
+   Benchmark is the de-vigged Pinnacle closing price. Value bets = edge ≥ ${Math.round(B.min_edge*100)}% at the best pre-match price.
+   Closing-line value (CLV) is the most reliable sign of a real edge; ROI over a few hundred bets is mostly noise.</p>`
+   + statBlock("All leagues", B.overall)
+   + Object.values(B.leagues).map(l => statBlock(l.name, l)).join("");
+}
+
+function render(){
+  filters();
+  document.getElementById("main").innerHTML =
+    tab==="fixtures" ? fixtures() : tab==="ratings" ? ratings() : backtest();
+}
+
+document.querySelector("nav").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  tab = b.dataset.tab;
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("on", x===b));
+  render(); window.scrollTo(0,0);
+});
+document.getElementById("filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.lg) league = b.dataset.lg;
+  if (b.dataset.val) valueOnly = !valueOnly;
+  render();
+});
+load();
+</script>
+</body>
+</html>
