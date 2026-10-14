@@ -1,4 +1,4 @@
-# Lower League Predictor — v0.2
+# Lower League Predictor — v0.3
 
 Match predictions for **League One, League Two and the National League**, built in layers so each one has to prove it improves accuracy before it's trusted.
 
@@ -67,5 +67,6 @@ docs/index.html   website (GitHub Pages)
 
 ## Changelog
 
+- **v0.3** — Workflows no longer fail when two runs save results at the same time (newest results win).
 - **v0.2** — Premier League and Championship added as training-only data. Fixes recently relegated sides (e.g. Oxford) being rated from stale League One form.
 - **v0.1** — Baseline Dixon-Coles model, walk-forward backtest, daily predictions, manual news layer, website.

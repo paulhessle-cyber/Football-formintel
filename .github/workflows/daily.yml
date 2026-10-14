@@ -30,5 +30,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data logs data/raw
           git diff --cached --quiet || git commit -m "Daily predictions $(date -u +%Y-%m-%dT%H:%M)"
-          git pull --rebase
+          git pull --rebase -X theirs
           git push
