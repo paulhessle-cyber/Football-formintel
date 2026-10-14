@@ -1,79 +1,79 @@
 {
-  "version": "0.1",
-  "generated": "2026-10-14T10:16+00:00",
+  "version": "0.3",
+  "generated": "2026-10-14T21:12+00:00",
   "from": "2024-08-09",
   "to": "2026-10-10",
   "min_edge": 0.05,
   "overall": {
     "matches": 3683,
-    "logloss_1x2_model": 1.0447,
+    "logloss_1x2_model": 1.0459,
     "logloss_1x2_market": 1.0209,
-    "brier_1x2_model": 0.6276,
+    "brier_1x2_model": 0.629,
     "brier_1x2_market": 0.6122,
-    "logloss_ou25_model": 0.6958,
+    "logloss_ou25_model": 0.6947,
     "logloss_ou25_market": 0.6817,
     "value_bets": {
-      "bets": 2953,
-      "roi": -0.0869,
-      "profit_units": -256.6,
-      "avg_odds": 3.73,
-      "avg_clv": -0.0252,
-      "beat_close_pct": 0.336
+      "bets": 3046,
+      "roi": -0.081,
+      "profit_units": -246.7,
+      "avg_odds": 3.79,
+      "avg_clv": -0.0251,
+      "beat_close_pct": 0.334
     }
   },
   "leagues": {
     "E2": {
       "name": "League One",
       "matches": 1206,
-      "logloss_1x2_model": 1.0416,
+      "logloss_1x2_model": 1.0429,
       "logloss_1x2_market": 1.0188,
-      "brier_1x2_model": 0.6246,
+      "brier_1x2_model": 0.6271,
       "brier_1x2_market": 0.6105,
-      "logloss_ou25_model": 0.6951,
+      "logloss_ou25_model": 0.6918,
       "logloss_ou25_market": 0.6796,
       "value_bets": {
-        "bets": 997,
-        "roi": -0.0739,
-        "profit_units": -73.6,
-        "avg_odds": 3.62,
-        "avg_clv": -0.0133,
-        "beat_close_pct": 0.384
+        "bets": 1054,
+        "roi": -0.0757,
+        "profit_units": -79.8,
+        "avg_odds": 3.84,
+        "avg_clv": -0.0123,
+        "beat_close_pct": 0.385
       }
     },
     "E3": {
       "name": "League Two",
       "matches": 1218,
-      "logloss_1x2_model": 1.0636,
+      "logloss_1x2_model": 1.0647,
       "logloss_1x2_market": 1.0426,
-      "brier_1x2_model": 0.6419,
+      "brier_1x2_model": 0.6426,
       "brier_1x2_market": 0.628,
-      "logloss_ou25_model": 0.6945,
+      "logloss_ou25_model": 0.6944,
       "logloss_ou25_market": 0.6882,
       "value_bets": {
-        "bets": 1026,
-        "roi": -0.0455,
-        "profit_units": -46.7,
-        "avg_odds": 3.72,
-        "avg_clv": -0.0278,
-        "beat_close_pct": 0.318
+        "bets": 1044,
+        "roi": -0.0408,
+        "profit_units": -42.6,
+        "avg_odds": 3.67,
+        "avg_clv": -0.0286,
+        "beat_close_pct": 0.312
       }
     },
     "EC": {
       "name": "National League",
       "matches": 1259,
-      "logloss_1x2_model": 1.0295,
+      "logloss_1x2_model": 1.0308,
       "logloss_1x2_market": 1.0021,
-      "brier_1x2_model": 0.6167,
+      "brier_1x2_model": 0.6176,
       "brier_1x2_market": 0.5987,
-      "logloss_ou25_model": 0.6978,
+      "logloss_ou25_model": 0.6977,
       "logloss_ou25_market": 0.6775,
       "value_bets": {
-        "bets": 930,
-        "roi": -0.1465,
-        "profit_units": -136.3,
+        "bets": 948,
+        "roi": -0.1311,
+        "profit_units": -124.3,
         "avg_odds": 3.86,
-        "avg_clv": -0.0351,
-        "beat_close_pct": 0.304
+        "avg_clv": -0.0356,
+        "beat_close_pct": 0.301
       }
     }
   }
