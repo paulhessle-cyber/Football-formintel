@@ -22,7 +22,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
 header{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 16px 8px;border-bottom:1px solid var(--line)}
 h1{font-size:19px;margin:0;letter-spacing:-.01em}
 .sub{color:var(--muted);font-size:12px;margin-top:2px}
-nav{display:flex;gap:6px;margin-top:10px}
+nav{display:flex;gap:6px;margin-top:10px;overflow-x:auto;scrollbar-width:none}
 nav button,.chip{white-space:nowrap;flex-shrink:0;border:0;background:var(--chip);color:var(--ink);padding:7px 12px;border-radius:999px;font:inherit;font-size:13px}
 nav button.on,.chip.on{background:var(--ink);color:var(--bg)}
 .filters{display:flex;gap:6px;overflow-x:auto;padding:10px 16px 0;scrollbar-width:none}
@@ -51,6 +51,16 @@ td.n,th.n{text-align:right}
 .stat .h{color:var(--muted);font-size:12px}
 .good{color:var(--home);font-weight:600}.bad{color:var(--value);font-weight:600}
 .empty{color:var(--muted);text-align:center;padding:40px 0}
+.pl{display:grid;grid-template-columns:1fr auto;gap:2px 10px;font-size:13px;padding:9px 0;border-bottom:1px solid var(--line)}
+.pl .m{color:var(--muted);font-size:12px}
+.pl .r{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;font-size:11px;font-weight:700;border-radius:5px;padding:1px 6px;margin-left:4px}
+.b-open{background:var(--chip);color:var(--muted)}.b-win{background:#e3f1e9;color:var(--home)}.b-loss{background:var(--value-bg);color:var(--value)}
+@media (prefers-color-scheme:dark){.b-win{background:#16301f}}
+.big{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px}
+.big div{background:var(--chip);border-radius:10px;padding:8px 10px}
+.big b{display:block;font-size:18px;font-variant-numeric:tabular-nums}
+.big span{font-size:11.5px;color:var(--muted)}
 p.note{color:var(--muted);font-size:12.5px}
 </style>
 </head>
@@ -61,6 +71,7 @@ p.note{color:var(--muted);font-size:12.5px}
   <nav>
     <button data-tab="fixtures" class="on">Fixtures</button>
     <button data-tab="ratings">Ratings</button>
+    <button data-tab="paper">Paper bets</button>
     <button data-tab="backtest">Track record</button>
   </nav>
 </header>
@@ -69,7 +80,7 @@ p.note{color:var(--muted);font-size:12.5px}
 
 <script>
 const LEAGUES = {E2:"League One",E3:"League Two",EC:"National League"};
-let P = null, B = null, tab = "fixtures", league = "all", valueOnly = false;
+let P = null, B = null, PB = null, tab = "fixtures", league = "all", valueOnly = false;
 
 const pct = x => x == null ? "–" : Math.round(x*100) + "%";
 const odd = x => x == null ? "–" : x.toFixed(2);
@@ -80,6 +91,7 @@ const line = l => l == null ? "–" : (l>0?"+":"") + l;
 async function load(){
   try { P = await (await fetch("data/predictions.json",{cache:"no-store"})).json(); } catch(e) {}
   try { B = await (await fetch("data/backtest.json",{cache:"no-store"})).json(); } catch(e) {}
+  try { PB = await (await fetch("data/paper.json",{cache:"no-store"})).json(); } catch(e) {}
   document.getElementById("sub").textContent = P
     ? `v${P.version} · updated ${new Date(P.generated).toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"})}`
     : "No predictions yet — run the daily workflow";
@@ -88,7 +100,7 @@ async function load(){
 
 function filters(){
   const el = document.getElementById("filters");
-  if (tab === "backtest") { el.innerHTML = ""; return; }
+  if (tab === "backtest" || tab === "paper") { el.innerHTML = ""; return; }
   const chips = [["all","All"], ...Object.entries(LEAGUES)];
   el.innerHTML = chips.map(([k,v]) => `<button class="chip ${league===k?"on":""}" data-lg="${k}">${v}</button>`).join("")
     + (tab==="fixtures" ? `<button class="chip ${valueOnly?"on":""}" data-val="1">Value only</button>` : "");
@@ -186,10 +198,55 @@ function backtest(){
    + Object.values(B.leagues).map(l => statBlock(l.name, l)).join("");
 }
 
+function curveSvg(c){
+  if (!c || c.length < 2) return "";
+  const W=340,H=70,min=Math.min(0,...c),max=Math.max(0,...c),rng=(max-min)||1;
+  const x=i=>i/(c.length-1)*W, y=v=>H-(v-min)/rng*H;
+  const pts=c.map((v,i)=>`${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  const col=c[c.length-1]>=0?"var(--home)":"var(--value)";
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" style="margin-top:6px" aria-label="Running profit">
+    <line x1="0" x2="${W}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)" stroke-dasharray="3 3"/>
+    <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2"/></svg>`;
+}
+
+function paperStats(title, s){
+  if (!s || !s.bets) return "";
+  return `<div class="pl"><span><b>${esc(title)}</b> <span class="m">${s.settled} settled · ${s.open} open</span></span>
+    <span class="r">${s.settled ? `<b class="${s.profit_best>=0?"good":"bad"}">${s.profit_best>0?"+":""}${s.profit_best}u</b>` : "–"}</span>
+    <span class="m">${s.settled ? `ROI ${sgn(s.roi_best)} · CLV ${sgn(s.avg_clv)} · beat close ${pct(s.beat_close_pct)}` : "waiting for results"}</span><span></span></div>`;
+}
+
+function paperTab(){
+  if (!PB || !PB.overall || !PB.overall.bets) return `<p class="note">Every bet the site flags as value is recorded here at 1 unit, the first time it's flagged, then settled automatically when the result comes in. Nothing recorded yet — bets appear once the daily run flags one.</p>`;
+  const o = PB.overall, t = PB.by_type || {};
+  let h = `<p class="note">Every value bet the site flags, recorded at 1 unit the first time it's flagged and settled automatically. <b>CLV</b> (did we beat the closing price?) is the number to judge by — a few hundred bets are needed before profit means much.</p>
+  <div class="card"><div class="big">
+    <div><b class="${(o.profit_best||0)>=0?"good":"bad"}">${o.settled ? (o.profit_best>0?"+":"")+o.profit_best+"u" : "–"}</b><span>Profit (best price)</span></div>
+    <div><b class="${(o.avg_clv||0)>0?"good":"bad"}">${o.settled ? sgn(o.avg_clv) : "–"}</b><span>Avg CLV</span></div>
+    <div><b>${o.settled ? pct(o.beat_close_pct) : "–"}</b><span>Beat close</span></div>
+  </div>
+  <div class="extra" style="margin-top:0"><span>Bets <b>${o.bets}</b></span><span>Settled <b>${o.settled}</b></span>
+   ${o.settled ? `<span>ROI best <b>${sgn(o.roi_best)}</b></span><span>ROI avg price <b>${sgn(o.roi_avg)}</b></span><span>Won <b>${pct(o.win_pct)}</b></span><span>Avg odds <b>${o.avg_odds}</b></span>` : ""}</div>
+  ${curveSvg(PB.curve)}</div>
+  <div class="card">${paperStats("With news tag", t.news)}${paperStats("No news", t.no_news)}${paperStats("Win/draw/win", t["1x2"])}${paperStats("Over/Under", t.ou25)}${paperStats("Asian handicap", t.ah)}</div>
+  <div class="day">Bets</div><div class="card">`;
+  for (const b of PB.bets) {
+    const st = b.status==="open" ? `<span class="badge b-open">open</span>`
+      : b.status==="void" ? `<span class="badge b-open">void</span>`
+      : `<span class="badge ${b.profit_best>0?"b-win":b.profit_best<0?"b-loss":"b-open"}">${b.result}</span>`;
+    const ln = b.line==null ? null : (b.label==="AH Away" ? -b.line : b.line);
+    const line = ln!=null && b.label.startsWith("AH") ? " "+(ln>0?"+":"")+ln : "";
+    h += `<div class="pl"><span><b>${esc(b.label)}${line}</b> @ ${odd(b.odds_best)}${b.news?" 📰":""} ${st}</span>
+      <span class="r">${b.status==="settled" ? `<b class="${b.profit_best>=0?"good":"bad"}">${b.profit_best>0?"+":""}${b.profit_best.toFixed(2)}</b>` : ""}</span>
+      <span class="m">${esc(b.home)} v ${esc(b.away)} · ${b.date.slice(8)}/${b.date.slice(5,7)} · edge ${sgn(b.edge)}${b.clv!=null?` · CLV ${sgn(b.clv)}`:""}</span><span></span></div>`;
+  }
+  return h + `</div>`;
+}
+
 function render(){
   filters();
   document.getElementById("main").innerHTML =
-    tab==="fixtures" ? fixtures() : tab==="ratings" ? ratings() : backtest();
+    tab==="fixtures" ? fixtures() : tab==="ratings" ? ratings() : tab==="paper" ? paperTab() : backtest();
 }
 
 document.querySelector("nav").addEventListener("click", e => {

@@ -1,7 +1,7 @@
 """Project configuration."""
 from pathlib import Path
 
-VERSION = "0.4"
+VERSION = "0.5"
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"

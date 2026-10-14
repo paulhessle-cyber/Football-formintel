@@ -1,4 +1,4 @@
-# Lower League Predictor — v0.4
+# Lower League Predictor — v0.5
 
 Match predictions for **League One, League Two and the National League**, built in layers so each one has to prove it improves accuracy before it's trusted.
 
@@ -68,6 +68,7 @@ docs/index.html   website (GitHub Pages)
 
 ## Changelog
 
+- **v0.5** — Paper bets tab: every value flag is logged at 1 unit the first time it appears (best and average price), settled automatically from results, with closing-line value. Split by news-tagged vs not, and by market. Log: `logs/paper_bets.csv`.
 - **v0.4** — Model is blended with the bookmakers' pre-match price using a weight learned from the backtest (currently ~0%: the goals-only model adds nothing the market lacks). News tags shift the final odds at full strength. Benchmark switched to Betfair Exchange closing prices (Pinnacle stopped supplying football-data in 2025). Track record shows Model / Market / Blend / Close side by side.
 - **v0.3** — Workflows no longer fail when two runs save results at the same time (newest results win).
 - **v0.2** — Premier League and Championship added as training-only data. Fixes recently relegated sides (e.g. Oxford) being rated from stale League One form.

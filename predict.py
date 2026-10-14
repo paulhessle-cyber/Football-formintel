@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 
-from fp import blend, config, data, markets, model, news
+from fp import blend, config, data, markets, model, news, paper
 
 
 def num(x, nd=3):
@@ -189,6 +189,8 @@ def main():
     (config.SITE_DATA_DIR / "predictions.json").write_text(json.dumps(out, indent=1))
     if preds:
         append_log(preds, run_ts)
+        paper.record(preds, fixtures, run_ts)
+    paper.write_summary(paper.settle(results), run_ts)
     print(f"v{config.VERSION}: {len(preds)} fixtures predicted"
           + (f" ({error})" if error else ""))
 
