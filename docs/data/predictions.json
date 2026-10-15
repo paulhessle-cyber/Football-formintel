@@ -1,7 +1,7 @@
 {
- "version": "0.4",
- "generated": "2026-10-14T21:44+00:00",
- "model_fitted_to": "2026-10-13",
+ "version": "0.5",
+ "generated": "2026-10-15T11:27+00:00",
+ "model_fitted_to": "2026-10-15",
  "min_edge": 0.05,
  "error": null,
  "weights": {
@@ -9,10 +9,10 @@
   "w_ou25": 0.0
  },
  "home_advantage": {
-  "E0": 1.188,
-  "E1": 1.225,
-  "E2": 1.225,
-  "E3": 1.191,
+  "E0": 1.184,
+  "E1": 1.222,
+  "E2": 1.22,
+  "E3": 1.19,
   "EC": 1.212
  },
  "fixtures": [
@@ -51,8 +51,8 @@
     "h": 0.348,
     "d": 0.272,
     "a": 0.38,
-    "o25": 0.475,
-    "u25": 0.525
+    "o25": 0.472,
+    "u25": 0.528
    },
    "no_market": false,
    "weights": {
@@ -106,261 +106,261 @@
   {
    "team": "Stockport",
    "div": "E2",
-   "attack": 0.223,
+   "attack": 0.22,
    "defence": 0.086,
-   "overall": 0.309
+   "overall": 0.306
   },
   {
    "team": "Oxford",
    "div": "E2",
-   "attack": 0.08,
-   "defence": 0.192,
-   "overall": 0.272
+   "attack": 0.073,
+   "defence": 0.191,
+   "overall": 0.264
   },
   {
    "team": "York",
    "div": "E3",
    "attack": 0.179,
-   "defence": 0.053,
-   "overall": 0.232
+   "defence": 0.056,
+   "overall": 0.235
   },
   {
    "team": "Reading",
    "div": "E2",
-   "attack": 0.2,
-   "defence": 0.002,
-   "overall": 0.202
+   "attack": 0.198,
+   "defence": 0.003,
+   "overall": 0.201
   },
   {
    "team": "Plymouth",
    "div": "E2",
-   "attack": 0.214,
+   "attack": 0.211,
    "defence": -0.019,
-   "overall": 0.195
+   "overall": 0.192
   },
   {
    "team": "Luton",
    "div": "E2",
-   "attack": 0.183,
-   "defence": -0.02,
-   "overall": 0.163
+   "attack": 0.18,
+   "defence": -0.019,
+   "overall": 0.161
   },
   {
    "team": "Huddersfield",
    "div": "E2",
-   "attack": 0.137,
-   "defence": -0.011,
-   "overall": 0.127
+   "attack": 0.135,
+   "defence": -0.01,
+   "overall": 0.125
   },
   {
    "team": "Leicester",
    "div": "E2",
-   "attack": 0.082,
+   "attack": 0.078,
    "defence": 0.045,
-   "overall": 0.127
+   "overall": 0.122
   },
   {
    "team": "Barnet",
    "div": "E3",
    "attack": 0.162,
-   "defence": -0.05,
-   "overall": 0.113
-  },
-  {
-   "team": "Bradford",
-   "div": "E2",
-   "attack": -0.161,
-   "defence": 0.267,
-   "overall": 0.106
+   "defence": -0.048,
+   "overall": 0.115
   },
   {
    "team": "Cambridge",
    "div": "E2",
    "attack": -0.071,
-   "defence": 0.175,
-   "overall": 0.104
+   "defence": 0.176,
+   "overall": 0.105
   },
   {
-   "team": "Wycombe",
+   "team": "Bradford",
    "div": "E2",
-   "attack": 0.104,
-   "defence": -0.085,
-   "overall": 0.019
+   "attack": -0.162,
+   "defence": 0.267,
+   "overall": 0.104
   },
   {
    "team": "Boreham Wood",
    "div": "EC",
    "attack": 0.176,
-   "defence": -0.159,
-   "overall": 0.016
+   "defence": -0.156,
+   "overall": 0.02
   },
   {
-   "team": "Mansfield",
+   "team": "Wycombe",
    "div": "E2",
-   "attack": 0.031,
-   "defence": -0.016,
-   "overall": 0.015
+   "attack": 0.102,
+   "defence": -0.084,
+   "overall": 0.018
   },
   {
    "team": "Stevenage",
    "div": "E2",
-   "attack": -0.217,
-   "defence": 0.227,
-   "overall": 0.01
+   "attack": -0.218,
+   "defence": 0.229,
+   "overall": 0.012
+  },
+  {
+   "team": "Mansfield",
+   "div": "E2",
+   "attack": 0.028,
+   "defence": -0.016,
+   "overall": 0.012
   },
   {
    "team": "Leyton Orient",
    "div": "E2",
-   "attack": -0.009,
-   "defence": -0.037,
-   "overall": -0.046
+   "attack": -0.01,
+   "defence": -0.038,
+   "overall": -0.048
   },
   {
    "team": "Notts County",
    "div": "E2",
    "attack": -0.011,
-   "defence": -0.042,
-   "overall": -0.053
+   "defence": -0.039,
+   "overall": -0.05
   },
   {
    "team": "Milton Keynes Dons",
    "div": "E2",
    "attack": 0.038,
-   "defence": -0.093,
-   "overall": -0.055
-  },
-  {
-   "team": "Blackpool",
-   "div": "E2",
-   "attack": -0.009,
-   "defence": -0.053,
-   "overall": -0.062
+   "defence": -0.091,
+   "overall": -0.053
   },
   {
    "team": "Chesterfield",
    "div": "E3",
-   "attack": 0.038,
-   "defence": -0.103,
-   "overall": -0.065
+   "attack": 0.037,
+   "defence": -0.101,
+   "overall": -0.064
+  },
+  {
+   "team": "Blackpool",
+   "div": "E2",
+   "attack": -0.012,
+   "defence": -0.053,
+   "overall": -0.066
   },
   {
    "team": "Salford",
    "div": "E3",
-   "attack": -0.101,
-   "defence": 0.01,
-   "overall": -0.091
+   "attack": -0.103,
+   "defence": 0.013,
+   "overall": -0.089
   },
   {
    "team": "Rochdale",
    "div": "E3",
    "attack": -0.121,
-   "defence": 0.0,
-   "overall": -0.121
+   "defence": 0.003,
+   "overall": -0.118
   },
   {
    "team": "Grimsby",
    "div": "E3",
    "attack": -0.053,
-   "defence": -0.071,
-   "overall": -0.124
-  },
-  {
-   "team": "Sheffield Weds",
-   "div": "E2",
-   "attack": -0.099,
-   "defence": -0.03,
-   "overall": -0.129
+   "defence": -0.069,
+   "overall": -0.121
   },
   {
    "team": "Southend",
    "div": "EC",
    "attack": 0.006,
-   "defence": -0.141,
-   "overall": -0.135
+   "defence": -0.138,
+   "overall": -0.132
+  },
+  {
+   "team": "Sheffield Weds",
+   "div": "E2",
+   "attack": -0.105,
+   "defence": -0.032,
+   "overall": -0.137
   },
   {
    "team": "Worthing",
    "div": "EC",
    "attack": 0.089,
-   "defence": -0.249,
-   "overall": -0.16
+   "defence": -0.246,
+   "overall": -0.157
   },
   {
    "team": "Doncaster",
    "div": "E2",
-   "attack": -0.117,
-   "defence": -0.051,
-   "overall": -0.167
+   "attack": -0.12,
+   "defence": -0.049,
+   "overall": -0.17
   },
   {
    "team": "Peterboro",
    "div": "E2",
-   "attack": -0.011,
+   "attack": -0.013,
    "defence": -0.179,
-   "overall": -0.19
+   "overall": -0.191
   },
   {
    "team": "Walsall",
    "div": "E3",
-   "attack": -0.147,
-   "defence": -0.05,
-   "overall": -0.197
+   "attack": -0.15,
+   "defence": -0.048,
+   "overall": -0.198
   },
   {
    "team": "Crewe",
    "div": "E3",
-   "attack": -0.206,
+   "attack": -0.207,
    "defence": 0.005,
    "overall": -0.201
   },
   {
-   "team": "Burton",
-   "div": "E2",
-   "attack": -0.147,
-   "defence": -0.062,
-   "overall": -0.209
-  },
-  {
    "team": "Barnsley",
    "div": "E2",
-   "attack": 0.027,
+   "attack": 0.025,
    "defence": -0.238,
-   "overall": -0.211
+   "overall": -0.212
+  },
+  {
+   "team": "Burton",
+   "div": "E2",
+   "attack": -0.149,
+   "defence": -0.064,
+   "overall": -0.212
   },
   {
    "team": "Bromley",
    "div": "E2",
    "attack": -0.063,
-   "defence": -0.153,
-   "overall": -0.216
+   "defence": -0.152,
+   "overall": -0.215
   },
   {
    "team": "Oldham",
    "div": "E3",
    "attack": -0.213,
-   "defence": -0.02,
-   "overall": -0.233
+   "defence": -0.018,
+   "overall": -0.231
   },
   {
    "team": "Colchester",
    "div": "E3",
    "attack": -0.225,
-   "defence": -0.032,
-   "overall": -0.257
+   "defence": -0.027,
+   "overall": -0.251
   },
   {
    "team": "Exeter",
    "div": "E3",
-   "attack": -0.329,
-   "defence": 0.04,
+   "attack": -0.331,
+   "defence": 0.042,
    "overall": -0.289
   },
   {
    "team": "Carlisle",
    "div": "EC",
    "attack": -0.073,
-   "defence": -0.225,
-   "overall": -0.299
+   "defence": -0.223,
+   "overall": -0.296
   },
   {
    "team": "Swindon",
@@ -372,9 +372,9 @@
   {
    "team": "Wigan",
    "div": "E2",
-   "attack": -0.357,
+   "attack": -0.358,
    "defence": 0.041,
-   "overall": -0.316
+   "overall": -0.317
   },
   {
    "team": "AFC Wimbledon",
@@ -387,288 +387,288 @@
    "team": "Fleetwood Town",
    "div": "E3",
    "attack": -0.253,
-   "defence": -0.091,
-   "overall": -0.344
+   "defence": -0.089,
+   "overall": -0.342
   },
   {
    "team": "Forest Green",
    "div": "EC",
-   "attack": -0.132,
-   "defence": -0.254,
-   "overall": -0.385
-  },
-  {
-   "team": "Bristol Rvs",
-   "div": "E3",
-   "attack": -0.155,
-   "defence": -0.251,
-   "overall": -0.406
+   "attack": -0.134,
+   "defence": -0.252,
+   "overall": -0.386
   },
   {
    "team": "Kidderminster",
    "div": "EC",
-   "attack": -0.491,
-   "defence": 0.083,
-   "overall": -0.408
+   "attack": -0.49,
+   "defence": 0.087,
+   "overall": -0.403
+  },
+  {
+   "team": "Bristol Rvs",
+   "div": "E3",
+   "attack": -0.156,
+   "defence": -0.249,
+   "overall": -0.406
   },
   {
    "team": "Halifax",
    "div": "EC",
    "attack": -0.255,
-   "defence": -0.192,
-   "overall": -0.448
+   "defence": -0.19,
+   "overall": -0.445
   },
   {
    "team": "Gillingham",
    "div": "E3",
-   "attack": -0.272,
-   "defence": -0.193,
-   "overall": -0.465
+   "attack": -0.273,
+   "defence": -0.189,
+   "overall": -0.462
   },
   {
    "team": "Port Vale",
    "div": "E3",
-   "attack": -0.474,
-   "defence": 0.007,
-   "overall": -0.467
+   "attack": -0.476,
+   "defence": 0.008,
+   "overall": -0.468
   },
   {
    "team": "Harrogate",
    "div": "EC",
-   "attack": -0.243,
-   "defence": -0.23,
-   "overall": -0.474
+   "attack": -0.244,
+   "defence": -0.228,
+   "overall": -0.471
   },
   {
    "team": "Woking",
    "div": "EC",
    "attack": -0.245,
-   "defence": -0.234,
-   "overall": -0.479
+   "defence": -0.231,
+   "overall": -0.476
   },
   {
    "team": "Cheltenham",
    "div": "E3",
    "attack": -0.131,
-   "defence": -0.357,
-   "overall": -0.488
+   "defence": -0.355,
+   "overall": -0.487
   },
   {
    "team": "Accrington",
    "div": "E3",
-   "attack": -0.309,
+   "attack": -0.31,
    "defence": -0.184,
-   "overall": -0.493
-  },
-  {
-   "team": "Rotherham",
-   "div": "E3",
-   "attack": -0.309,
-   "defence": -0.191,
-   "overall": -0.5
+   "overall": -0.494
   },
   {
    "team": "Fylde",
    "div": "EC",
    "attack": -0.16,
-   "defence": -0.341,
+   "defence": -0.338,
+   "overall": -0.498
+  },
+  {
+   "team": "Rotherham",
+   "div": "E3",
+   "attack": -0.311,
+   "defence": -0.189,
    "overall": -0.501
   },
   {
    "team": "Yeovil",
    "div": "EC",
    "attack": -0.236,
-   "defence": -0.268,
-   "overall": -0.504
+   "defence": -0.265,
+   "overall": -0.501
   },
   {
    "team": "Dag and Red",
    "div": "EC",
-   "attack": -0.271,
-   "defence": -0.241,
-   "overall": -0.512
+   "attack": -0.27,
+   "defence": -0.238,
+   "overall": -0.507
   },
   {
    "team": "Barrow",
    "div": "EC",
-   "attack": -0.265,
-   "defence": -0.282,
-   "overall": -0.547
+   "attack": -0.266,
+   "defence": -0.28,
+   "overall": -0.546
   },
   {
    "team": "Scunthorpe",
    "div": "EC",
-   "attack": -0.196,
-   "defence": -0.381,
-   "overall": -0.577
+   "attack": -0.195,
+   "defence": -0.378,
+   "overall": -0.574
   },
   {
    "team": "Altrincham",
    "div": "EC",
    "attack": -0.299,
-   "defence": -0.286,
-   "overall": -0.585
+   "defence": -0.283,
+   "overall": -0.582
   },
   {
    "team": "Newport County",
    "div": "E3",
-   "attack": -0.298,
-   "defence": -0.309,
-   "overall": -0.607
+   "attack": -0.297,
+   "defence": -0.307,
+   "overall": -0.604
   },
   {
    "team": "Tranmere",
    "div": "E3",
    "attack": -0.267,
-   "defence": -0.341,
-   "overall": -0.609
+   "defence": -0.34,
+   "overall": -0.606
   },
   {
    "team": "Crawley Town",
    "div": "E3",
-   "attack": -0.329,
-   "defence": -0.311,
-   "overall": -0.64
-  },
-  {
-   "team": "Northampton",
-   "div": "E3",
-   "attack": -0.493,
-   "defence": -0.159,
-   "overall": -0.653
+   "attack": -0.33,
+   "defence": -0.309,
+   "overall": -0.639
   },
   {
    "team": "Maidenhead",
    "div": "EC",
-   "attack": -0.298,
-   "defence": -0.36,
-   "overall": -0.658
+   "attack": -0.297,
+   "defence": -0.356,
+   "overall": -0.653
+  },
+  {
+   "team": "Northampton",
+   "div": "E3",
+   "attack": -0.495,
+   "defence": -0.158,
+   "overall": -0.653
   },
   {
    "team": "Hornchurch",
    "div": "EC",
    "attack": -0.414,
-   "defence": -0.301,
-   "overall": -0.715
-  },
-  {
-   "team": "Shrewsbury",
-   "div": "E3",
-   "attack": -0.464,
-   "defence": -0.257,
-   "overall": -0.721
+   "defence": -0.298,
+   "overall": -0.711
   },
   {
    "team": "Tamworth",
    "div": "EC",
    "attack": -0.217,
-   "defence": -0.507,
-   "overall": -0.724
+   "defence": -0.504,
+   "overall": -0.721
+  },
+  {
+   "team": "Shrewsbury",
+   "div": "E3",
+   "attack": -0.465,
+   "defence": -0.256,
+   "overall": -0.722
   },
   {
    "team": "Boston Utd",
    "div": "EC",
    "attack": -0.35,
-   "defence": -0.378,
-   "overall": -0.728
+   "defence": -0.375,
+   "overall": -0.725
   },
   {
    "team": "Aldershot",
    "div": "EC",
-   "attack": -0.251,
-   "defence": -0.493,
-   "overall": -0.743
+   "attack": -0.25,
+   "defence": -0.49,
+   "overall": -0.74
   },
   {
    "team": "Wealdstone",
    "div": "EC",
    "attack": -0.274,
-   "defence": -0.496,
-   "overall": -0.771
+   "defence": -0.494,
+   "overall": -0.768
   },
   {
    "team": "Dorking",
    "div": "EC",
-   "attack": -0.286,
-   "defence": -0.493,
-   "overall": -0.779
+   "attack": -0.287,
+   "defence": -0.49,
+   "overall": -0.777
   },
   {
    "team": "Hartlepool",
    "div": "EC",
    "attack": -0.466,
-   "defence": -0.322,
-   "overall": -0.788
+   "defence": -0.319,
+   "overall": -0.785
   },
   {
    "team": "Sutton",
    "div": "EC",
    "attack": -0.428,
-   "defence": -0.405,
-   "overall": -0.833
+   "defence": -0.401,
+   "overall": -0.829
   },
   {
    "team": "Eastleigh",
    "div": "EC",
-   "attack": -0.414,
-   "defence": -0.46,
-   "overall": -0.873
+   "attack": -0.413,
+   "defence": -0.457,
+   "overall": -0.87
   },
   {
    "team": "Solihull",
    "div": "EC",
    "attack": -0.318,
-   "defence": -0.558,
-   "overall": -0.876
+   "defence": -0.555,
+   "overall": -0.873
   },
   {
    "team": "Oxford City",
    "div": "EC",
-   "attack": -0.378,
-   "defence": -0.504,
-   "overall": -0.882
+   "attack": -0.38,
+   "defence": -0.501,
+   "overall": -0.881
   },
   {
    "team": "Morecambe",
    "div": "EC",
    "attack": -0.274,
-   "defence": -0.651,
-   "overall": -0.925
+   "defence": -0.649,
+   "overall": -0.923
   },
   {
    "team": "Truro",
    "div": "EC",
-   "attack": -0.705,
-   "defence": -0.352,
-   "overall": -1.058
+   "attack": -0.704,
+   "defence": -0.35,
+   "overall": -1.054
   },
   {
    "team": "Braintree Town",
    "div": "EC",
    "attack": -0.676,
-   "defence": -0.419,
-   "overall": -1.096
+   "defence": -0.417,
+   "overall": -1.093
   },
   {
    "team": "Gateshead",
    "div": "EC",
    "attack": -0.499,
-   "defence": -0.608,
-   "overall": -1.107
+   "defence": -0.605,
+   "overall": -1.104
   },
   {
    "team": "Ebbsfleet",
    "div": "EC",
-   "attack": -0.605,
-   "defence": -0.58,
-   "overall": -1.185
+   "attack": -0.602,
+   "defence": -0.576,
+   "overall": -1.179
   },
   {
    "team": "Brackley Town",
    "div": "EC",
-   "attack": -0.723,
-   "defence": -0.488,
-   "overall": -1.21
+   "attack": -0.721,
+   "defence": -0.485,
+   "overall": -1.206
   }
  ]
 }
