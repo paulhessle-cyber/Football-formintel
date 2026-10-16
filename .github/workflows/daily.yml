@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["data/news_events.csv"]   # re-predict as soon as news tags change
+    paths: ["data/news_events.csv", "data/refresh.txt"]   # re-predict when news tags change or a refresh is requested
 
 permissions:
   contents: write

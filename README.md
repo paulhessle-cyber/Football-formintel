@@ -74,3 +74,7 @@ docs/index.html   website (GitHub Pages)
 - **v0.3** — Workflows no longer fail when two runs save results at the same time (newest results win).
 - **v0.2** — Premier League and Championship added as training-only data. Fixes recently relegated sides (e.g. Oxford) being rated from stale League One form.
 - **v0.1** — Baseline Dixon-Coles model, walk-forward backtest, daily predictions, manual news layer, website.
+
+## Forcing a refresh
+
+GitHub often runs scheduled jobs hours late. Editing `data/refresh.txt` (any change, e.g. the current time) and pushing starts Daily predictions immediately.
