@@ -1,0 +1,4 @@
+date,div,home,away,selection,time,label,line,odds_best,odds_avg,prob,edge,news,news_note,flagged_at,version,status,result,profit_best,profit_avg,close_prob,clv
+2026-10-17,E2,Stockport,Bromley,ah_away,15:00,AH Away,-1.75,1.98,1.91,,0.147,False,,2026-10-16T09:44+00:00,0.6,open,,,,,
+2026-10-17,E3,Salford,Crawley Town,a,15:00,Away,,8.0,7.03,0.133,0.063,False,,2026-10-16T09:44+00:00,0.6,open,,,,,
+2026-10-17,E3,Salford,Crawley Town,ah_away,15:00,AH Away,-1.5,1.85,1.77,,0.092,False,,2026-10-16T09:44+00:00,0.6,open,,,,,

@@ -1,8 +1,89 @@
 {
- "generated": "2026-10-15T15:19+00:00",
+ "generated": "2026-10-16T09:44+00:00",
  "overall": {
-  "bets": 0
+  "bets": 3,
+  "open": 3,
+  "settled": 0
  },
- "by_type": {},
- "bets": []
+ "by_type": {
+  "news": {
+   "bets": 0,
+   "open": 0,
+   "settled": 0
+  },
+  "no_news": {
+   "bets": 3,
+   "open": 3,
+   "settled": 0
+  },
+  "1x2": {
+   "bets": 1,
+   "open": 1,
+   "settled": 0
+  },
+  "ou25": {
+   "bets": 0,
+   "open": 0,
+   "settled": 0
+  },
+  "ah": {
+   "bets": 2,
+   "open": 2,
+   "settled": 0
+  }
+ },
+ "bets": [
+  {
+   "date": "2026-10-17",
+   "time": "15:00",
+   "div": "E2",
+   "home": "Stockport",
+   "away": "Bromley",
+   "label": "AH Away",
+   "line": -1.75,
+   "odds_best": 1.98,
+   "odds_avg": 1.91,
+   "edge": 0.147,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
+  {
+   "date": "2026-10-17",
+   "time": "15:00",
+   "div": "E3",
+   "home": "Salford",
+   "away": "Crawley Town",
+   "label": "Away",
+   "line": null,
+   "odds_best": 8.0,
+   "odds_avg": 7.03,
+   "edge": 0.063,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
+  {
+   "date": "2026-10-17",
+   "time": "15:00",
+   "div": "E3",
+   "home": "Salford",
+   "away": "Crawley Town",
+   "label": "AH Away",
+   "line": -1.5,
+   "odds_best": 1.85,
+   "odds_avg": 1.77,
+   "edge": 0.092,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  }
+ ],
+ "curve": []
 }
