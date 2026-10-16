@@ -3,3 +3,9 @@ date_added,team,player,kind,attack_pct,defence_pct,confidence,expires,note
 # Examples:
 # 2026-10-14,Example Town,J Smith,injury - top scorer out,-12,0,1.0,2026-11-01,club confirmed hamstring
 # 2026-10-14,Example Rovers,,manager sacked,0,-3,0.8,,interim in charge
+2026-10-16,Reading,Jack Marriott,injury - top scorer out,-8,0,1.0,2026-10-17,League One top scorer injured - Sports Mole 16/10
+2026-10-16,Reading,George Earthy,injury - key creative midfielder out,-3,0,1.0,2026-10-17,playmaker injured - Sports Mole 16/10
+2026-10-16,Plymouth,Aribim Pepple,doubt - main forward,-6,0,0.5,2026-10-17,missed last game may not be rushed back - Sports Mole 16/10
+2026-10-16,Milton Keynes Dons,Curtis Nelson,doubt - first-choice CB,0,-3,0.5,2026-10-17,knock v Reading - Sports Mole 16/10
+2026-10-16,Milton Keynes Dons,Dan Crowley,doubt - key creative midfielder,-3,0,0.5,2026-10-17,missed last league game - Sports Mole 16/10
+2026-10-16,Crawley Town,Akin Odimayo,doubt - first-choice defender,0,-3,0.5,2026-10-17,stretchered off 10/10 boss says no chance next game - Sussex Express 10/10
