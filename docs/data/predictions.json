@@ -1,6 +1,6 @@
 {
  "version": "0.6",
- "generated": "2026-10-16T09:44+00:00",
+ "generated": "2026-10-16T09:48+00:00",
  "model_fitted_to": "2026-10-15",
  "min_edge": 0.05,
  "error": null,
@@ -24,21 +24,21 @@
    "home": "Milton Keynes Dons",
    "away": "Luton",
    "xg": {
-    "home": 1.39,
-    "away": 1.63
+    "home": 1.37,
+    "away": 1.65
    },
    "xg_model": {
-    "home": 1.55,
-    "away": 1.58
+    "home": 1.53,
+    "away": 1.6
    },
    "xg_base": {
     "home": 1.55,
     "away": 1.58
    },
    "prob": {
-    "h": 0.308,
-    "d": 0.254,
-    "a": 0.438,
+    "h": 0.299,
+    "d": 0.253,
+    "a": 0.448,
     "o25": 0.565,
     "u25": 0.435
    },
@@ -48,9 +48,9 @@
     "a": 0.384
    },
    "prob_model": {
-    "h": 0.374,
+    "h": 0.364,
     "d": 0.242,
-    "a": 0.384,
+    "a": 0.394,
     "o25": 0.606,
     "u25": 0.394
    },
@@ -65,9 +65,9 @@
     "a": 0.438
    },
    "fair": {
-    "h": 3.25,
-    "d": 3.93,
-    "a": 2.28,
+    "h": 3.35,
+    "d": 3.95,
+    "a": 2.23,
     "o25": 1.77,
     "u25": 2.3
    },
@@ -79,25 +79,28 @@
     "u25": 2.2
    },
    "edge": {
-    "h": -0.046,
-    "d": 0.017,
-    "a": -0.037,
+    "h": -0.074,
+    "d": 0.013,
+    "a": -0.014,
     "o25": -0.04,
     "u25": -0.042
    },
    "ah_fair": {
     "line": 0.25,
-    "home": 2.01,
-    "away": 1.99
+    "home": 2.05,
+    "away": 1.95
    },
    "ah_market": {
     "line": 0.25,
     "home_odds": 1.95,
     "away_odds": 1.9,
-    "home_edge": -0.025,
-    "away_edge": -0.041
+    "home_edge": -0.044,
+    "away_edge": -0.022
    },
-   "news": [],
+   "news": [
+    "Milton Keynes Dons (Curtis Nelson): doubt - first-choice CB - knock v Reading - Sports Mole 16/10",
+    "Milton Keynes Dons (Dan Crowley): doubt - key creative midfielder - missed last league game - Sports Mole 16/10"
+   ],
    "value": [],
    "unknown_team": []
   },
@@ -704,11 +707,11 @@
    "home": "Plymouth",
    "away": "Huddersfield",
    "xg": {
-    "home": 1.58,
+    "home": 1.53,
     "away": 1.5
    },
    "xg_model": {
-    "home": 1.83,
+    "home": 1.78,
     "away": 1.4
    },
    "xg_base": {
@@ -716,11 +719,11 @@
     "away": 1.4
    },
    "prob": {
-    "h": 0.366,
-    "d": 0.262,
-    "a": 0.372,
-    "o25": 0.576,
-    "u25": 0.424
+    "h": 0.354,
+    "d": 0.265,
+    "a": 0.381,
+    "o25": 0.564,
+    "u25": 0.436
    },
    "prob_base": {
     "h": 0.474,
@@ -728,11 +731,11 @@
     "a": 0.294
    },
    "prob_model": {
-    "h": 0.474,
-    "d": 0.232,
-    "a": 0.294,
-    "o25": 0.628,
-    "u25": 0.372
+    "h": 0.462,
+    "d": 0.236,
+    "a": 0.303,
+    "o25": 0.616,
+    "u25": 0.384
    },
    "no_market": false,
    "weights": {
@@ -745,11 +748,11 @@
     "a": 0.372
    },
    "fair": {
-    "h": 2.73,
-    "d": 3.81,
-    "a": 2.69,
-    "o25": 1.74,
-    "u25": 2.36
+    "h": 2.82,
+    "d": 3.78,
+    "a": 2.62,
+    "o25": 1.77,
+    "u25": 2.3
    },
    "odds": {
     "h": 2.66,
@@ -759,25 +762,27 @@
     "u25": 2.25
    },
    "edge": {
-    "h": -0.026,
-    "d": -0.017,
-    "a": -0.033,
-    "o25": -0.049,
-    "u25": -0.047
+    "h": -0.058,
+    "d": -0.007,
+    "a": -0.009,
+    "o25": -0.069,
+    "u25": -0.02
    },
    "ah_fair": {
     "line": 0.0,
-    "home": 2.02,
-    "away": 1.98
+    "home": 2.08,
+    "away": 1.93
    },
    "ah_market": {
     "line": 0.0,
     "home_odds": 1.95,
     "away_odds": 1.9,
-    "home_edge": -0.024,
-    "away_edge": -0.031
+    "home_edge": -0.045,
+    "away_edge": -0.011
    },
-   "news": [],
+   "news": [
+    "Plymouth (Aribim Pepple): doubt - main forward - missed last game may not be rushed back - Sports Mole 16/10"
+   ],
    "value": [],
    "unknown_team": []
   },
@@ -961,23 +966,23 @@
    "home": "Wigan",
    "away": "Reading",
    "xg": {
-    "home": 1.16,
-    "away": 1.59
+    "home": 1.17,
+    "away": 1.43
    },
    "xg_model": {
     "home": 1.02,
-    "away": 1.41
+    "away": 1.26
    },
    "xg_base": {
     "home": 1.02,
     "away": 1.41
    },
    "prob": {
-    "h": 0.276,
-    "d": 0.255,
-    "a": 0.469,
-    "o25": 0.563,
-    "u25": 0.437
+    "h": 0.304,
+    "d": 0.269,
+    "a": 0.427,
+    "o25": 0.523,
+    "u25": 0.477
    },
    "prob_base": {
     "h": 0.271,
@@ -985,11 +990,11 @@
     "a": 0.455
    },
    "prob_model": {
-    "h": 0.271,
-    "d": 0.274,
-    "a": 0.455,
-    "o25": 0.438,
-    "u25": 0.562
+    "h": 0.298,
+    "d": 0.289,
+    "a": 0.413,
+    "o25": 0.399,
+    "u25": 0.601
    },
    "no_market": false,
    "weights": {
@@ -1002,11 +1007,11 @@
     "a": 0.469
    },
    "fair": {
-    "h": 3.62,
-    "d": 3.92,
-    "a": 2.13,
-    "o25": 1.77,
-    "u25": 2.29
+    "h": 3.29,
+    "d": 3.72,
+    "a": 2.34,
+    "o25": 1.91,
+    "u25": 2.1
    },
    "odds": {
     "h": 3.5,
@@ -1016,26 +1021,31 @@
     "u25": 2.15
    },
    "edge": {
-    "h": -0.034,
-    "d": -0.044,
-    "a": -0.039,
-    "o25": -0.059,
-    "u25": -0.062
+    "h": 0.065,
+    "d": 0.009,
+    "a": -0.126,
+    "o25": -0.127,
+    "u25": 0.026
    },
    "ah_fair": {
-    "line": 0.5,
-    "home": 1.88,
-    "away": 2.13
+    "line": 0.25,
+    "home": 1.97,
+    "away": 2.03
    },
    "ah_market": {
     "line": 0.5,
     "home_odds": 1.8,
     "away_odds": 2.05,
-    "home_edge": -0.044,
-    "away_edge": -0.039
+    "home_edge": 0.032,
+    "away_edge": -0.126
    },
-   "news": [],
-   "value": [],
+   "news": [
+    "Reading (Jack Marriott): injury - top scorer out - League One top scorer injured - Sports Mole 16/10",
+    "Reading (George Earthy): injury - key creative midfielder out - playmaker injured - Sports Mole 16/10"
+   ],
+   "value": [
+    "h"
+   ],
    "unknown_team": []
   },
   {
@@ -1726,11 +1736,11 @@
    "home": "Salford",
    "away": "Crawley Town",
    "xg": {
-    "home": 2.16,
+    "home": 2.19,
     "away": 0.91
    },
    "xg_model": {
-    "home": 1.76,
+    "home": 1.79,
     "away": 0.85
    },
    "xg_base": {
@@ -1738,11 +1748,11 @@
     "away": 0.85
    },
    "prob": {
-    "h": 0.687,
-    "d": 0.18,
-    "a": 0.133,
-    "o25": 0.657,
-    "u25": 0.343
+    "h": 0.692,
+    "d": 0.178,
+    "a": 0.13,
+    "o25": 0.663,
+    "u25": 0.337
    },
    "prob_base": {
     "h": 0.586,
@@ -1750,11 +1760,11 @@
     "a": 0.176
    },
    "prob_model": {
-    "h": 0.586,
-    "d": 0.238,
-    "a": 0.176,
-    "o25": 0.485,
-    "u25": 0.515
+    "h": 0.592,
+    "d": 0.235,
+    "a": 0.173,
+    "o25": 0.492,
+    "u25": 0.508
    },
    "no_market": false,
    "weights": {
@@ -1767,11 +1777,11 @@
     "a": 0.133
    },
    "fair": {
-    "h": 1.46,
-    "d": 5.55,
-    "a": 7.53,
-    "o25": 1.52,
-    "u25": 2.91
+    "h": 1.44,
+    "d": 5.63,
+    "a": 7.68,
+    "o25": 1.51,
+    "u25": 2.97
    },
    "odds": {
     "h": 1.4,
@@ -1781,27 +1791,28 @@
     "u25": 2.8
    },
    "edge": {
-    "h": -0.038,
-    "d": -0.008,
-    "a": 0.063,
-    "o25": -0.047,
-    "u25": -0.039
+    "h": -0.031,
+    "d": -0.023,
+    "a": 0.041,
+    "o25": -0.039,
+    "u25": -0.056
    },
    "ah_fair": {
     "line": -1.25,
-    "home": 2.1,
-    "away": 1.91
+    "home": 2.07,
+    "away": 1.94
    },
    "ah_market": {
     "line": -1.5,
     "home_odds": 2.0,
     "away_odds": 1.85,
-    "home_edge": -0.18,
-    "away_edge": 0.092
+    "home_edge": -0.166,
+    "away_edge": 0.079
    },
-   "news": [],
+   "news": [
+    "Crawley Town (Akin Odimayo): doubt - first-choice defender - stretchered off 10/10 boss says no chance next game - Sussex Express 10/10"
+   ],
    "value": [
-    "a",
     "ah_away"
    ],
    "unknown_team": []

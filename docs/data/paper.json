@@ -1,14 +1,14 @@
 {
- "generated": "2026-10-16T09:44+00:00",
+ "generated": "2026-10-16T09:48+00:00",
  "overall": {
-  "bets": 3,
-  "open": 3,
+  "bets": 4,
+  "open": 4,
   "settled": 0
  },
  "by_type": {
   "news": {
-   "bets": 0,
-   "open": 0,
+   "bets": 1,
+   "open": 1,
    "settled": 0
   },
   "no_news": {
@@ -17,8 +17,8 @@
    "settled": 0
   },
   "1x2": {
-   "bets": 1,
-   "open": 1,
+   "bets": 2,
+   "open": 2,
    "settled": 0
   },
   "ou25": {
@@ -79,6 +79,23 @@
    "odds_avg": 1.77,
    "edge": 0.092,
    "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
+  {
+   "date": "2026-10-17",
+   "time": "15:00",
+   "div": "E2",
+   "home": "Wigan",
+   "away": "Reading",
+   "label": "Home",
+   "line": null,
+   "odds_best": 3.5,
+   "odds_avg": 3.38,
+   "edge": 0.065,
+   "news": true,
    "status": "open",
    "result": null,
    "profit_best": null,
