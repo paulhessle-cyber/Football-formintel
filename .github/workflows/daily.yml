@@ -5,6 +5,9 @@ on:
     - cron: "12 6 * * *"     # 07:12 UK summer / 06:12 winter
     - cron: "42 10 * * *"    # late-morning refresh for updated odds and news
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["data/news_events.csv"]   # re-predict as soon as news tags change
 
 permissions:
   contents: write
