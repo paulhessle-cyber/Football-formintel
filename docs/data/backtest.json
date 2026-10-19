@@ -1,6 +1,6 @@
 {
-  "version": "0.4",
-  "generated": "2026-10-14T21:43+00:00",
+  "version": "0.6",
+  "generated": "2026-10-19T11:14+00:00",
   "from": "2024-08-09",
   "to": "2026-10-10",
   "min_edge": 0.05,
@@ -85,7 +85,7 @@
       "brier_1x2_close": 0.5963,
       "logloss_ou25_model": 0.6975,
       "logloss_ou25_open": 0.6786,
-      "logloss_ou25_blend": 0.6786,
+      "logloss_ou25_blend": 0.6787,
       "logloss_ou25_close": 0.6778,
       "value_bets": {
         "bets": 64,
