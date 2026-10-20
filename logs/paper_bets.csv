@@ -1,5 +1,5 @@
 date,div,home,away,selection,time,label,line,odds_best,odds_avg,prob,edge,news,news_note,flagged_at,version,status,result,profit_best,profit_avg,close_prob,clv
-2026-10-17,E2,Stockport,Bromley,ah_away,15:00,AH Away,-1.75,1.98,1.91,,0.147,False,,2026-10-16T09:44+00:00,0.6,open,,,,,
-2026-10-17,E3,Salford,Crawley Town,a,15:00,Away,,8.0,7.03,0.133,0.063,False,,2026-10-16T09:44+00:00,0.6,open,,,,,
-2026-10-17,E3,Salford,Crawley Town,ah_away,15:00,AH Away,-1.5,1.85,1.77,,0.092,False,,2026-10-16T09:44+00:00,0.6,open,,,,,
-2026-10-17,E2,Wigan,Reading,h,15:00,Home,,3.5,3.38,0.304,0.065,True,Reading (Jack Marriott): injury - top scorer out - League One top scorer injured - Sports Mole 16/10 | Reading (George Earthy): injury - key creative midfielder out - playmaker injured - Sports Mole 16/10,2026-10-16T09:48+00:00,0.6,open,,,,,
+2026-10-17,E2,Stockport,Bromley,ah_away,15:00,AH Away,-1.75,1.98,1.91,,0.147,False,,2026-10-16T09:44+00:00,0.6,settled,1-0,0.98,0.91,0.5013,-0.0073
+2026-10-17,E3,Salford,Crawley Town,a,15:00,Away,,8.0,7.03,0.133,0.063,False,,2026-10-16T09:44+00:00,0.6,settled,2-1,-1.0,-1.0,0.1152,-0.0782
+2026-10-17,E3,Salford,Crawley Town,ah_away,15:00,AH Away,-1.5,1.85,1.77,,0.092,False,,2026-10-16T09:44+00:00,0.6,settled,2-1,0.85,0.77,0.5296,-0.0203
+2026-10-17,E2,Wigan,Reading,h,15:00,Home,,3.5,3.38,0.304,0.065,True,Reading (Jack Marriott): injury - top scorer out - League One top scorer injured - Sports Mole 16/10 | Reading (George Earthy): injury - key creative midfielder out - playmaker injured - Sports Mole 16/10,2026-10-16T09:48+00:00,0.6,settled,1-0,2.5,2.38,0.2207,-0.2276
