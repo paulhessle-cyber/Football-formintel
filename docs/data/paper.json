@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-23T11:37+00:00",
+ "generated": "2026-10-23T15:26+00:00",
  "overall": {
-  "bets": 4,
-  "open": 0,
+  "bets": 7,
+  "open": 3,
   "settled": 4,
   "profit_best": 3.33,
   "roi_best": 0.8325,
@@ -28,8 +28,8 @@
    "avg_odds": 3.5
   },
   "no_news": {
-   "bets": 3,
-   "open": 0,
+   "bets": 6,
+   "open": 3,
    "settled": 3,
    "profit_best": 0.83,
    "roi_best": 0.2767,
@@ -41,8 +41,8 @@
    "avg_odds": 3.94
   },
   "1x2": {
-   "bets": 2,
-   "open": 0,
+   "bets": 3,
+   "open": 1,
    "settled": 2,
    "profit_best": 1.5,
    "roi_best": 0.75,
@@ -59,8 +59,8 @@
    "settled": 0
   },
   "ah": {
-   "bets": 2,
-   "open": 0,
+   "bets": 4,
+   "open": 2,
    "settled": 2,
    "profit_best": 1.83,
    "roi_best": 0.915,
@@ -73,6 +73,57 @@
   }
  },
  "bets": [
+  {
+   "date": "2026-10-24",
+   "time": "12:30",
+   "div": "E2",
+   "home": "Huddersfield",
+   "away": "Wigan",
+   "label": "Draw",
+   "line": null,
+   "odds_best": 5.75,
+   "odds_avg": 5.08,
+   "edge": 0.053,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
+  {
+   "date": "2026-10-24",
+   "time": "12:30",
+   "div": "E2",
+   "home": "Huddersfield",
+   "away": "Wigan",
+   "label": "AH Away",
+   "line": -1.5,
+   "odds_best": 1.83,
+   "odds_avg": 1.79,
+   "edge": 0.096,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
+  {
+   "date": "2026-10-24",
+   "time": "12:30",
+   "div": "E3",
+   "home": "Bristol Rvs",
+   "away": "Swindon",
+   "label": "AH Away",
+   "line": -1.0,
+   "odds_best": 1.85,
+   "odds_avg": 1.8,
+   "edge": 0.066,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
   {
    "date": "2026-10-17",
    "time": "15:00",
