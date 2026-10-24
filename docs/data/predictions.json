@@ -1,6 +1,6 @@
 {
  "version": "0.6",
- "generated": "2026-10-23T15:26+00:00",
+ "generated": "2026-10-24T10:58+00:00",
  "model_fitted_to": "2026-10-22",
  "min_edge": 0.05,
  "error": null,
@@ -16,91 +16,6 @@
   "EC": 1.21
  },
  "fixtures": [
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-10-23",
-   "time": "19:45",
-   "home": "Gateshead",
-   "away": "Tamworth",
-   "xg": {
-    "home": 1.26,
-    "away": 1.95
-   },
-   "xg_model": {
-    "home": 1.46,
-    "away": 1.78
-   },
-   "xg_base": {
-    "home": 1.46,
-    "away": 1.78
-   },
-   "prob": {
-    "h": 0.215,
-    "d": 0.228,
-    "a": 0.557,
-    "o25": 0.614,
-    "u25": 0.386
-   },
-   "prob_base": {
-    "h": 0.317,
-    "d": 0.234,
-    "a": 0.449
-   },
-   "prob_model": {
-    "h": 0.317,
-    "d": 0.234,
-    "a": 0.449,
-    "o25": 0.628,
-    "u25": 0.372
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.0
-   },
-   "prob_market": {
-    "h": 0.215,
-    "d": 0.228,
-    "a": 0.557
-   },
-   "fair": {
-    "h": 4.65,
-    "d": 4.38,
-    "a": 1.8,
-    "o25": 1.63,
-    "u25": 2.59
-   },
-   "odds": {
-    "h": 4.4,
-    "d": 4.5,
-    "a": 1.67,
-    "o25": 1.57,
-    "u25": 2.5
-   },
-   "edge": {
-    "h": -0.054,
-    "d": 0.026,
-    "a": -0.07,
-    "o25": -0.036,
-    "u25": -0.035
-   },
-   "ah_fair": {
-    "line": 0.75,
-    "home": 1.97,
-    "away": 2.03
-   },
-   "ah_market": {
-    "line": 0.75,
-    "home_odds": 2.0,
-    "away_odds": 1.8,
-    "home_edge": 0.015,
-    "away_edge": -0.101
-   },
-   "news": [],
-   "value": [],
-   "unknown_team": []
-  },
   {
    "div": "E2",
    "league": "League One",
