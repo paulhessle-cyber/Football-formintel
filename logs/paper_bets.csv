@@ -3,6 +3,6 @@ date,div,home,away,selection,time,label,line,odds_best,odds_avg,prob,edge,news,n
 2026-10-17,E3,Salford,Crawley Town,a,15:00,Away,,8.0,7.03,0.133,0.063,False,,2026-10-16T09:44+00:00,0.6,settled,2-1,-1.0,-1.0,0.1152,-0.0782
 2026-10-17,E3,Salford,Crawley Town,ah_away,15:00,AH Away,-1.5,1.85,1.77,,0.092,False,,2026-10-16T09:44+00:00,0.6,settled,2-1,0.85,0.77,0.5296,-0.0203
 2026-10-17,E2,Wigan,Reading,h,15:00,Home,,3.5,3.38,0.304,0.065,True,Reading (Jack Marriott): injury - top scorer out - League One top scorer injured - Sports Mole 16/10 | Reading (George Earthy): injury - key creative midfielder out - playmaker injured - Sports Mole 16/10,2026-10-16T09:48+00:00,0.6,settled,1-0,2.5,2.38,0.2207,-0.2276
-2026-10-24,E2,Huddersfield,Wigan,d,12:30,Draw,,5.75,5.08,0.183,0.053,False,,2026-10-23T15:26+00:00,0.6,open,,,,,
-2026-10-24,E2,Huddersfield,Wigan,ah_away,12:30,AH Away,-1.5,1.83,1.79,,0.096,False,,2026-10-23T15:26+00:00,0.6,open,,,,,
-2026-10-24,E3,Bristol Rvs,Swindon,ah_away,12:30,AH Away,-1.0,1.85,1.8,,0.066,False,,2026-10-23T15:26+00:00,0.6,open,,,,,
+2026-10-24,E2,Huddersfield,Wigan,d,12:30,Draw,,5.75,5.08,0.183,0.053,False,,2026-10-23T15:26+00:00,0.6,settled,2-1,-1.0,-1.0,0.1803,0.0366
+2026-10-24,E2,Huddersfield,Wigan,ah_away,12:30,AH Away,-1.5,1.83,1.79,,0.096,False,,2026-10-23T15:26+00:00,0.6,settled,2-1,0.83,0.79,0.5323,-0.026
+2026-10-24,E3,Bristol Rvs,Swindon,ah_away,12:30,AH Away,-1.0,1.85,1.8,,0.066,False,,2026-10-23T15:26+00:00,0.6,settled,0-0,0.85,0.8,,
