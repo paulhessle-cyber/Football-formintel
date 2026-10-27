@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-27T12:10+00:00",
+ "generated": "2026-10-27T16:00+00:00",
  "overall": {
-  "bets": 7,
-  "open": 0,
+  "bets": 9,
+  "open": 2,
   "settled": 7,
   "profit_best": 4.01,
   "roi_best": 0.5729,
@@ -28,8 +28,8 @@
    "avg_odds": 3.5
   },
   "no_news": {
-   "bets": 6,
-   "open": 0,
+   "bets": 8,
+   "open": 2,
    "settled": 6,
    "profit_best": 1.51,
    "roi_best": 0.2517,
@@ -41,8 +41,8 @@
    "avg_odds": 3.54
   },
   "1x2": {
-   "bets": 3,
-   "open": 0,
+   "bets": 4,
+   "open": 1,
    "settled": 3,
    "profit_best": 0.5,
    "roi_best": 0.1667,
@@ -59,8 +59,8 @@
    "settled": 0
   },
   "ah": {
-   "bets": 4,
-   "open": 0,
+   "bets": 5,
+   "open": 1,
    "settled": 4,
    "profit_best": 3.51,
    "roi_best": 0.8775,
@@ -73,6 +73,40 @@
   }
  },
  "bets": [
+  {
+   "date": "2026-10-27",
+   "time": "19:45",
+   "div": "E2",
+   "home": "Leicester",
+   "away": "Wigan",
+   "label": "Away",
+   "line": null,
+   "odds_best": 8.75,
+   "odds_avg": 7.11,
+   "edge": 0.15,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
+  {
+   "date": "2026-10-27",
+   "time": "19:45",
+   "div": "E2",
+   "home": "Leicester",
+   "away": "Wigan",
+   "label": "AH Away",
+   "line": -1.25,
+   "odds_best": 2.03,
+   "odds_avg": 1.95,
+   "edge": 0.096,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
   {
    "date": "2026-10-24",
    "time": "12:30",

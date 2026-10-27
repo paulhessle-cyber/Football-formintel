@@ -6,3 +6,5 @@ date,div,home,away,selection,time,label,line,odds_best,odds_avg,prob,edge,news,n
 2026-10-24,E2,Huddersfield,Wigan,d,12:30,Draw,,5.75,5.08,0.183,0.053,False,,2026-10-23T15:26+00:00,0.6,settled,2-1,-1.0,-1.0,0.1803,0.0366
 2026-10-24,E2,Huddersfield,Wigan,ah_away,12:30,AH Away,-1.5,1.83,1.79,,0.096,False,,2026-10-23T15:26+00:00,0.6,settled,2-1,0.83,0.79,0.5323,-0.026
 2026-10-24,E3,Bristol Rvs,Swindon,ah_away,12:30,AH Away,-1.0,1.85,1.8,,0.066,False,,2026-10-23T15:26+00:00,0.6,settled,0-0,0.85,0.8,,
+2026-10-27,E2,Leicester,Wigan,a,19:45,Away,,8.75,7.11,0.131,0.15,False,,2026-10-27T16:00+00:00,0.6,open,,,,,
+2026-10-27,E2,Leicester,Wigan,ah_away,19:45,AH Away,-1.25,2.03,1.95,,0.096,False,,2026-10-27T16:00+00:00,0.6,open,,,,,
