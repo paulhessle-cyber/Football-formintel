@@ -1,17 +1,17 @@
 {
- "generated": "2026-11-01T16:54+00:00",
+ "generated": "2026-11-02T15:49+00:00",
  "overall": {
   "bets": 12,
-  "open": 3,
-  "settled": 9,
-  "profit_best": 2.01,
-  "roi_best": 0.2233,
-  "profit_avg": 1.65,
-  "roi_avg": 0.1833,
-  "avg_clv": -0.0346,
-  "beat_close_pct": 0.25,
-  "win_pct": 0.556,
-  "avg_odds": 3.95
+  "open": 0,
+  "settled": 12,
+  "profit_best": 0.89,
+  "roi_best": 0.0742,
+  "profit_avg": 0.47,
+  "roi_avg": 0.0392,
+  "avg_clv": -0.0357,
+  "beat_close_pct": 0.273,
+  "win_pct": 0.5,
+  "avg_odds": 4.6
  },
  "by_type": {
   "news": {
@@ -29,29 +29,29 @@
   },
   "no_news": {
    "bets": 11,
-   "open": 3,
-   "settled": 8,
-   "profit_best": -0.49,
-   "roi_best": -0.0613,
-   "profit_avg": -0.73,
-   "roi_avg": -0.0912,
-   "avg_clv": -0.0071,
-   "beat_close_pct": 0.286,
-   "win_pct": 0.5,
-   "avg_odds": 4.0
+   "open": 0,
+   "settled": 11,
+   "profit_best": -1.61,
+   "roi_best": -0.1464,
+   "profit_avg": -1.91,
+   "roi_avg": -0.1736,
+   "avg_clv": -0.0165,
+   "beat_close_pct": 0.3,
+   "win_pct": 0.455,
+   "avg_odds": 4.7
   },
   "1x2": {
    "bets": 6,
-   "open": 2,
-   "settled": 4,
-   "profit_best": -0.5,
-   "roi_best": -0.125,
-   "profit_avg": -0.62,
-   "roi_avg": -0.155,
-   "avg_clv": -0.0474,
+   "open": 0,
+   "settled": 6,
+   "profit_best": -2.5,
+   "roi_best": -0.4167,
+   "profit_avg": -2.62,
+   "roi_avg": -0.4367,
+   "avg_clv": -0.0468,
    "beat_close_pct": 0.5,
-   "win_pct": 0.25,
-   "avg_odds": 6.5
+   "win_pct": 0.167,
+   "avg_odds": 7.29
   },
   "ou25": {
    "bets": 0,
@@ -60,16 +60,16 @@
   },
   "ah": {
    "bets": 6,
-   "open": 1,
-   "settled": 5,
-   "profit_best": 2.51,
-   "roi_best": 0.502,
-   "profit_avg": 2.27,
-   "roi_avg": 0.454,
-   "avg_clv": -0.0219,
+   "open": 0,
+   "settled": 6,
+   "profit_best": 3.39,
+   "roi_best": 0.565,
+   "profit_avg": 3.09,
+   "roi_avg": 0.515,
+   "avg_clv": -0.0225,
    "beat_close_pct": 0.0,
-   "win_pct": 0.8,
-   "avg_odds": 1.91
+   "win_pct": 0.833,
+   "avg_odds": 1.9
   }
  },
  "bets": [
@@ -85,10 +85,10 @@
    "odds_avg": 9.56,
    "edge": 0.167,
    "news": false,
-   "status": "open",
-   "result": null,
-   "profit_best": null,
-   "clv": null
+   "status": "settled",
+   "result": "2-1",
+   "profit_best": -1.0,
+   "clv": 0.0307
   },
   {
    "date": "2026-10-31",
@@ -102,10 +102,10 @@
    "odds_avg": 1.82,
    "edge": 0.072,
    "news": false,
-   "status": "open",
-   "result": null,
-   "profit_best": null,
-   "clv": null
+   "status": "settled",
+   "result": "2-1",
+   "profit_best": 0.88,
+   "clv": -0.0248
   },
   {
    "date": "2026-10-31",
@@ -119,10 +119,10 @@
    "odds_avg": 4.78,
    "edge": 0.091,
    "news": false,
-   "status": "open",
-   "result": null,
-   "profit_best": null,
-   "clv": null
+   "status": "settled",
+   "result": "1-1",
+   "profit_best": -1.0,
+   "clv": -0.1218
   },
   {
    "date": "2026-10-27",
@@ -287,6 +287,9 @@
   3.16,
   4.01,
   3.01,
-  2.01
+  2.01,
+  1.01,
+  1.89,
+  0.89
  ]
 }
