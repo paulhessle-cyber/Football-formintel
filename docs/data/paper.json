@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-03T08:57+00:00",
+ "generated": "2026-11-03T14:11+00:00",
  "overall": {
-  "bets": 12,
-  "open": 0,
+  "bets": 13,
+  "open": 1,
   "settled": 12,
   "profit_best": 0.89,
   "roi_best": 0.0742,
@@ -28,8 +28,8 @@
    "avg_odds": 3.5
   },
   "no_news": {
-   "bets": 11,
-   "open": 0,
+   "bets": 12,
+   "open": 1,
    "settled": 11,
    "profit_best": -1.61,
    "roi_best": -0.1464,
@@ -41,8 +41,8 @@
    "avg_odds": 4.7
   },
   "1x2": {
-   "bets": 6,
-   "open": 0,
+   "bets": 7,
+   "open": 1,
    "settled": 6,
    "profit_best": -2.5,
    "roi_best": -0.4167,
@@ -73,6 +73,23 @@
   }
  },
  "bets": [
+  {
+   "date": "2026-11-03",
+   "time": "19:45",
+   "div": "E2",
+   "home": "Wigan",
+   "away": "Mansfield",
+   "label": "Away",
+   "line": null,
+   "odds_best": 2.88,
+   "odds_avg": 2.16,
+   "edge": 0.251,
+   "news": false,
+   "status": "open",
+   "result": null,
+   "profit_best": null,
+   "clv": null
+  },
   {
    "date": "2026-10-31",
    "time": "15:00",

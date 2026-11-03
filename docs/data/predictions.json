@@ -1,7 +1,7 @@
 {
  "version": "0.6",
- "generated": "2026-11-03T08:57+00:00",
- "model_fitted_to": "2026-11-02",
+ "generated": "2026-11-03T14:11+00:00",
+ "model_fitted_to": "2026-11-03",
  "min_edge": 0.05,
  "error": null,
  "weights": {
@@ -9,20 +9,365 @@
   "w_ou25": 0.0
  },
  "home_advantage": {
-  "E0": 1.2,
+  "E0": 1.198,
   "E1": 1.242,
   "E2": 1.247,
   "E3": 1.211,
   "EC": 1.211
  },
- "fixtures": [],
+ "fixtures": [
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-03",
+   "time": "19:45",
+   "home": "Huddersfield",
+   "away": "Luton",
+   "xg": {
+    "home": 1.75,
+    "away": 1.33
+   },
+   "xg_model": {
+    "home": 1.8,
+    "away": 1.38
+   },
+   "xg_base": {
+    "home": 1.8,
+    "away": 1.38
+   },
+   "prob": {
+    "h": 0.464,
+    "d": 0.254,
+    "a": 0.282,
+    "o25": 0.577,
+    "u25": 0.423
+   },
+   "prob_base": {
+    "h": 0.472,
+    "d": 0.235,
+    "a": 0.293
+   },
+   "prob_model": {
+    "h": 0.472,
+    "d": 0.235,
+    "a": 0.293,
+    "o25": 0.617,
+    "u25": 0.383
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.0
+   },
+   "prob_market": {
+    "h": 0.464,
+    "d": 0.254,
+    "a": 0.282
+   },
+   "fair": {
+    "h": 2.16,
+    "d": 3.94,
+    "a": 3.54,
+    "o25": 1.73,
+    "u25": 2.37
+   },
+   "odds": {
+    "h": 2.05,
+    "d": 3.8,
+    "a": 3.4,
+    "o25": 1.7,
+    "u25": 2.3
+   },
+   "edge": {
+    "h": -0.05,
+    "d": -0.035,
+    "a": -0.04,
+    "o25": -0.018,
+    "u25": -0.028
+   },
+   "ah_fair": {
+    "line": -0.25,
+    "home": 1.88,
+    "away": 2.13
+   },
+   "ah_market": {
+    "line": -0.5,
+    "home_odds": 2.03,
+    "away_odds": 1.83,
+    "home_edge": -0.059,
+    "away_edge": -0.018
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": []
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-03",
+   "time": "19:45",
+   "home": "Wigan",
+   "away": "Mansfield",
+   "xg": {
+    "home": 1.21,
+    "away": 1.48
+   },
+   "xg_model": {
+    "home": 1.08,
+    "away": 1.27
+   },
+   "xg_base": {
+    "home": 1.08,
+    "away": 1.27
+   },
+   "prob": {
+    "h": 0.302,
+    "d": 0.264,
+    "a": 0.435,
+    "o25": 0.548,
+    "u25": 0.452
+   },
+   "prob_base": {
+    "h": 0.311,
+    "d": 0.286,
+    "a": 0.403
+   },
+   "prob_model": {
+    "h": 0.311,
+    "d": 0.286,
+    "a": 0.403,
+    "o25": 0.415,
+    "u25": 0.585
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.0
+   },
+   "prob_market": {
+    "h": 0.302,
+    "d": 0.264,
+    "a": 0.435
+   },
+   "fair": {
+    "h": 3.31,
+    "d": 3.79,
+    "a": 2.3,
+    "o25": 1.83,
+    "u25": 2.21
+   },
+   "odds": {
+    "h": 3.25,
+    "d": 3.75,
+    "a": 2.88,
+    "o25": 1.73,
+    "u25": 2.1
+   },
+   "edge": {
+    "h": -0.019,
+    "d": -0.011,
+    "a": 0.251,
+    "o25": -0.052,
+    "u25": -0.051
+   },
+   "ah_fair": {
+    "line": 0.25,
+    "home": 2.0,
+    "away": 2.0
+   },
+   "ah_market": {
+    "line": 0.25,
+    "home_odds": 1.98,
+    "away_odds": 1.88,
+    "home_edge": -0.01,
+    "away_edge": -0.051
+   },
+   "news": [],
+   "value": [
+    "a"
+   ],
+   "unknown_team": []
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-03",
+   "time": "19:45",
+   "home": "Northampton",
+   "away": "Oldham",
+   "xg": {
+    "home": 1.2,
+    "away": 1.08
+   },
+   "xg_model": {
+    "home": 0.94,
+    "away": 1.03
+   },
+   "xg_base": {
+    "home": 0.94,
+    "away": 1.03
+   },
+   "prob": {
+    "h": 0.403,
+    "d": 0.287,
+    "a": 0.31,
+    "o25": 0.444,
+    "u25": 0.556
+   },
+   "prob_base": {
+    "h": 0.316,
+    "d": 0.317,
+    "a": 0.367
+   },
+   "prob_model": {
+    "h": 0.316,
+    "d": 0.317,
+    "a": 0.367,
+    "o25": 0.315,
+    "u25": 0.685
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.0
+   },
+   "prob_market": {
+    "h": 0.403,
+    "d": 0.287,
+    "a": 0.31
+   },
+   "fair": {
+    "h": 2.48,
+    "d": 3.49,
+    "a": 3.22,
+    "o25": 2.25,
+    "u25": 1.8
+   },
+   "odds": {
+    "h": 2.37,
+    "d": 3.4,
+    "a": 3.2,
+    "o25": 2.15,
+    "u25": 1.73
+   },
+   "edge": {
+    "h": -0.045,
+    "d": -0.026,
+    "a": -0.007,
+    "o25": -0.045,
+    "u25": -0.038
+   },
+   "ah_fair": {
+    "line": -0.25,
+    "home": 2.13,
+    "away": 1.89
+   },
+   "ah_market": {
+    "line": -0.25,
+    "home_odds": 2.03,
+    "away_odds": 1.83,
+    "home_edge": -0.038,
+    "away_edge": -0.027
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": []
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-04",
+   "time": "19:45",
+   "home": "Oxford Utd",
+   "away": "Reading",
+   "xg": {
+    "home": 1.37,
+    "away": 1.46
+   },
+   "xg_model": {
+    "home": 1.22,
+    "away": 1.45
+   },
+   "xg_base": {
+    "home": 1.22,
+    "away": 1.45
+   },
+   "prob": {
+    "h": 0.357,
+    "d": 0.262,
+    "a": 0.381,
+    "o25": 0.562,
+    "u25": 0.438
+   },
+   "prob_base": {
+    "h": 0.316,
+    "d": 0.264,
+    "a": 0.42
+   },
+   "prob_model": {
+    "h": 0.316,
+    "d": 0.264,
+    "a": 0.42,
+    "o25": 0.499,
+    "u25": 0.501
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.0
+   },
+   "prob_market": {
+    "h": 0.357,
+    "d": 0.262,
+    "a": 0.381
+   },
+   "fair": {
+    "h": 2.8,
+    "d": 3.81,
+    "a": 2.63,
+    "o25": 1.78,
+    "u25": 2.28
+   },
+   "odds": {
+    "h": 2.7,
+    "d": 3.7,
+    "a": 2.5,
+    "o25": 1.7,
+    "u25": 2.18
+   },
+   "edge": {
+    "h": -0.036,
+    "d": -0.029,
+    "a": -0.049,
+    "o25": -0.045,
+    "u25": -0.045
+   },
+   "ah_fair": {
+    "line": 0.0,
+    "home": 2.07,
+    "away": 1.94
+   },
+   "ah_market": {
+    "line": 0.0,
+    "home_odds": 1.98,
+    "away_odds": 1.88,
+    "home_edge": -0.031,
+    "away_edge": -0.022
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [
+    "Oxford Utd"
+   ]
+  }
+ ],
  "ratings": [
   {
    "team": "Stockport",
    "div": "E2",
    "attack": 0.184,
-   "defence": 0.16,
-   "overall": 0.344
+   "defence": 0.159,
+   "overall": 0.343
   },
   {
    "team": "Oxford",
@@ -42,7 +387,7 @@
    "team": "Leicester",
    "div": "E2",
    "attack": 0.177,
-   "defence": 0.077,
+   "defence": 0.076,
    "overall": 0.253
   },
   {
@@ -105,7 +450,7 @@
    "team": "Milton Keynes Dons",
    "div": "E2",
    "attack": 0.115,
-   "defence": -0.037,
+   "defence": -0.038,
    "overall": 0.078
   },
   {
@@ -139,16 +484,16 @@
   {
    "team": "Boreham Wood",
    "div": "EC",
-   "attack": 0.177,
+   "attack": 0.178,
    "defence": -0.198,
-   "overall": -0.021
+   "overall": -0.02
   },
   {
    "team": "Salford",
    "div": "E3",
    "attack": -0.036,
    "defence": 0.013,
-   "overall": -0.023
+   "overall": -0.024
   },
   {
    "team": "Grimsby",
@@ -162,7 +507,7 @@
    "div": "E2",
    "attack": -0.078,
    "defence": -0.003,
-   "overall": -0.082
+   "overall": -0.081
   },
   {
    "team": "Blackpool",
@@ -197,7 +542,7 @@
    "div": "E2",
    "attack": 0.01,
    "defence": -0.215,
-   "overall": -0.206
+   "overall": -0.205
   },
   {
    "team": "Exeter",
@@ -217,8 +562,8 @@
    "team": "Swindon",
    "div": "E3",
    "attack": -0.111,
-   "defence": -0.124,
-   "overall": -0.235
+   "defence": -0.125,
+   "overall": -0.236
   },
   {
    "team": "Doncaster",
@@ -252,7 +597,7 @@
    "team": "Carlisle",
    "div": "EC",
    "attack": -0.058,
-   "defence": -0.229,
+   "defence": -0.23,
    "overall": -0.288
   },
   {
@@ -293,22 +638,22 @@
   {
    "team": "Rochdale",
    "div": "E3",
-   "attack": -0.132,
+   "attack": -0.133,
    "defence": -0.209,
    "overall": -0.341
   },
   {
-   "team": "Port Vale",
-   "div": "E3",
-   "attack": -0.415,
-   "defence": 0.025,
-   "overall": -0.39
-  },
-  {
    "team": "Worthing",
    "div": "EC",
-   "attack": 0.034,
+   "attack": 0.035,
    "defence": -0.424,
+   "overall": -0.389
+  },
+  {
+   "team": "Port Vale",
+   "div": "E3",
+   "attack": -0.416,
+   "defence": 0.025,
    "overall": -0.39
   },
   {
@@ -344,7 +689,7 @@
    "div": "E3",
    "attack": -0.116,
    "defence": -0.381,
-   "overall": -0.496
+   "overall": -0.497
   },
   {
    "team": "Halifax",
@@ -371,7 +716,7 @@
    "team": "Woking",
    "div": "EC",
    "attack": -0.273,
-   "defence": -0.242,
+   "defence": -0.243,
    "overall": -0.516
   },
   {
@@ -384,7 +729,7 @@
   {
    "team": "Tranmere",
    "div": "E3",
-   "attack": -0.259,
+   "attack": -0.26,
    "defence": -0.283,
    "overall": -0.542
   },
@@ -440,7 +785,7 @@
   {
    "team": "Shrewsbury",
    "div": "E3",
-   "attack": -0.38,
+   "attack": -0.381,
    "defence": -0.266,
    "overall": -0.647
   },
@@ -573,9 +918,9 @@
   {
    "team": "Ebbsfleet",
    "div": "EC",
-   "attack": -0.628,
+   "attack": -0.627,
    "defence": -0.605,
-   "overall": -1.232
+   "overall": -1.231
   },
   {
    "team": "Brackley Town",
