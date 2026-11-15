@@ -92,11 +92,20 @@ def _ah_profit(hg, ag, line, odds, side):
     return total
 
 
-def _close_prob(m: pd.Series, sel: str, line):
+def _close_prob(m: pd.Series, sel: str, line, bf=None):
     def dv(*cols):
         p = blend.devig_rows([[m.get(c, np.nan) for c in cols]])[0]
         return p if np.all(np.isfinite(p)) else None
 
+    from . import betfair
+    if sel in ("h", "d", "a"):                    # Betfair close recorded by the proxy, when we have it
+        p = betfair.close_probs(bf, "mo")
+        if p:
+            return p["hda".index(sel)]
+    elif sel in ("o25", "u25"):
+        p = betfair.close_probs(bf, "ou")
+        if p:
+            return p[0 if sel == "o25" else 1]
     if sel in ("h", "d", "a"):
         i = "hda".index(sel)
         for cols in (("bfec_h", "bfec_d", "bfec_a"), ("avgc_h", "avgc_d", "avgc_a")):
@@ -118,7 +127,7 @@ def _close_prob(m: pd.Series, sel: str, line):
     return None
 
 
-def settle(results: pd.DataFrame):
+def settle(results: pd.DataFrame, bf_index=None):
     """Settle open bets whose result is now in the data."""
     bets = _load()
     if bets.empty:
@@ -156,7 +165,8 @@ def settle(results: pd.DataFrame):
                 return odds - 1 if won else -1.0
             return _ah_profit(hg, ag, line, odds, sel[3:])
 
-        cp = _close_prob(m, sel, line)
+        bf = bf_index.find(b["div"], b["date"], b["home"], b["away"]) if bf_index is not None else None
+        cp = _close_prob(m, sel, line, bf)
         bets.loc[i, "status"] = "settled"
         bets.loc[i, "result"] = f"{hg}-{ag}"
         bets.loc[i, "profit_best"] = round(profit(b["odds_best"]), 3)

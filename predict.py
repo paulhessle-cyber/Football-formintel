@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 
-from fp import blend, config, data, markets, model, news, newslog, paper
+from fp import betfair, blend, config, data, markets, model, news, newslog, paper
 
 
 def num(x, nd=3):
@@ -27,7 +27,7 @@ def _shift(p_blend: np.ndarray, p_news: np.ndarray, p_base: np.ndarray) -> np.nd
 
 
 def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
-                    weights: dict) -> dict:
+                    weights: dict, bf_index: "betfair.Index | None" = None) -> dict:
     lam0, mu0 = tm.rates(r["home"], r["away"], r["div"])
     hm, am, notes = news.multipliers(events, r["home"], r["away"], r["date"])
     lam, mu_ = lam0 * hm, mu0 * am
@@ -124,6 +124,8 @@ def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
         "news": notes,
         "value": value,
         "unknown_team": [t for t in (r["home"], r["away"]) if t not in tm.attack],
+        "betfair": betfair.match_view(bf_index.find(r["div"], r["date"].strftime("%Y-%m-%d"), r["home"], r["away"]))
+                   if bf_index is not None else None,
     }
 
 
@@ -180,6 +182,14 @@ def main():
     run_ts = datetime.now(timezone.utc).isoformat(timespec="minutes")
 
     results = data.load_results(refresh=not a.no_download)
+
+    bf_error, bf_count = None, 0
+    if not a.no_download:
+        try:
+            bf_count = betfair.update()
+        except Exception as e:                       # proxy down or not set up yet: carry on without
+            bf_error = f"Betfair prices unavailable: {e}"[:200]
+    bf_index = betfair.Index()
     tm = model.fit(data.completed(results))
 
     error = None
@@ -198,12 +208,13 @@ def main():
     if not fixtures.empty:
         today = pd.Timestamp.now().normalize()
         fixtures = fixtures[fixtures["date"] >= today].sort_values(["date", "time", "div"])
-        preds = [predict_fixture(tm, r, events, weights) for _, r in fixtures.iterrows()]
+        preds = [predict_fixture(tm, r, events, weights, bf_index) for _, r in fixtures.iterrows()]
 
     out = {"version": config.VERSION, "generated": run_ts,
            "model_fitted_to": str(tm.fitted_to.date()),
            "min_edge": config.MIN_EDGE, "error": error,
            "weights": {"w_1x2": weights["w_1x2"], "w_ou25": weights["w_ou25"]},
+           "betfair": {"error": bf_error, "fetched": bf_count, "no_betfair_match": bf_index.unmatched[:20]},
            "home_advantage": {k: round(float(np.exp(v)), 3) for k, v in tm.home_adv.items()},
            "fixtures": preds, "ratings": ratings_table(tm)}
     config.SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -212,8 +223,8 @@ def main():
         append_log(preds, run_ts)
         paper.record(preds, fixtures, run_ts)
         newslog.record(preds, run_ts)
-    paper.write_summary(paper.settle(results), run_ts)
-    newslog.write_summary(newslog.settle(results), run_ts)
+    paper.write_summary(paper.settle(results, bf_index), run_ts)
+    newslog.write_summary(newslog.settle(results, bf_index), run_ts)
     print(f"v{config.VERSION}: {len(preds)} fixtures predicted"
           + (f" ({error})" if error else ""))
 

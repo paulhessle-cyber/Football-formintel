@@ -1,7 +1,7 @@
 """Project configuration."""
 from pathlib import Path
 
-VERSION = "0.7"
+VERSION = "0.8"
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -33,6 +33,8 @@ CURRENT_SEASON = SEASONS[-1]
 
 BASE_URL = "https://www.football-data.co.uk/mmz4281/{season}/{div}.csv"
 FIXTURES_URL = "https://www.football-data.co.uk/fixtures.csv"
+# Betfair prices recorded by the FormIntel odds proxy on the droplet (server/football.js)
+BETFAIR_URL = "https://odds.formintel.co.uk/football"
 
 # Model settings
 HALF_LIFE_DAYS = 240        # time decay: a match this old counts half as much

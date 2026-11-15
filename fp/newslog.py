@@ -48,6 +48,9 @@ def record(preds: list[dict], run_ts: str):
             "mkt_h": m["h"], "mkt_d": m["d"], "mkt_a": m["a"],
             "our_h": f["h"], "our_d": f["d"], "our_a": f["a"],
             "tags": " | ".join(p["news"]), "status": "open",
+            # Betfair at the time of tagging (sharper than the bookmaker snapshot)
+            "bf_h": (p.get("betfair") or {}).get("now", [None] * 3)[0],
+            "bf_a": (p.get("betfair") or {}).get("now", [None] * 3)[2],
         })
     if not rows:
         return
@@ -57,14 +60,15 @@ def record(preds: list[dict], run_ts: str):
     allrows.to_csv(NEWS_LOG, index=False)
 
 
-def settle(results: pd.DataFrame) -> pd.DataFrame:
+def settle(results: pd.DataFrame, bf_index=None) -> pd.DataFrame:
     log = _load()
     if log.empty:
         return log
-    for c in ("result", "close_h", "close_d", "close_a", "shift", "move"):
+    for c in ("result", "close_h", "close_d", "close_a", "shift", "move", "measured_on"):
         if c not in log.columns:
             log[c] = np.nan
     log["result"] = log["result"].astype(object)
+    log["measured_on"] = log["measured_on"].astype(object)
     done = results.dropna(subset=["hg", "ag"]).copy()
     done["date_s"] = done["date"].dt.strftime("%Y-%m-%d")
     done = done.drop_duplicates(["date_s", "div", "home", "away"]).set_index(
@@ -78,15 +82,26 @@ def settle(results: pd.DataFrame) -> pd.DataFrame:
                 log.loc[i, "status"] = "void"
             continue
         m = done.loc[key]
-        close = blend.devig_rows([[m.get("bfec_h"), m.get("bfec_d"), m.get("bfec_a")]])[0]
-        if not np.all(np.isfinite(close)):
-            close = blend.devig_rows([[m.get("avgc_h"), m.get("avgc_d"), m.get("avgc_a")]])[0]
+        from . import betfair
+        bf = bf_index.find(b["div"], b["date"], b["home"], b["away"]) if bf_index is not None else None
+        bf_close = betfair.close_probs(bf, "mo")
+        bf_start = (pd.notna(b.get("bf_h")) and pd.notna(b.get("bf_a"))) if "bf_h" in b else False
+        if bf_close and bf_start:
+            close = np.array(bf_close, float)           # Betfair at tagging -> Betfair close
+            mkt_h, mkt_a = float(b["bf_h"]), float(b["bf_a"])
+            log.loc[i, "measured_on"] = "betfair"
+        else:
+            close = blend.devig_rows([[m.get("bfec_h"), m.get("bfec_d"), m.get("bfec_a")]])[0]
+            if not np.all(np.isfinite(close)):
+                close = blend.devig_rows([[m.get("avgc_h"), m.get("avgc_d"), m.get("avgc_a")]])[0]
+            mkt_h, mkt_a = float(b["mkt_h"]), float(b["mkt_a"])
+            log.loc[i, "measured_on"] = "snapshot"
         log.loc[i, "result"] = f"{int(m['hg'])}-{int(m['ag'])}"
         log.loc[i, "status"] = "settled"
         if np.all(np.isfinite(close)):
             log.loc[i, ["close_h", "close_d", "close_a"]] = np.round(close, 4)
             sup = lambda h, a: float(h) - float(a)          # home% minus away%
-            base = sup(b["mkt_h"], b["mkt_a"])
+            base = sup(mkt_h, mkt_a)
             log.loc[i, "shift"] = round(sup(b["our_h"], b["our_a"]) - base, 4)
             log.loc[i, "move"] = round(sup(close[0], close[2]) - base, 4)
     log.to_csv(NEWS_LOG, index=False)

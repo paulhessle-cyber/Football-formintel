@@ -1,4 +1,4 @@
-# Lower League Predictor — v0.7
+# Lower League Predictor — v0.8
 
 Match predictions for **League One, League Two and the National League**, built in layers so each one has to prove it improves accuracy before it's trusted.
 
@@ -8,7 +8,7 @@ Match predictions for **League One, League Two and the National League**, built 
 | 1b. Market blending — model must earn its weight | ✅ v0.4 |
 | 2. News tags from match previews (scheduled, twice a week) | ✅ v0.6 — scored by the news scorecard |
 | 3. Lineup / availability adjustments | planned |
-| 4. Live odds feed (more UK bookmakers, opening → closing moves) | idea |
+| 4. Betfair Exchange prices from the FormIntel odds proxy (`server/football.js`) | ✅ v0.8 |
 
 Markets: 1X2, Over/Under 2.5, Asian handicap (fair price at the market line).
 
@@ -21,6 +21,21 @@ Markets: 1X2, Over/Under 2.5, Asian handicap (fair price at the market line).
 - **Benchmark:** the **Betfair Exchange closing price** (Pinnacle stopped supplying data in 2025). The backtest refits weekly and only uses matches before each week. It reports log loss vs the closing line, plus value-bet ROI and **closing-line value (CLV)**. CLV is the number to trust; ROI over a few dozen bets is mostly luck.
 - **News scorecard:** every match with news tags is scored on whether the bookmakers' price later moved the way the tags predicted (`logs/news_log.csv`). This judges the news layer on every tagged match, not just the rare value bets.
 - **Logging:** every prediction is appended to `logs/predictions_log.csv` before kick-off, with and without news adjustments, so each layer can be scored honestly later.
+
+## Betfair prices (odds proxy on the droplet)
+
+`server/football.js` is an add-on for the FormIntel odds proxy (`odds.formintel.co.uk`). It shares the proxy's Betfair login (a delayed key is fine) and records Match Odds and Over/Under 2.5 prices for every League One, League Two and National League match: every 30 min from 3 days out, every 10 min in the last 6 hours, every 2 min in the last hour. `GET /football?status=1` shows what it's doing.
+
+Install once, on the droplet, from the proxy's folder:
+
+```
+cd /root/formintel-proxy
+curl -fsSLO https://raw.githubusercontent.com/paulhessle-cyber/Football-formintel/main/server/football.js
+curl -fsSLO https://raw.githubusercontent.com/paulhessle-cyber/Football-formintel/main/server/install-football.js
+node install-football.js
+```
+
+then restart the proxy as the installer says. Each predictions run fetches `/football?days=21` and keeps a summary per match in `data/betfair/` (first, 24h, 6h, 1h, 10 min before, and the closing price). The site shows the current Betfair price and how far it has moved; paper bets and the news scorecard use the recorded Betfair closing price.
 
 ## Setup (one time)
 
@@ -71,6 +86,7 @@ docs/index.html   website (GitHub Pages)
 
 ## Changelog
 
+- **v0.8** — Betfair Exchange prices recorded by the odds proxy on the droplet: current price and movement on each fixture, true Betfair closing price for paper bets and the news scorecard.
 - **v0.7** — Fairer odds conversion (power method) removes fake value on long shots. Value flags and paper bets now use the best price at a named UK bookmaker, with a sanity filter for mistimed prices. Team ratings use shots on target as well as goals (1X2 log loss 1.045 → 1.040). Asian handicap value is based on the market's own handicap prices. News scorecard added. Four schedule slots a day to cope with GitHub's late starts. Blend weights are now saved by the weekly backtest. Earlier paper bets are kept but reported separately.
 - **v0.6** — Daily predictions also run whenever `data/news_events.csv` is updated, so new news tags take effect within minutes. Twice-weekly scheduled news tagging from match previews.
 - **v0.5** — Paper bets tab: every value flag is logged at 1 unit the first time it appears (best and average price), settled automatically from results, with closing-line value. Split by news-tagged vs not, and by market. Log: `logs/paper_bets.csv`.

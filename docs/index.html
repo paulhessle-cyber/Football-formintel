@@ -108,6 +108,19 @@ function filters(){
     + (tab==="fixtures" ? `<button class="chip ${valueOnly?"on":""}" data-val="1">Value only</button>` : "");
 }
 
+function bfLine(f){
+  const b = f.betfair;
+  if (!b || !b.now) return "";
+  const pt = x => (x>0?"+":"") + Math.round(x*100);
+  let mv = "";
+  if (b.move != null && b.first_at && Math.abs(b.move) >= 0.02) {
+    const since = new Date(b.first_at).toLocaleDateString("en-GB",{weekday:"short"});
+    mv = ` · <b class="${b.move>0?"good":""}">moved ${pt(Math.abs(b.move))} pts to ${b.move>0?esc(f.home):esc(f.away)}</b> since ${since}`;
+  }
+  const at = b.at ? new Date(b.at).toLocaleTimeString("en-GB",{weekday:"short",hour:"2-digit",minute:"2-digit"}) : "";
+  return `<span>Betfair <b>${pct(b.now[0])} / ${pct(b.now[1])} / ${pct(b.now[2])}</b>${mv}${at ? ` <span class="bk">(${at})</span>` : ""}</span>`;
+}
+
 function card(f){
   const val = f.value.length > 0;
   const e = f.edge, o = f.odds, p = f.prob, bk = f.book || {}, mn = f.min_odds || {};
@@ -134,6 +147,7 @@ function card(f){
     </div>
     <div class="extra">
       <span>Over 2.5 <b>${pct(p.o25)}</b> · fair ${odd(f.fair.o25)} · ${esc(bk.o25 || "best")} ${odd(o.o25)}<span class="${cls(e.o25)}"> ${sgn(e.o25)}</span></span>
+      ${bfLine(f)}
       ${am ? `<span>Handicap <b>${line(am.line)}</b> · fair ${odd(am.home_fair)}/${odd(am.away_fair)} · ${esc(am.home_book || "best")} ${odd(am.home_odds)}/${odd(am.away_odds)}</span>` : ""}
     </div>`;
   const names = {h:"Home",d:"Draw",a:"Away",o25:"Over 2.5",u25:"Under 2.5"};
