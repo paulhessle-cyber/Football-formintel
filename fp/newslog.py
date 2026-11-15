@@ -26,6 +26,7 @@ import pandas as pd
 from . import blend, config
 
 NEWS_LOG = config.LOG_DIR / "news_log.csv"
+NEWS_RUNS = config.DATA_DIR / "news_runs.csv"     # one row per run of the news task
 KEY = ["date", "div", "home", "away"]
 
 
@@ -93,7 +94,16 @@ def settle(results: pd.DataFrame) -> pd.DataFrame:
 
 
 def write_summary(log: pd.DataFrame, run_ts: str):
-    out = {"generated": run_ts, "tagged": 0, "settled": 0, "matches": []}
+    out = {"generated": run_ts, "tagged": 0, "settled": 0, "matches": [], "last_run": None}
+    try:                                   # when did the news task last report in?
+        runs = pd.read_csv(NEWS_RUNS)
+        if len(runs):
+            last = runs.iloc[-1]
+            out["last_run"] = {k: (None if pd.isna(v) else (v.item() if hasattr(v, "item") else v))
+                               for k, v in last.items()}
+            out["runs"] = int(len(runs))
+    except (FileNotFoundError, pd.errors.EmptyDataError, pd.errors.ParserError):
+        pass
     if not log.empty:
         out["tagged"] = int(len(log))
         s = log[(log["status"] == "settled") & log.get("shift", pd.Series(dtype=float)).notna()]

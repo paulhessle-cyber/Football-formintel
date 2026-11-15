@@ -234,10 +234,22 @@ function paperStats(title, s){
     <span class="m">${s.settled ? `ROI ${sgn(s.roi_best)} · CLV ${sgn(s.avg_clv)} · beat close ${pct(s.beat_close_pct)}` : "waiting for results"}</span><span></span></div>`;
 }
 
+function newsRun(){
+  const r = NW && NW.last_run;
+  if (!r || !r.run_utc) return `<p class="warn" style="margin:0 0 8px">The news task hasn't reported a run yet.</p>`;
+  const when = new Date(String(r.run_utc).replace(" ", "T") + (/[zZ+]/.test(r.run_utc) ? "" : "Z"));
+  const days = (Date.now() - when.getTime()) / 864e5;
+  const txt = `Last news check: <b>${when.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"})}</b> · ${r.matches_checked ?? "?"} matches · ${r.tags_added ?? 0} tags${r.note ? " · " + esc(r.note) : ""}`;
+  return days > 5
+    ? `<p class="warn" style="margin:0 0 8px;color:var(--value);font-style:normal">⚠ ${txt}. It should run every Tuesday and Friday — it looks stuck.</p>`
+    : `<p class="note" style="margin:0 0 8px">${txt}</p>`;
+}
+
 function newsCard(){
-  if (!NW || !NW.tagged) return "";
+  if (!NW) return "";
+  if (!NW.tagged) return `<div class="day">News tags scorecard</div><div class="card">${newsRun()}</div>`;
   const pts = x => x == null ? "–" : (x>0?"+":"") + (x*100).toFixed(1);
-  let h = `<div class="day">News tags scorecard</div><div class="card">
+  let h = `<div class="day">News tags scorecard</div><div class="card">${newsRun()}
    <p class="note" style="margin-top:0">For every match with news tags: did the bookmakers' price later move the way the tags said? This is the test of whether tags know something the odds don't. Needs 50+ matches to mean much.</p>
    <div class="big">
     <div><b>${NW.settled}</b><span>Matches scored</span></div>
