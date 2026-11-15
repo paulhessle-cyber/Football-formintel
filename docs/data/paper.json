@@ -1,57 +1,25 @@
 {
- "generated": "2026-11-15T17:23+00:00",
+ "generated": "2026-11-15T21:17+00:00",
  "overall": {
-  "bets": 15,
-  "open": 2,
-  "settled": 13,
-  "profit_best": -0.11,
-  "roi_best": -0.0085,
-  "profit_avg": -0.53,
-  "roi_avg": -0.0408,
-  "avg_clv": -0.0223,
-  "beat_close_pct": 0.333,
-  "win_pct": 0.462,
-  "avg_odds": 4.47
+  "bets": 0,
+  "open": 0,
+  "settled": 0
  },
  "by_type": {
   "news": {
-   "bets": 1,
+   "bets": 0,
    "open": 0,
-   "settled": 1,
-   "profit_best": 2.5,
-   "roi_best": 2.5,
-   "profit_avg": 2.38,
-   "roi_avg": 2.38,
-   "avg_clv": -0.2276,
-   "beat_close_pct": 0.0,
-   "win_pct": 1.0,
-   "avg_odds": 3.5
+   "settled": 0
   },
   "no_news": {
-   "bets": 14,
-   "open": 2,
-   "settled": 12,
-   "profit_best": -2.61,
-   "roi_best": -0.2175,
-   "profit_avg": -2.91,
-   "roi_avg": -0.2425,
-   "avg_clv": -0.0037,
-   "beat_close_pct": 0.364,
-   "win_pct": 0.417,
-   "avg_odds": 4.55
+   "bets": 0,
+   "open": 0,
+   "settled": 0
   },
   "1x2": {
-   "bets": 9,
-   "open": 2,
-   "settled": 7,
-   "profit_best": -3.5,
-   "roi_best": -0.5,
-   "profit_avg": -3.62,
-   "roi_avg": -0.5171,
-   "avg_clv": -0.0222,
-   "beat_close_pct": 0.571,
-   "win_pct": 0.143,
-   "avg_odds": 6.66
+   "bets": 0,
+   "open": 0,
+   "settled": 0
   },
   "ou25": {
    "bets": 0,
@@ -59,17 +27,9 @@
    "settled": 0
   },
   "ah": {
-   "bets": 6,
+   "bets": 0,
    "open": 0,
-   "settled": 6,
-   "profit_best": 3.39,
-   "roi_best": 0.565,
-   "profit_avg": 3.09,
-   "roi_avg": 0.515,
-   "avg_clv": -0.0225,
-   "beat_close_pct": 0.0,
-   "win_pct": 0.833,
-   "avg_odds": 1.9
+   "settled": 0
   }
  },
  "bets": [
@@ -88,7 +48,8 @@
    "status": "open",
    "result": null,
    "profit_best": null,
-   "clv": null
+   "clv": null,
+   "legacy": true
   },
   {
    "date": "2026-11-14",
@@ -105,7 +66,8 @@
    "status": "open",
    "result": null,
    "profit_best": null,
-   "clv": null
+   "clv": null,
+   "legacy": true
   },
   {
    "date": "2026-11-03",
@@ -122,7 +84,8 @@
    "status": "settled",
    "result": "0-0",
    "profit_best": -1.0,
-   "clv": 0.1251
+   "clv": 0.1251,
+   "legacy": true
   },
   {
    "date": "2026-10-31",
@@ -139,7 +102,8 @@
    "status": "settled",
    "result": "2-1",
    "profit_best": -1.0,
-   "clv": 0.0307
+   "clv": 0.0307,
+   "legacy": true
   },
   {
    "date": "2026-10-31",
@@ -156,7 +120,8 @@
    "status": "settled",
    "result": "2-1",
    "profit_best": 0.88,
-   "clv": -0.0248
+   "clv": -0.0248,
+   "legacy": true
   },
   {
    "date": "2026-10-31",
@@ -173,7 +138,8 @@
    "status": "settled",
    "result": "1-1",
    "profit_best": -1.0,
-   "clv": -0.1218
+   "clv": -0.1218,
+   "legacy": true
   },
   {
    "date": "2026-10-27",
@@ -190,7 +156,8 @@
    "status": "settled",
    "result": "3-0",
    "profit_best": -1.0,
-   "clv": 0.0797
+   "clv": 0.0797,
+   "legacy": true
   },
   {
    "date": "2026-10-27",
@@ -207,7 +174,8 @@
    "status": "settled",
    "result": "3-0",
    "profit_best": -1.0,
-   "clv": -0.0339
+   "clv": -0.0339,
+   "legacy": true
   },
   {
    "date": "2026-10-24",
@@ -224,7 +192,8 @@
    "status": "settled",
    "result": "2-1",
    "profit_best": -1.0,
-   "clv": 0.0366
+   "clv": 0.0366,
+   "legacy": true
   },
   {
    "date": "2026-10-24",
@@ -241,7 +210,8 @@
    "status": "settled",
    "result": "2-1",
    "profit_best": 0.83,
-   "clv": -0.026
+   "clv": -0.026,
+   "legacy": true
   },
   {
    "date": "2026-10-24",
@@ -258,7 +228,8 @@
    "status": "settled",
    "result": "0-0",
    "profit_best": 0.85,
-   "clv": null
+   "clv": null,
+   "legacy": true
   },
   {
    "date": "2026-10-17",
@@ -275,7 +246,8 @@
    "status": "settled",
    "result": "1-0",
    "profit_best": 0.98,
-   "clv": -0.0073
+   "clv": -0.0073,
+   "legacy": true
   },
   {
    "date": "2026-10-17",
@@ -292,7 +264,8 @@
    "status": "settled",
    "result": "2-1",
    "profit_best": -1.0,
-   "clv": -0.0782
+   "clv": -0.0782,
+   "legacy": true
   },
   {
    "date": "2026-10-17",
@@ -309,7 +282,8 @@
    "status": "settled",
    "result": "2-1",
    "profit_best": 0.85,
-   "clv": -0.0203
+   "clv": -0.0203,
+   "legacy": true
   },
   {
    "date": "2026-10-17",
@@ -326,22 +300,22 @@
    "status": "settled",
    "result": "1-0",
    "profit_best": 2.5,
-   "clv": -0.2276
+   "clv": -0.2276,
+   "legacy": true
   }
  ],
- "curve": [
-  0.98,
-  -0.02,
-  0.83,
-  3.33,
-  2.33,
-  3.16,
-  4.01,
-  3.01,
-  2.01,
-  1.01,
-  1.89,
-  0.89,
-  -0.11
- ]
+ "legacy": {
+  "bets": 15,
+  "open": 2,
+  "settled": 13,
+  "profit_best": -0.11,
+  "roi_best": -0.0085,
+  "profit_avg": -0.53,
+  "roi_avg": -0.0408,
+  "avg_clv": -0.0223,
+  "beat_close_pct": 0.333,
+  "win_pct": 0.462,
+  "avg_odds": 4.47
+ },
+ "curve": []
 }
