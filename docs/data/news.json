@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T21:28+00:00",
+ "generated": "2026-11-15T21:34+00:00",
  "tagged": 4,
  "settled": 4,
  "matches": [
@@ -44,7 +44,14 @@
    "move": -0.0852
   }
  ],
- "last_run": null,
+ "last_run": {
+  "run_utc": "2026-11-15T21:33",
+  "matches_checked": 0,
+  "previews_found": 0,
+  "tags_added": 0,
+  "note": "no league fixtures this window - international break"
+ },
+ "runs": 1,
  "moved_our_way_pct": 0.5,
  "capture": -1.48,
  "avg_shift_pts": 3.0
