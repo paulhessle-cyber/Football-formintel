@@ -29,10 +29,12 @@ const zlib = require('zlib');
 
 const VERSION = 1;
 // Betfair's competition names (matched loosely; North/South are excluded)
+// Names vary (sponsors, "1" or "One"), so match loosely and rule out the rest.
+const NOT_IT = /north|south|women|ladies|u\d\d|under|youth|cup|trophy|vase|play.?off|reserve|premier|championship|isthmian|southern|northern/i;
 const LEAGUES = [
-  { div: 'E2', re: /^english\s+league\s*(1|one)$/i },
-  { div: 'E3', re: /^english\s+league\s*(2|two)$/i },
-  { div: 'EC', re: /^english\s+national\s+league$/i },
+  { div: 'E2', re: /\bleague\s*(1|one)\b/i },
+  { div: 'E3', re: /\bleague\s*(2|two)\b/i },
+  { div: 'EC', re: /\bnational\s+league\b/i },
 ];
 const MARKET_TYPES = ['MATCH_ODDS', 'OVER_UNDER_25'];
 const AHEAD_MS = 3 * 86400000;                       // follow matches from this long before kick-off
@@ -60,7 +62,7 @@ const days = {};                                     // 'YYYY-MM-DD' -> { v, dat
 const dirty = new Set();
 let saveTimer = null, respCache = null;
 const stat = { since: 0, ticks: 0, calls: 0, errors: 0, lastError: '', lastErrorAt: 0, delayed: null,
-               competitions: {}, catalogueAt: 0, markets: 0 };
+               competitions: {}, englishCompetitions: [], catalogueAt: 0, markets: 0 };
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 function num(v) {
@@ -142,13 +144,16 @@ function flush() {
 // ── which matches to follow ──────────────────────────────────────────────────
 async function refreshCompetitions(t) {
   const list = await call('listCompetitions', { filter: { eventTypeIds: ['1'], marketCountries: ['GB'] } });
-  const found = {};
+  const found = {}, seen = [];
   (list || []).forEach((c) => {
     const name = String((c.competition && c.competition.name) || '').trim();
     const id = c.competition && c.competition.id;
-    LEAGUES.forEach((L) => { if (id && L.re.test(name)) found[L.div] = { id: String(id), name: name }; });
+    if (/english|england/i.test(name)) seen.push(name);
+    if (!id || !/english|england/i.test(name) || NOT_IT.test(name)) return;
+    LEAGUES.forEach((L) => { if (L.re.test(name) && !found[L.div]) found[L.div] = { id: String(id), name: name }; });
   });
-  if (Object.keys(found).length) { compIds = found; stat.competitions = found; }
+  stat.englishCompetitions = seen.sort().slice(0, 40);
+  if (Object.keys(found).length) { compIds = Object.assign({}, compIds, found); stat.competitions = compIds; }
   lastComps = t;
 }
 
@@ -305,7 +310,7 @@ async function tick() {
   try {
     const t = now();
     if (t < backoffUntil) return;
-    if (!lastComps || t - lastComps >= COMPETITIONS_MS || !Object.keys(compIds).length && t - lastComps >= 30 * 60000) {
+    if (!lastComps || t - lastComps >= COMPETITIONS_MS || Object.keys(compIds).length < LEAGUES.length && t - lastComps >= 30 * 60000) {
       try { await refreshCompetitions(t); } catch (e) { noteError(e); }
     }
     if (!lastCatalogue || t - lastCatalogue >= CATALOGUE_MS) {
@@ -368,7 +373,8 @@ function status() {
   mk.forEach((M) => { if (M.ph === 'pre') following++; else if (M.ph === 'live') waitingResult++; });
   return {
     ok: !!started, version: VERSION, since: stat.since ? new Date(stat.since).toISOString() : null,
-    competitions: stat.competitions, firstDay: files[0] || null, days: files.length,
+    competitions: stat.competitions, missing: LEAGUES.map((L) => L.div).filter((d) => !compIds[d]),
+    englishCompetitionsOnBetfair: stat.englishCompetitions, firstDay: files[0] || null, days: files.length,
     marketsFollowed: following, awaitingResult: waitingResult,
     catalogueAt: stat.catalogueAt ? new Date(stat.catalogueAt).toISOString() : null,
     delayedData: stat.delayed, betfairCalls: stat.calls, errors: stat.errors,
