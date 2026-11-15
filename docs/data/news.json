@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T21:17+00:00",
+ "generated": "2026-11-15T21:28+00:00",
  "tagged": 4,
  "settled": 4,
  "matches": [
@@ -44,6 +44,7 @@
    "move": -0.0852
   }
  ],
+ "last_run": null,
  "moved_our_way_pct": 0.5,
  "capture": -1.48,
  "avg_shift_pts": 3.0
