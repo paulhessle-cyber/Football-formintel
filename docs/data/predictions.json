@@ -1,12 +1,17 @@
 {
- "version": "0.7",
- "generated": "2026-11-15T21:34+00:00",
+ "version": "0.8",
+ "generated": "2026-11-15T22:28+00:00",
  "model_fitted_to": "2026-11-09",
  "min_edge": 0.05,
  "error": null,
  "weights": {
   "w_1x2": 0.0,
   "w_ou25": 0.021
+ },
+ "betfair": {
+  "error": "Betfair prices unavailable: 404 Client Error: Not Found for url: https://odds.formintel.co.uk/football?days=21",
+  "fetched": 0,
+  "no_betfair_match": []
  },
  "home_advantage": {
   "E0": 1.175,
