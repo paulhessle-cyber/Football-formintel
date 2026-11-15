@@ -8,7 +8,8 @@ weeks (see fp/blend.py). We report:
   * log loss / Brier for model, pre-match market, blend and the closing line
     (Betfair Exchange close; Pinnacle / bookmaker average as fallbacks)
   * value bets: level stakes where the BLENDED probability gives an edge
-    >= MIN_EDGE at the best pre-match price, with ROI and closing-line value
+    >= MIN_EDGE at the best UK bookmaker price (and, for reference, at the
+    market-wide maximum price), with ROI and closing-line value
 
 The final blend weights are saved to data/blend.json for predict.py.
 
@@ -122,24 +123,31 @@ def summarise(bt: pd.DataFrame, weights: dict) -> dict:
     has1 = np.all(np.isfinite(open1), 1) & np.all(np.isfinite(close1), 1)
     has2 = np.all(np.isfinite(open2), 1) & np.all(np.isfinite(close2), 1)
 
-    # value bets from the BLENDED probabilities at the best pre-match price
-    best = np.column_stack([
-        bt[c1].where(bt[c1].notna(), bt[c2]).to_numpy(float)
-        for c1, c2 in (("max_h", "avg_h"), ("max_d", "avg_d"), ("max_a", "avg_a"),
-                       ("max_o25", "avg_o25"), ("max_u25", "avg_u25"))])
+    # value bets from the BLENDED probabilities: at the best UK bookmaker
+    # price (bettable) and, for reference, at the market-wide maximum price
+    sels = ("h", "d", "a", "o25", "u25")
+    uk = np.column_stack([bt[f"uk_{s_}"].to_numpy(float) for s_ in sels])
+    mx = np.column_stack([bt[f"max_{s_}"].to_numpy(float) for s_ in sels])
     probs = np.column_stack([blend1, blend2])
     closes = np.column_stack([close1, close2])
     won = np.column_stack([res[:, None] == np.arange(3), ou_res[:, None] == np.arange(2)])
-    edge = probs * best - 1
-    sel = np.isfinite(edge) & (edge >= config.MIN_EDGE)
-    i, k = np.where(sel)
-    bets = pd.DataFrame({
-        "div": bt["div"].to_numpy()[i],
-        "market": np.where(k < 3, "1x2", "ou25"),
-        "odds": best[i, k],
-        "profit": np.where(won[i, k], best[i, k] - 1, -1.0),
-        "clv": best[i, k] * closes[i, k] - 1,
-    })
+
+    def find_bets(price):
+        edge = probs * price - 1
+        sel = np.isfinite(edge) & (edge >= config.MIN_EDGE)
+        i, k = np.where(sel)
+        return pd.DataFrame({
+            "div": bt["div"].to_numpy()[i],
+            "market": np.where(k < 3, "1x2", "ou25"),
+            "odds": price[i, k],
+            "profit": np.where(won[i, k], price[i, k] - 1, -1.0),
+            "clv": price[i, k] * closes[i, k] - 1,
+        })
+
+    bets, bets_max = find_bets(uk), find_bets(mx)
+    # what you lose on average just by betting at the best UK price
+    any_uk = np.isfinite(uk) & np.isfinite(closes)
+    uk_margin = float((uk[any_uk] * closes[any_uk] - 1).mean()) if any_uk.any() else None
 
     def r4(x):
         return None if x is None or not np.isfinite(x) else round(float(x), 4)
@@ -178,7 +186,9 @@ def summarise(bt: pd.DataFrame, weights: dict) -> dict:
            "from": str(bt.date.min().date()), "to": str(bt.date.max().date()),
            "min_edge": config.MIN_EDGE,
            "weights": {"w_1x2": weights["w_1x2"], "w_ou25": weights["w_ou25"]},
-           "overall": {**block(np.ones(len(bt), bool)), "value_bets": bet_stats(bets)},
+           "uk_price_vs_fair": r4(uk_margin),
+           "overall": {**block(np.ones(len(bt), bool)), "value_bets": bet_stats(bets),
+                       "value_bets_max": bet_stats(bets_max)},
            "leagues": {}}
     for div, name in config.LEAGUES.items():
         mask = (bt["div"] == div).to_numpy()

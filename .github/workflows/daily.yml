@@ -2,8 +2,13 @@ name: Daily predictions
 
 on:
   schedule:
-    - cron: "12 6 * * *"     # 07:12 UK summer / 06:12 winter
-    - cron: "42 10 * * *"    # late-morning refresh for updated odds and news
+    # GitHub starts scheduled jobs on this repo 7-8 hours late, so there are
+    # four slots: whichever way the delay goes, the site is fresh by morning
+    # and again around lunchtime (UK). Extra runs are harmless.
+    - cron: "12 22 * * *"
+    - cron: "42 2 * * *"
+    - cron: "12 6 * * *"
+    - cron: "42 10 * * *"
   workflow_dispatch:
   push:
     branches: [main]

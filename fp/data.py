@@ -34,7 +34,49 @@ ODDS_COLS = {
     "BFEC>2.5": "bfec_o25", "BFEC<2.5": "bfec_u25",
     # match xG (football-data added this in 2026/27)
     "HxG": "hxg", "AxG": "axg",
+    # shots / shots on target (not published for the National League)
+    "HS": "hs", "AS": "as_", "HST": "hst", "AST": "ast",
 }
+
+# Bookmakers in the football-data files that take UK customers. Their prices
+# are the ones you could actually bet at; "Max" in the files is the highest
+# price from a wider panel and is usually NOT at one of these.
+UK_BOOKS = {
+    "B365": "Bet365", "BFD": "Betfred", "BMGM": "BetMGM", "BV": "BetVictor",
+    "BW": "bwin", "CL": "Coral", "LB": "Ladbrokes", "PP": "Paddy Power",
+    "SKB": "Sky Bet", "WH": "William Hill", "BF": "Betfair",
+}
+# selection -> column suffix in the raw files
+BOOK_SUFFIX = {"h": "H", "d": "D", "a": "A", "o25": ">2.5", "u25": "<2.5",
+               "ahh": "AHH", "aha": "AHA"}
+SELECTIONS = list(BOOK_SUFFIX)
+
+
+def _uk_best(raw: pd.DataFrame) -> dict:
+    """Best pre-match price among UK bookmakers for each selection, and who."""
+    cols = {}
+    for sel, suf in BOOK_SUFFIX.items():
+        have = [(code, name) for code, name in UK_BOOKS.items() if code + suf in raw.columns]
+        if not have:
+            cols[f"uk_{sel}"] = np.nan
+            cols[f"ukb_{sel}"] = ""
+            continue
+        prices = np.column_stack([pd.to_numeric(raw[c + suf], errors="coerce").to_numpy(float)
+                                  for c, _ in have])
+        prices[~(prices > 1)] = np.nan
+        # Sanity check: a bookmaker price above the file's own "market maximum"
+        # was collected at a different time (seen with William Hill in 2024/25)
+        # and isn't a real opportunity, so ignore it.
+        if "Max" + suf in raw.columns:
+            cap = pd.to_numeric(raw["Max" + suf], errors="coerce").to_numpy(float) * 1.011
+            prices[prices > np.where(np.isfinite(cap), cap, np.inf)[:, None]] = np.nan
+        filled = np.where(np.isfinite(prices), prices, -1.0)
+        idx = filled.argmax(axis=1)
+        best = filled.max(axis=1)
+        names = np.array([n for _, n in have], dtype=object)[idx]
+        cols[f"uk_{sel}"] = np.where(best > 1, best, np.nan)
+        cols[f"ukb_{sel}"] = np.where(best > 1, names, "")
+    return cols
 
 
 def _get(url: str, retries: int = 3) -> str:
@@ -67,8 +109,10 @@ def normalise(raw: pd.DataFrame, div: str | None = None) -> pd.DataFrame:
     out["away"] = raw["AwayTeam"].astype(str).str.strip()
     for src, dst in (("FTHG", "hg"), ("FTAG", "ag")):
         out[dst] = pd.to_numeric(raw[src], errors="coerce") if src in raw.columns else np.nan
-    for src, dst in ODDS_COLS.items():
-        out[dst] = pd.to_numeric(raw[src], errors="coerce") if src in raw.columns else np.nan
+    extra = {dst: (pd.to_numeric(raw[src], errors="coerce") if src in raw.columns else np.nan)
+             for src, dst in ODDS_COLS.items()}
+    extra.update(_uk_best(raw))
+    out = pd.concat([out, pd.DataFrame(extra, index=raw.index)], axis=1)
     out = out.dropna(subset=["date"])
     out = out[(out["home"] != "nan") & (out["away"] != "nan")]
     return out.reset_index(drop=True)
@@ -116,3 +160,15 @@ def download_fixtures() -> pd.DataFrame:
 
 def completed(df: pd.DataFrame) -> pd.DataFrame:
     return df.dropna(subset=["hg", "ag"]).reset_index(drop=True)
+
+
+def best_price(r, sel: str):
+    """(price, bookmaker) for a selection: best UK bookmaker, else market max."""
+    uk = r.get(f"uk_{sel}", np.nan)
+    if pd.notna(uk) and uk > 1:
+        return float(uk), str(r.get(f"ukb_{sel}", ""))
+    for col in (f"max_{sel}", f"avg_{sel}"):
+        v = r.get(col, np.nan)
+        if pd.notna(v) and v > 1:
+            return float(v), "market max" if col.startswith("max") else "market avg"
+    return np.nan, ""

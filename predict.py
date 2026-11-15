@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 
-from fp import blend, config, data, markets, model, news, paper
+from fp import blend, config, data, markets, model, news, newslog, paper
 
 
 def num(x, nd=3):
@@ -51,27 +51,44 @@ def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
     m = blend.fit_matrix(mn, f1, f2)
     ph, pd_, pa = f1
     po, pu = f2
-    ah_line, ah_h, ah_a = markets.ah_fair_line(m)
 
-    def best(mx, av):
-        return r[mx] if np.isfinite(r[mx]) else r[av]
-
-    odds = {"h": best("max_h", "avg_h"), "d": best("max_d", "avg_d"),
-            "a": best("max_a", "avg_a"), "o25": best("max_o25", "avg_o25"),
-            "u25": best("max_u25", "avg_u25")}
+    # Prices: best among the UK bookmakers in the data (bettable), with the
+    # wider "market max" kept only for reference.
+    odds, books = {}, {}
+    for sel in ("h", "d", "a", "o25", "u25"):
+        odds[sel], books[sel] = data.best_price(r, sel)
+    odds_max = {sel: r.get(f"max_{sel}", np.nan) for sel in odds}
     probs = {"h": ph, "d": pd_, "a": pa, "o25": po, "u25": pu}
     edges = {k: num(markets.edge(probs[k], odds[k])) for k in probs}
     has_mkt = bool(np.all(np.isfinite(k1)))
     mkt = list(k1[0]) if has_mkt else None
 
+    # Asian handicap: start from the market's own handicap prices (they carry
+    # far more information than a handicap derived from a scoreline model),
+    # then apply the same news shift the scoreline model shows.
     ah_mkt = None
     if np.isfinite(r["ah_line"]):
-        ahh = best("max_ahh", "avg_ahh")
-        aha = best("max_aha", "avg_aha")
-        ah_mkt = {"line": num(r["ah_line"], 2),
+        line = float(r["ah_line"])
+        ahh, bk_h = data.best_price(r, "ahh")
+        aha, bk_a = data.best_price(r, "aha")
+        share = lambda mat: 1 / markets.ah_fair_odds(mat, line, "home")   # home share, pushes excluded
+        e_news = share(m)
+        ka = blend.devig_rows([[r["avg_ahh"], r["avg_aha"]]])[0]
+        if np.all(np.isfinite(ka)):
+            e_base = share(blend.fit_matrix(m0, b1, b2))
+            fh = ka[0] * e_news / max(e_base, 1e-9)
+            fa = ka[1] * (1 - e_news) / max(1 - e_base, 1e-9)
+            fh, fa = fh / (fh + fa), fa / (fh + fa)
+        else:
+            fh, fa = e_news, 1 - e_news
+        live = sum(f * (pw + pl) for f, pw, _, pl in markets.ah_outcomes(m, line))  # stake not refunded
+        ah_mkt = {"line": num(line, 2),
                   "home_odds": num(ahh, 2), "away_odds": num(aha, 2),
-                  "home_edge": num(markets.ah_ev(m, r["ah_line"], ahh)) if np.isfinite(ahh) else None,
-                  "away_edge": num(markets.ah_ev(m, r["ah_line"], aha, "away")) if np.isfinite(aha) else None}
+                  "home_book": bk_h, "away_book": bk_a,
+                  "home_fair": num(1 / fh, 2) if fh > 0 else None,
+                  "away_fair": num(1 / fa, 2) if fa > 0 else None,
+                  "home_edge": num(live * (fh * ahh - 1)) if np.isfinite(ahh) else None,
+                  "away_edge": num(live * (fa * aha - 1)) if np.isfinite(aha) else None}
 
     value = [k for k, e in edges.items() if e is not None and e >= config.MIN_EDGE]
     if ah_mkt:
@@ -97,8 +114,12 @@ def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
         "prob_market": None if mkt is None else {"h": num(mkt[0]), "d": num(mkt[1]), "a": num(mkt[2])},
         "fair": {k: markets.fair(v) for k, v in probs.items()},
         "odds": {k: num(v, 2) for k, v in odds.items()},
+        "book": books,
+        "odds_max": {k: num(v, 2) for k, v in odds_max.items()},
+        # lowest price still worth taking (fair odds + the value threshold)
+        "min_odds": {k: (round((1 + config.MIN_EDGE) / v, 2) if v > 0 else None)
+                     for k, v in probs.items()},
         "edge": edges,
-        "ah_fair": {"line": ah_line, "home": num(ah_h, 2), "away": num(ah_a, 2)},
         "ah_market": ah_mkt,
         "news": notes,
         "value": value,
@@ -190,7 +211,9 @@ def main():
     if preds:
         append_log(preds, run_ts)
         paper.record(preds, fixtures, run_ts)
+        newslog.record(preds, run_ts)
     paper.write_summary(paper.settle(results), run_ts)
+    newslog.write_summary(newslog.settle(results), run_ts)
     print(f"v{config.VERSION}: {len(preds)} fixtures predicted"
           + (f" ({error})" if error else ""))
 

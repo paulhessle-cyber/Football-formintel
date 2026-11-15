@@ -22,12 +22,31 @@ DEFAULT = {"w_1x2": 0.0, "w_ou25": 0.0}
 
 
 def devig_rows(odds: np.ndarray) -> np.ndarray:
-    """Rows of decimal odds -> de-vigged probabilities (NaN if incomplete)."""
+    """Rows of decimal odds -> fair probabilities (NaN if incomplete).
+
+    Uses the POWER method: find k so that sum((1/odds)^k) = 1. Bookmakers
+    load more of their margin onto long shots, so simply scaling 1/odds
+    (the old method) overrates outsiders - on 3,600 lower-league matches
+    outcomes priced under 12% won only two-thirds as often as it implied,
+    which produced fake "value" on long shots. The power method fixes most
+    of that and is measurably more accurate (log loss 1.0253 vs 1.0263).
+    """
     odds = np.asarray(odds, float)
     out = np.full(odds.shape, np.nan)
     ok = np.all(np.isfinite(odds) & (odds > 1), axis=1)
-    inv = 1 / odds[ok]
-    out[ok] = inv / inv.sum(axis=1, keepdims=True)
+    if not ok.any():
+        return out
+    q = 1 / odds[ok]
+    lq = np.log(q)
+    k = np.ones(len(q))
+    for _ in range(60):                      # Newton's method, all rows at once
+        qk = q ** k[:, None]
+        step = (qk.sum(axis=1) - 1) / (qk * lq).sum(axis=1)
+        k = np.clip(k - step, 0.2, 5.0)
+        if np.max(np.abs(step)) < 1e-10:
+            break
+    p = q ** k[:, None]
+    out[ok] = p / p.sum(axis=1, keepdims=True)
     return out
 
 

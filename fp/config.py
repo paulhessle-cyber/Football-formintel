@@ -1,7 +1,7 @@
 """Project configuration."""
 from pathlib import Path
 
-VERSION = "0.6"
+VERSION = "0.7"
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
@@ -38,6 +38,8 @@ FIXTURES_URL = "https://www.football-data.co.uk/fixtures.csv"
 HALF_LIFE_DAYS = 240        # time decay: a match this old counts half as much
 TRAIN_YEARS = 3             # ignore matches older than this
 RIDGE = 0.5                 # pulls thin-data teams toward average
+GOALS_WEIGHT = 0.25         # ratings use 25% goals + 75% shots on target (where
+                            # shots data exists); less luck than goals alone
 MAX_GOALS = 10              # score matrix size
 
 # Value flagging

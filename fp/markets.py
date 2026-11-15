@@ -68,14 +68,6 @@ def ah_fair_line(m: np.ndarray) -> tuple[float, float, float]:
     return best
 
 
-def devig(*odds: float) -> list[float] | None:
-    """Bookmaker odds -> probabilities, margin removed proportionally."""
-    if any(o is None or not np.isfinite(o) or o <= 1 for o in odds):
-        return None
-    inv = np.array([1 / o for o in odds])
-    return list(inv / inv.sum())
-
-
 def fair(p: float) -> float | None:
     return round(1 / p, 2) if p > 0 else None
 

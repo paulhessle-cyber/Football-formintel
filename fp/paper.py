@@ -1,7 +1,8 @@
 """Paper betting: log every flagged bet, then settle it against the result.
 
 A bet is "placed" (1 unit, level stakes) the FIRST time a selection is
-flagged as value, at the best price and the average price shown then.
+flagged as value, at the best UK bookmaker price shown then (and, for
+comparison, the market average price).
 Later runs don't change it - that's what you'd have got if you'd acted.
 
 Once the result is in the data, each bet is settled with:
@@ -16,7 +17,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from . import config
+from . import blend, config
 
 PAPER_FILE = config.LOG_DIR / "paper_bets.csv"
 KEY = ["date", "div", "home", "away", "selection"]
@@ -46,10 +47,12 @@ def record(preds: list[dict], fixtures: pd.DataFrame, run_ts: str):
                 side = sel[3:]
                 am = p["ah_market"] or {}
                 best = am.get(f"{side}_odds")
+                book = am.get(f"{side}_book", "")
                 avg = r[f"avg_ah{side[0]}"]
                 prob, line, edge = None, am.get("line"), am.get(f"{side}_edge")
             else:
                 best = p["odds"][sel]
+                book = (p.get("book") or {}).get(sel, "")
                 avg = r[{"h": "avg_h", "d": "avg_d", "a": "avg_a",
                          "o25": "avg_o25", "u25": "avg_u25"}[sel]]
                 prob, line, edge = p["prob"][sel], None, p["edge"][sel]
@@ -57,7 +60,7 @@ def record(preds: list[dict], fixtures: pd.DataFrame, run_ts: str):
                 "date": p["date"], "time": p["time"], "div": p["div"],
                 "home": p["home"], "away": p["away"], "selection": sel,
                 "label": LABELS.get(sel, sel), "line": line,
-                "odds_best": best,
+                "odds_best": best, "book": book,
                 "odds_avg": round(float(avg), 2) if pd.notna(avg) else None,
                 "prob": prob, "edge": edge,
                 "news": bool(p["news"]), "news_note": " | ".join(p["news"]),
@@ -91,10 +94,8 @@ def _ah_profit(hg, ag, line, odds, side):
 
 def _close_prob(m: pd.Series, sel: str, line):
     def dv(*cols):
-        o = np.array([m.get(c, np.nan) for c in cols], float)
-        if np.all(np.isfinite(o) & (o > 1)):
-            return (1 / o) / (1 / o).sum()
-        return None
+        p = blend.devig_rows([[m.get(c, np.nan) for c in cols]])[0]
+        return p if np.all(np.isfinite(p)) else None
 
     if sel in ("h", "d", "a"):
         i = "hda".index(sel)
@@ -187,25 +188,34 @@ def _stats(b: pd.DataFrame) -> dict:
     return out
 
 
+# Bets flagged before v0.7 used a method that overrated long shots and prices
+# that mostly weren't at UK bookmakers; they are kept but reported separately.
+CURRENT_FROM = "2026-11-15T21:00"
+
+
 def write_summary(bets: pd.DataFrame, run_ts: str):
-    out = {"generated": run_ts, "overall": {"bets": 0}, "by_type": {}, "bets": []}
+    out = {"generated": run_ts, "overall": {"bets": 0}, "by_type": {}, "bets": [],
+           "legacy": {"bets": 0}}
     if not bets.empty:
         bets = bets.copy()
         bets["news"] = bets["news"].astype(str).str.lower() == "true"
-        out["overall"] = _stats(bets)
+        bets["legacy"] = bets["flagged_at"].astype(str) < CURRENT_FROM
+        cur, old = bets[~bets["legacy"]], bets[bets["legacy"]]
+        out["legacy"] = _stats(old)
+        out["overall"] = _stats(cur)
         out["by_type"] = {
-            "news": _stats(bets[bets["news"]]),
-            "no_news": _stats(bets[~bets["news"]]),
-            "1x2": _stats(bets[bets["selection"].isin(["h", "d", "a"])]),
-            "ou25": _stats(bets[bets["selection"].isin(["o25", "u25"])]),
-            "ah": _stats(bets[bets["selection"].str.startswith("ah_")]),
+            "news": _stats(cur[cur["news"]]),
+            "no_news": _stats(cur[~cur["news"]]),
+            "1x2": _stats(cur[cur["selection"].isin(["h", "d", "a"])]),
+            "ou25": _stats(cur[cur["selection"].isin(["o25", "u25"])]),
+            "ah": _stats(cur[cur["selection"].str.startswith("ah_")]),
         }
         # running profit (settled, in kick-off order) for the chart
-        s = bets[bets["status"] == "settled"].sort_values(["date", "time"])
+        s = cur[cur["status"] == "settled"].sort_values(["date", "time"])
         out["curve"] = [round(float(x), 2) for x in s["profit_best"].cumsum()]
         recent = bets.sort_values(["date", "time"], ascending=False).head(300)
-        cols = ["date", "time", "div", "home", "away", "label", "line", "odds_best",
-                "odds_avg", "edge", "news", "status", "result", "profit_best", "clv"]
+        cols = ["date", "time", "div", "home", "away", "label", "line", "odds_best", "book",
+                "odds_avg", "edge", "news", "status", "result", "profit_best", "clv", "legacy"]
         recent = recent[[c for c in cols if c in recent.columns]]
         out["bets"] = json.loads(recent.to_json(orient="records"))
     config.SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)

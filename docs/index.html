@@ -40,6 +40,7 @@ main{padding:8px 16px 40px;max-width:720px;margin:0 auto}
 .grid .pos{color:var(--value);font-weight:700}
 .extra{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:8px;font-size:12.5px;color:var(--muted)}
 .extra b{color:var(--ink);font-weight:600}
+.bk{color:var(--muted);font-size:11px;margin-top:-3px}
 .tag{display:inline-block;background:var(--value-bg);color:var(--value);border-radius:6px;padding:2px 7px;font-size:11.5px;font-weight:700;margin:8px 4px 0 0}
 .news{margin-top:8px;font-size:12.5px;color:var(--news)}
 .warn{font-size:12px;color:var(--muted);margin-top:6px;font-style:italic}
@@ -80,7 +81,7 @@ p.note{color:var(--muted);font-size:12.5px}
 
 <script>
 const LEAGUES = {E2:"League One",E3:"League Two",EC:"National League"};
-let P = null, B = null, PB = null, tab = "fixtures", league = "all", valueOnly = false;
+let P = null, B = null, PB = null, NW = null, tab = "fixtures", league = "all", valueOnly = false;
 
 const pct = x => x == null ? "–" : Math.round(x*100) + "%";
 const odd = x => x == null ? "–" : x.toFixed(2);
@@ -92,6 +93,7 @@ async function load(){
   try { P = await (await fetch("data/predictions.json",{cache:"no-store"})).json(); } catch(e) {}
   try { B = await (await fetch("data/backtest.json",{cache:"no-store"})).json(); } catch(e) {}
   try { PB = await (await fetch("data/paper.json",{cache:"no-store"})).json(); } catch(e) {}
+  try { NW = await (await fetch("data/news.json",{cache:"no-store"})).json(); } catch(e) {}
   document.getElementById("sub").textContent = P
     ? `v${P.version} · updated ${new Date(P.generated).toLocaleString("en-GB",{dateStyle:"medium",timeStyle:"short"})}`
     : "No predictions yet — run the daily workflow";
@@ -108,9 +110,10 @@ function filters(){
 
 function card(f){
   const val = f.value.length > 0;
-  const e = f.edge, o = f.odds, p = f.prob;
+  const e = f.edge, o = f.odds, p = f.prob, bk = f.book || {}, mn = f.min_odds || {};
   const cls = x => x != null && x >= P.min_edge ? "pos" : "";
-  const mk = f.prob_market;
+  const mk = f.prob_market, am = f.ah_market;
+  const b = k => `<span class="bk">${esc(bk[k] || "")}</span>`;
   let html = `<div class="card ${val?"val":""}">
     <div class="meta"><span>${esc(f.league)}</span><span>${esc(f.time)}</span></div>
     <div class="teams"><span>${esc(f.home)} <span class="xg">${f.xg.home} xG</span></span>
@@ -123,18 +126,27 @@ function card(f){
     <div class="grid">
       <span class="h"></span><span class="h">Home</span><span class="h">Draw</span><span class="h">Away</span>
       <span class="h">Fair</span><span>${odd(f.fair.h)}</span><span>${odd(f.fair.d)}</span><span>${odd(f.fair.a)}</span>
-      <span class="h">Best</span><span>${odd(o.h)}</span><span>${odd(o.d)}</span><span>${odd(o.a)}</span>
+      <span class="h">Best UK</span><span>${odd(o.h)}</span><span>${odd(o.d)}</span><span>${odd(o.a)}</span>
+      <span class="h"></span>${b("h")}${b("d")}${b("a")}
       <span class="h">Edge</span><span class="${cls(e.h)}">${sgn(e.h)}</span><span class="${cls(e.d)}">${sgn(e.d)}</span><span class="${cls(e.a)}">${sgn(e.a)}</span>
       <span class="h">Model</span><span>${pct(f.prob_model.h)}</span><span>${pct(f.prob_model.d)}</span><span>${pct(f.prob_model.a)}</span>
       ${mk ? `<span class="h">Market</span><span>${pct(mk.h)}</span><span>${pct(mk.d)}</span><span>${pct(mk.a)}</span>` : ""}
     </div>
     <div class="extra">
-      <span>O2.5 <b>${pct(p.o25)}</b> (fair ${odd(f.fair.o25)}, best ${odd(o.o25)}<span class="${cls(e.o25)}"> ${sgn(e.o25)}</span>)</span>
-      <span>AH fair <b>${line(f.ah_fair.line)}</b> @ ${odd(f.ah_fair.home)}/${odd(f.ah_fair.away)}</span>
-      ${f.ah_market ? `<span>AH mkt <b>${line(f.ah_market.line)}</b> @ ${odd(f.ah_market.home_odds)}/${odd(f.ah_market.away_odds)}</span>` : ""}
+      <span>Over 2.5 <b>${pct(p.o25)}</b> · fair ${odd(f.fair.o25)} · ${esc(bk.o25 || "best")} ${odd(o.o25)}<span class="${cls(e.o25)}"> ${sgn(e.o25)}</span></span>
+      ${am ? `<span>Handicap <b>${line(am.line)}</b> · fair ${odd(am.home_fair)}/${odd(am.away_fair)} · ${esc(am.home_book || "best")} ${odd(am.home_odds)}/${odd(am.away_odds)}</span>` : ""}
     </div>`;
-  const names = {h:"Home",d:"Draw",a:"Away",o25:"Over 2.5",u25:"Under 2.5",ah_home:"AH Home",ah_away:"AH Away"};
-  if (val) html += f.value.map(v => `<span class="tag">Value: ${names[v]||v}</span>`).join("");
+  const names = {h:"Home",d:"Draw",a:"Away",o25:"Over 2.5",u25:"Under 2.5"};
+  if (val) {
+    html += f.value.map(v => {
+      if (v === "ah_home" || v === "ah_away") {
+        const side = v.slice(3), ln = side === "home" ? am.line : -am.line;
+        return `<div class="tag">Value: ${side==="home"?esc(f.home):esc(f.away)} ${line(ln)} @ ${odd(am[side+"_odds"])} ${esc(am[side+"_book"]||"")}</div>`;
+      }
+      return `<div class="tag">Value: ${names[v]||v} @ ${odd(o[v])} ${esc(bk[v]||"")}${mn[v] ? ` · worth taking down to ${odd(mn[v])}` : ""}</div>`;
+    }).join("");
+    html += `<div class="warn">Prices are from the last odds snapshot — check the bookmaker still offers it.</div>`;
+  }
   if (f.news.length) html += `<div class="news">📰 ${f.news.map(esc).join("<br>📰 ")}</div>`;
   if (f.no_market) html += `<div class="warn">No bookmaker prices yet — showing the team model alone.</div>`;
   if (f.unknown_team.length) html += `<div class="warn">No history for ${f.unknown_team.map(esc).join(", ")} — rated as a weak side in this league.</div>`;
@@ -159,37 +171,43 @@ function fixtures(){
 function ratings(){
   if (!P) return `<div class="empty">No ratings yet.</div>`;
   const rows = P.ratings.filter(r => league==="all" || r.div===league);
-  return `<p class="note">Team strength from the baseline model (time-weighted, all three leagues on one scale). Positive = better than average.</p>
+  return `<p class="note">Team strength from goals and shots on target (time-weighted, all three leagues on one scale). Positive = better than average.</p>
   <table><tr><th>#</th><th>Team</th><th>Lg</th><th class="n">Att</th><th class="n">Def</th><th class="n">Overall</th></tr>
   ${rows.map((r,i)=>`<tr><td>${i+1}</td><td>${esc(r.team)}</td><td>${r.div}</td><td class="n">${r.attack.toFixed(2)}</td><td class="n">${r.defence.toFixed(2)}</td><td class="n"><b>${r.overall.toFixed(2)}</b></td></tr>`).join("")}</table>`;
+}
+
+function vbLine(label, vb){
+  if (!vb) return "";
+  return `<div class="extra" style="margin-top:8px"><span>${label} <b>${vb.bets}</b></span>
+    ${vb.bets ? `<span>ROI <b class="${vb.roi>0?"good":"bad"}">${sgn(vb.roi)}</b></span>
+    <span>Avg CLV <b class="${vb.avg_clv>0?"good":"bad"}">${sgn(vb.avg_clv)}</b></span>
+    <span>Beat close <b>${pct(vb.beat_close_pct)}</b></span>
+    <span>Avg odds <b>${vb.avg_odds}</b></span>` : ""}</div>`;
 }
 
 function statBlock(title, s){
   const v = x => x == null ? "–" : x.toFixed(4);
   const row = (label, m, o, b, c) => `<span>${label}</span><span>${v(m)}</span><span>${v(o)}</span><span><b>${v(b)}</b></span><span>${v(c)}</span>`;
-  const vb = s.value_bets || {bets:0};
   return `<div class="card"><div class="teams" style="margin-top:0">${esc(title)} <span class="xg">${s.matches} matches</span></div>
    <div class="stat">
     <span class="h">Log loss</span><span class="h">Model</span><span class="h">Market</span><span class="h">Blend</span><span class="h">Close</span>
     ${row("1X2", s.logloss_1x2_model, s.logloss_1x2_open, s.logloss_1x2_blend, s.logloss_1x2_close)}
     ${row("O/U 2.5", s.logloss_ou25_model, s.logloss_ou25_open, s.logloss_ou25_blend, s.logloss_ou25_close)}
    </div>
-   <div class="extra" style="margin-top:10px">
-    <span>Value bets <b>${vb.bets}</b></span>
-    ${vb.bets ? `<span>ROI <b class="${vb.roi>0?"good":"bad"}">${sgn(vb.roi)}</b></span>
-    <span>Avg CLV <b class="${vb.avg_clv>0?"good":"bad"}">${sgn(vb.avg_clv)}</b></span>
-    <span>Beat close <b>${pct(vb.beat_close_pct)}</b></span>
-    <span>Avg odds <b>${vb.avg_odds}</b></span>` : ""}
-   </div></div>`;
+   ${vbLine("Value bets at UK bookmakers", s.value_bets)}
+   ${vbLine("…at the market's highest price", s.value_bets_max)}
+   </div>`;
 }
 
 function backtest(){
   if (!B) return `<div class="empty">No backtest yet — run the backtest workflow.</div>`;
+  const hurdle = B.uk_price_vs_fair != null ? ` Betting at the best UK price with no edge loses about <b>${Math.abs(B.uk_price_vs_fair*100).toFixed(1)}%</b> on average — that's the bookmakers' margin a bet has to overcome.` : "";
   return `<p class="note">Walk-forward test ${B.from} → ${B.to}: refitted weekly, each match predicted using only earlier results.
    Lower log loss is better. <b>Market</b> = bookmakers' pre-match price, <b>Blend</b> = what this site shows,
    <b>Close</b> = Betfair Exchange closing price (the sharpest benchmark).
-   Value bets = blended edge ≥ ${Math.round(B.min_edge*100)}% at the best pre-match price.
-   Closing-line value (CLV) is the reliable sign of a real edge; ROI over a few hundred bets is mostly luck.</p>`
+   Value bets = blended edge ≥ ${Math.round(B.min_edge*100)}% at the best price from a UK bookmaker.${hurdle}
+   Closing-line value (CLV) is the reliable sign of a real edge; ROI over a few dozen bets is mostly luck.
+   The market's highest price is shown for comparison only — it is usually not at a UK bookmaker.</p>`
    + (B.weights ? `<div class="card"><div class="teams" style="margin-top:0">Model weight</div>
    <div class="extra" style="margin-top:0"><span>1X2 <b>${pct(B.weights.w_1x2)}</b></span><span>Over/Under <b>${pct(B.weights.w_ou25)}</b></span></div>
    <p class="note" style="margin-bottom:0">How much the team model is trusted over the market, learned from past results.
@@ -216,31 +234,63 @@ function paperStats(title, s){
     <span class="m">${s.settled ? `ROI ${sgn(s.roi_best)} · CLV ${sgn(s.avg_clv)} · beat close ${pct(s.beat_close_pct)}` : "waiting for results"}</span><span></span></div>`;
 }
 
-function paperTab(){
-  if (!PB || !PB.overall || !PB.overall.bets) return `<p class="note">Every bet the site flags as value is recorded here at 1 unit, the first time it's flagged, then settled automatically when the result comes in. Nothing recorded yet — bets appear once the daily run flags one.</p>`;
-  const o = PB.overall, t = PB.by_type || {};
-  let h = `<p class="note">Every value bet the site flags, recorded at 1 unit the first time it's flagged and settled automatically. <b>CLV</b> (did we beat the closing price?) is the number to judge by — a few hundred bets are needed before profit means much.</p>
-  <div class="card"><div class="big">
-    <div><b class="${(o.profit_best||0)>=0?"good":"bad"}">${o.settled ? (o.profit_best>0?"+":"")+o.profit_best+"u" : "–"}</b><span>Profit (best price)</span></div>
-    <div><b class="${(o.avg_clv||0)>0?"good":"bad"}">${o.settled ? sgn(o.avg_clv) : "–"}</b><span>Avg CLV</span></div>
-    <div><b>${o.settled ? pct(o.beat_close_pct) : "–"}</b><span>Beat close</span></div>
-  </div>
-  <div class="extra" style="margin-top:0"><span>Bets <b>${o.bets}</b></span><span>Settled <b>${o.settled}</b></span>
-   ${o.settled ? `<span>ROI best <b>${sgn(o.roi_best)}</b></span><span>ROI avg price <b>${sgn(o.roi_avg)}</b></span><span>Won <b>${pct(o.win_pct)}</b></span><span>Avg odds <b>${o.avg_odds}</b></span>` : ""}</div>
-  ${curveSvg(PB.curve)}</div>
-  <div class="card">${paperStats("With news tag", t.news)}${paperStats("No news", t.no_news)}${paperStats("Win/draw/win", t["1x2"])}${paperStats("Over/Under", t.ou25)}${paperStats("Asian handicap", t.ah)}</div>
-  <div class="day">Bets</div><div class="card">`;
-  for (const b of PB.bets) {
-    const st = b.status==="open" ? `<span class="badge b-open">open</span>`
-      : b.status==="void" ? `<span class="badge b-open">void</span>`
-      : `<span class="badge ${b.profit_best>0?"b-win":b.profit_best<0?"b-loss":"b-open"}">${b.result}</span>`;
-    const ln = b.line==null ? null : (b.label==="AH Away" ? -b.line : b.line);
-    const line = ln!=null && b.label.startsWith("AH") ? " "+(ln>0?"+":"")+ln : "";
-    h += `<div class="pl"><span><b>${esc(b.label)}${line}</b> @ ${odd(b.odds_best)}${b.news?" 📰":""} ${st}</span>
-      <span class="r">${b.status==="settled" ? `<b class="${b.profit_best>=0?"good":"bad"}">${b.profit_best>0?"+":""}${b.profit_best.toFixed(2)}</b>` : ""}</span>
-      <span class="m">${esc(b.home)} v ${esc(b.away)} · ${b.date.slice(8)}/${b.date.slice(5,7)} · edge ${sgn(b.edge)}${b.clv!=null?` · CLV ${sgn(b.clv)}`:""}</span><span></span></div>`;
+function newsCard(){
+  if (!NW || !NW.tagged) return "";
+  const pts = x => x == null ? "–" : (x>0?"+":"") + (x*100).toFixed(1);
+  let h = `<div class="day">News tags scorecard</div><div class="card">
+   <p class="note" style="margin-top:0">For every match with news tags: did the bookmakers' price later move the way the tags said? This is the test of whether tags know something the odds don't. Needs 50+ matches to mean much.</p>
+   <div class="big">
+    <div><b>${NW.settled}</b><span>Matches scored</span></div>
+    <div><b>${NW.settled ? pct(NW.moved_our_way_pct) : "–"}</b><span>Price moved our way</span></div>
+    <div><b class="${(NW.capture||0)>0?"good":"bad"}">${NW.settled ? NW.capture.toFixed(2) : "–"}</b><span>Capture (1 = spot on, 0 = no use)</span></div>
+   </div>`;
+  for (const m of NW.matches.slice(0, 25)) {
+    const ok = m.shift != null && m.move != null && Math.sign(m.shift) === Math.sign(m.move);
+    h += `<div class="pl"><span><b>${esc(m.home)} v ${esc(m.away)}</b> <span class="m">${m.date.slice(8)}/${m.date.slice(5,7)}</span>
+      ${m.status==="settled" && m.shift!=null ? `<span class="badge ${ok?"b-win":"b-loss"}">${ok?"moved our way":"moved against"}</span>` : `<span class="badge b-open">${esc(m.status)}</span>`}</span><span></span>
+      <span class="m">${esc(m.tags)}</span><span></span>
+      ${m.shift!=null ? `<span class="m">Tags shifted home-v-away by ${pts(m.shift)} pts · market then moved ${pts(m.move)} pts</span><span></span>` : ""}</div>`;
   }
   return h + `</div>`;
+}
+
+function paperTab(){
+  const intro = `<p class="note">Every value bet the site flags is recorded at 1 unit, at the best UK bookmaker price, the first time it's flagged, then settled automatically. <b>CLV</b> (did we beat the closing price?) is the number to judge by — profit over a few dozen bets is mostly luck.</p>`;
+  const o = (PB && PB.overall) || {bets:0}, t = (PB && PB.by_type) || {}, lg = (PB && PB.legacy) || {bets:0};
+  let h = intro;
+  if (o.bets) {
+    h += `<div class="card"><div class="big">
+      <div><b class="${(o.profit_best||0)>=0?"good":"bad"}">${o.settled ? (o.profit_best>0?"+":"")+o.profit_best+"u" : "–"}</b><span>Profit</span></div>
+      <div><b class="${(o.avg_clv||0)>0?"good":"bad"}">${o.settled ? sgn(o.avg_clv) : "–"}</b><span>Avg CLV</span></div>
+      <div><b>${o.settled ? pct(o.beat_close_pct) : "–"}</b><span>Beat close</span></div>
+    </div>
+    <div class="extra" style="margin-top:0"><span>Bets <b>${o.bets}</b></span><span>Settled <b>${o.settled}</b></span>
+     ${o.settled ? `<span>ROI <b>${sgn(o.roi_best)}</b></span><span>Won <b>${pct(o.win_pct)}</b></span><span>Avg odds <b>${o.avg_odds}</b></span>` : ""}</div>
+    ${curveSvg(PB.curve)}</div>
+    <div class="card">${paperStats("With news tag", t.news)}${paperStats("No news", t.no_news)}${paperStats("Win/draw/win", t["1x2"])}${paperStats("Over/Under", t.ou25)}${paperStats("Asian handicap", t.ah)}</div>`;
+  } else {
+    h += `<div class="card"><p class="note" style="margin:0">No bets flagged yet under the current method. Genuine value at UK bookmakers is rare — in the two-season test it came up only about five times a season without news.</p></div>`;
+  }
+  if (lg.bets) h += `<div class="card"><div class="pl" style="border:0;padding:0"><span><b>Earlier method (to 15 Nov)</b> <span class="m">${lg.settled} settled · ${lg.open} open</span></span>
+    <span class="r">${lg.settled ? `<b class="${lg.profit_best>=0?"good":"bad"}">${lg.profit_best>0?"+":""}${lg.profit_best}u</b>` : ""}</span>
+    <span class="m">${lg.settled ? `CLV ${sgn(lg.avg_clv)} · beat close ${pct(lg.beat_close_pct)}. ` : ""}These flags overrated long shots and used prices mostly not available at UK bookmakers, so they're kept separately.</span><span></span></div></div>`;
+  h += newsCard();
+  const list = (PB && PB.bets) || [];
+  if (list.length) {
+    h += `<div class="day">Bets</div><div class="card">`;
+    for (const b of list) {
+      const st = b.status==="open" ? `<span class="badge b-open">open</span>`
+        : b.status==="void" ? `<span class="badge b-open">void</span>`
+        : `<span class="badge ${b.profit_best>0?"b-win":b.profit_best<0?"b-loss":"b-open"}">${b.result}</span>`;
+      const ln = b.line==null ? null : (b.label==="AH Away" ? -b.line : b.line);
+      const line = ln!=null && b.label.startsWith("AH") ? " "+(ln>0?"+":"")+ln : "";
+      h += `<div class="pl" ${b.legacy?'style="opacity:.6"':""}><span><b>${esc(b.label)}${line}</b> @ ${odd(b.odds_best)}${b.book?" "+esc(b.book):""}${b.news?" 📰":""} ${st}</span>
+        <span class="r">${b.status==="settled" ? `<b class="${b.profit_best>=0?"good":"bad"}">${b.profit_best>0?"+":""}${b.profit_best.toFixed(2)}</b>` : ""}</span>
+        <span class="m">${esc(b.home)} v ${esc(b.away)} · ${b.date.slice(8)}/${b.date.slice(5,7)} · edge ${sgn(b.edge)}${b.clv!=null?` · CLV ${sgn(b.clv)}`:""}${b.legacy?" · earlier method":""}</span><span></span></div>`;
+    }
+    h += `</div>`;
+  }
+  return h;
 }
 
 function render(){
