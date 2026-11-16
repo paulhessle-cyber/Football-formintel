@@ -25,17 +25,18 @@
   "English Sky Bet Championship",
   "English Sky Bet League 1",
   "English Sky Bet League 2",
-  "English U21 Premier League Cup"
+  "English U21 Premier League Cup",
+  "English U21 Pro Development League"
  ],
  "firstDay": null,
  "days": 0,
  "marketsFollowed": 0,
  "awaitingResult": 0,
- "catalogueAt": "2026-11-16T09:54:09.924Z",
+ "catalogueAt": "2026-11-16T15:24:12.570Z",
  "delayedData": null,
- "betfairCalls": 24,
+ "betfairCalls": 36,
  "errors": 0,
  "lastError": null,
  "lastErrorAt": null,
- "now": "2026-11-16T10:08:59.160Z"
+ "now": "2026-11-16T15:44:12.841Z"
 }
