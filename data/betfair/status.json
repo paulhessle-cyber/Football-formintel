@@ -31,11 +31,11 @@
  "days": 0,
  "marketsFollowed": 0,
  "awaitingResult": 0,
- "catalogueAt": "2026-11-16T01:54:06.270Z",
+ "catalogueAt": "2026-11-16T09:54:09.924Z",
  "delayedData": null,
- "betfairCalls": 8,
+ "betfairCalls": 24,
  "errors": 0,
  "lastError": null,
  "lastErrorAt": null,
- "now": "2026-11-16T01:58:41.865Z"
+ "now": "2026-11-16T10:08:59.160Z"
 }
