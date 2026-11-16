@@ -1,0 +1,41 @@
+{
+ "ok": true,
+ "version": 1,
+ "since": "2026-11-15T22:53:34.836Z",
+ "competitions": {
+  "EC": {
+   "id": "11086347",
+   "name": "English National League"
+  },
+  "E2": {
+   "id": "35",
+   "name": "English Sky Bet League 1"
+  },
+  "E3": {
+   "id": "37",
+   "name": "English Sky Bet League 2"
+  }
+ },
+ "missing": [],
+ "englishCompetitionsOnBetfair": [
+  "English Football League Cup",
+  "English National League",
+  "English National League North",
+  "English Premier League",
+  "English Sky Bet Championship",
+  "English Sky Bet League 1",
+  "English Sky Bet League 2",
+  "English U21 Premier League Cup"
+ ],
+ "firstDay": null,
+ "days": 0,
+ "marketsFollowed": 0,
+ "awaitingResult": 0,
+ "catalogueAt": "2026-11-16T01:54:06.270Z",
+ "delayedData": null,
+ "betfairCalls": 8,
+ "errors": 0,
+ "lastError": null,
+ "lastErrorAt": null,
+ "now": "2026-11-16T01:58:41.865Z"
+}
