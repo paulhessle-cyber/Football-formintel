@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T04:27+00:00",
+ "generated": "2026-11-17T09:03+00:00",
  "tagged": 4,
  "settled": 4,
  "matches": [
@@ -45,13 +45,13 @@
   }
  ],
  "last_run": {
-  "run_utc": "2026-11-15T21:33",
-  "matches_checked": 0,
+  "run_utc": "2026-11-17T09:02",
+  "matches_checked": 34,
   "previews_found": 0,
   "tags_added": 0,
-  "note": "no league fixtures 16-19 Nov - international break"
+  "note": "34 fixtures Sat 21 Nov from Sky - previews not yet published"
  },
- "runs": 2,
+ "runs": 3,
  "moved_our_way_pct": 0.5,
  "capture": -1.48,
  "avg_shift_pts": 3.0
