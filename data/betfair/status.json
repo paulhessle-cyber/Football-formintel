@@ -21,6 +21,7 @@
   "English Football League Cup",
   "English National League",
   "English National League North",
+  "English National League South",
   "English Premier League",
   "English Sky Bet Championship",
   "English Sky Bet League 1",
@@ -32,11 +33,11 @@
  "days": 0,
  "marketsFollowed": 0,
  "awaitingResult": 0,
- "catalogueAt": "2026-11-16T20:24:15.216Z",
+ "catalogueAt": "2026-11-17T04:24:20.447Z",
  "delayedData": null,
- "betfairCalls": 46,
+ "betfairCalls": 63,
  "errors": 0,
  "lastError": null,
  "lastErrorAt": null,
- "now": "2026-11-16T20:40:03.318Z"
+ "now": "2026-11-17T04:28:02.533Z"
 }
