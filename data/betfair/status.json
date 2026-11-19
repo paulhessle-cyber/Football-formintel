@@ -19,24 +19,23 @@
  "missing": [],
  "englishCompetitionsOnBetfair": [
   "English Football League Cup",
-  "English Ladies League Cup",
   "English National League",
+  "English National League North",
+  "English National League South",
   "English Premier League",
   "English Sky Bet Championship",
   "English Sky Bet League 1",
-  "English Sky Bet League 2",
-  "English U21 Premier League Cup",
-  "English U21 Pro Development League"
+  "English Sky Bet League 2"
  ],
  "firstDay": "2026-11-20",
  "days": 2,
  "marketsFollowed": 72,
  "awaitingResult": 0,
- "catalogueAt": "2026-11-18T19:00:13.942Z",
+ "catalogueAt": "2026-11-19T03:00:18.116Z",
  "delayedData": true,
- "betfairCalls": 219,
+ "betfairCalls": 284,
  "errors": 11,
  "lastError": "Unexpected token < in JSON at position 0",
  "lastErrorAt": "2026-11-17T08:59:53.959Z",
- "now": "2026-11-18T19:01:14.610Z"
+ "now": "2026-11-19T03:20:20.867Z"
 }
