@@ -212,3 +212,44 @@ def close_probs(rec: dict | None, market: str) -> list | None:
     if not rec or market not in rec:
         return None
     return rec[market].get("close")
+
+
+# ── fixtures from Betfair (when football-data's fixture file is stale) ──────
+
+def fixtures(teams_by_div: dict, all_teams: list, existing: pd.DataFrame | None = None,
+             now_ms: int | None = None) -> pd.DataFrame:
+    """Upcoming matches Betfair has that the football-data fixture file doesn't.
+
+    teams_by_div: {div: [football-data team names]} to translate Betfair's names.
+    Returns rows in the same shape as data.normalise(), with no bookmaker odds.
+    """
+    import time as _time
+    now_ms = now_ms or int(_time.time() * 1000)
+    have = {}
+    if existing is not None and not existing.empty:
+        for _, r in existing.iterrows():
+            have.setdefault((r["div"], r["date"].strftime("%Y-%m-%d")), []).append((r["home"], r["away"]))
+
+    def to_fd(name, div):
+        best, score = None, 0.0
+        for pool in (teams_by_div.get(div, []), all_teams):
+            for t in pool:
+                sc = _sim(name, t)
+                if sc > score:
+                    best, score = t, sc
+            if score >= 0.75:
+                break
+        return best if score >= 0.6 else name
+
+    rows = []
+    for rec in load():
+        mo = rec.get("mo") or {}
+        if rec.get("ko", 0) < now_ms - 10 * 60000 or mo.get("close") or not mo.get("last"):
+            continue                                   # started, or no prices
+        home, away = to_fd(rec["bf_home"], rec["div"]), to_fd(rec["bf_away"], rec["div"])
+        dup = any(min(_sim(home, h), _sim(away, a)) >= 0.75 for h, a in have.get((rec["div"], rec["date"]), []))
+        if dup:
+            continue
+        rows.append({"div": rec["div"], "date": pd.Timestamp(rec["date"]), "time": rec["time"],
+                     "home": home, "away": away, "src": "betfair"})
+    return pd.DataFrame(rows)

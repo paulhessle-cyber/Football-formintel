@@ -1,4 +1,4 @@
-# Lower League Predictor — v0.8
+# Lower League Predictor — v0.9
 
 Match predictions for **League One, League Two and the National League**, built in layers so each one has to prove it improves accuracy before it's trusted.
 
@@ -86,6 +86,7 @@ docs/index.html   website (GitHub Pages)
 
 ## Changelog
 
+- **v0.9** — When football-data's fixture file is out of date, upcoming matches come from the Betfair recorder instead (Betfair price as the market; no value flags until bookmaker prices arrive).
 - **v0.8** — Betfair Exchange prices recorded by the odds proxy on the droplet: current price and movement on each fixture, true Betfair closing price for paper bets and the news scorecard.
 - **v0.7** — Fairer odds conversion (power method) removes fake value on long shots. Value flags and paper bets now use the best price at a named UK bookmaker, with a sanity filter for mistimed prices. Team ratings use shots on target as well as goals (1X2 log loss 1.045 → 1.040). Asian handicap value is based on the market's own handicap prices. News scorecard added. Four schedule slots a day to cope with GitHub's late starts. Blend weights are now saved by the weekly backtest. Earlier paper bets are kept but reported separately.
 - **v0.6** — Daily predictions also run whenever `data/news_events.csv` is updated, so new news tags take effect within minutes. Twice-weekly scheduled news tagging from match previews.

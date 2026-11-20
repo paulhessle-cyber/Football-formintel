@@ -143,7 +143,7 @@ function card(f){
       <span class="h"></span>${b("h")}${b("d")}${b("a")}
       <span class="h">Edge</span><span class="${cls(e.h)}">${sgn(e.h)}</span><span class="${cls(e.d)}">${sgn(e.d)}</span><span class="${cls(e.a)}">${sgn(e.a)}</span>
       <span class="h">Model</span><span>${pct(f.prob_model.h)}</span><span>${pct(f.prob_model.d)}</span><span>${pct(f.prob_model.a)}</span>
-      ${mk ? `<span class="h">Market</span><span>${pct(mk.h)}</span><span>${pct(mk.d)}</span><span>${pct(mk.a)}</span>` : ""}
+      ${mk ? `<span class="h">${f.market_source==="betfair"?"Betfair":"Market"}</span><span>${pct(mk.h)}</span><span>${pct(mk.d)}</span><span>${pct(mk.a)}</span>` : ""}
     </div>
     <div class="extra">
       <span>Over 2.5 <b>${pct(p.o25)}</b> · fair ${odd(f.fair.o25)} · ${esc(bk.o25 || "best")} ${odd(o.o25)}<span class="${cls(e.o25)}"> ${sgn(e.o25)}</span></span>
@@ -162,6 +162,7 @@ function card(f){
     html += `<div class="warn">Prices are from the last odds snapshot — check the bookmaker still offers it.</div>`;
   }
   if (f.news.length) html += `<div class="news">📰 ${f.news.map(esc).join("<br>📰 ")}</div>`;
+  if (f.market_source === "betfair") html += `<div class="warn">Bookmaker prices aren't in the data yet — this match uses Betfair's price, so no value flags.</div>`;
   if (f.no_market) html += `<div class="warn">No bookmaker prices yet — showing the team model alone.</div>`;
   if (f.unknown_team.length) html += `<div class="warn">No history for ${f.unknown_team.map(esc).join(", ")} — rated as a weak side in this league.</div>`;
   return html + `</div>`;

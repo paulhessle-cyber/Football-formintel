@@ -39,8 +39,17 @@ def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
     base2, news2 = np.array(markets.over_under(m0)), np.array(markets.over_under(mn))
 
     # 2. blend the pre-news model with the market, using backtested weights
-    k1 = blend.devig_rows([[r["avg_h"], r["avg_d"], r["avg_a"]]])
-    k2 = blend.devig_rows([[r["avg_o25"], r["avg_u25"]]])
+    bf_rec = (bf_index.find(r["div"], r["date"].strftime("%Y-%m-%d"), r["home"], r["away"])
+              if bf_index is not None else None)
+    bf_view = betfair.match_view(bf_rec)
+    k1 = blend.devig_rows([[r.get("avg_h", np.nan), r.get("avg_d", np.nan), r.get("avg_a", np.nan)]])
+    k2 = blend.devig_rows([[r.get("avg_o25", np.nan), r.get("avg_u25", np.nan)]])
+    market_src = "bookmakers"
+    if not np.all(np.isfinite(k1)) and bf_view:      # no bookmaker prices yet: use Betfair
+        k1 = np.array([bf_view["now"]], float)
+        market_src = "betfair"
+        if not np.all(np.isfinite(k2)) and bf_view.get("over"):
+            k2 = np.array([[bf_view["over"], 1 - bf_view["over"]]], float)
     b1 = blend.pool(base1[None], k1, weights["w_1x2"])[0]
     b2 = blend.pool(base2[None], k2, weights["w_ou25"])[0]
 
@@ -67,7 +76,7 @@ def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
     # far more information than a handicap derived from a scoreline model),
     # then apply the same news shift the scoreline model shows.
     ah_mkt = None
-    if np.isfinite(r["ah_line"]):
+    if np.isfinite(r.get("ah_line", np.nan)):
         line = float(r["ah_line"])
         ahh, bk_h = data.best_price(r, "ahh")
         aha, bk_a = data.best_price(r, "aha")
@@ -124,8 +133,8 @@ def predict_fixture(tm: model.TeamModel, r: pd.Series, events: pd.DataFrame,
         "news": notes,
         "value": value,
         "unknown_team": [t for t in (r["home"], r["away"]) if t not in tm.attack],
-        "betfair": betfair.match_view(bf_index.find(r["div"], r["date"].strftime("%Y-%m-%d"), r["home"], r["away"]))
-                   if bf_index is not None else None,
+        "betfair": bf_view,
+        "market_source": market_src if has_mkt else None,
     }
 
 
@@ -205,16 +214,27 @@ def main():
     events = news.load()
     weights = blend.load()
     preds = []
+    today = pd.Timestamp.now().normalize()
     if not fixtures.empty:
-        today = pd.Timestamp.now().normalize()
-        fixtures = fixtures[fixtures["date"] >= today].sort_values(["date", "time", "div"])
+        fixtures = fixtures[fixtures["date"] >= today]
+    # football-data's fixture file is sometimes days out of date: add any match
+    # Betfair has that it doesn't (no bookmaker odds for those - Betfair only)
+    teams_by_div = {}
+    for t, lg in tm.team_league.items():
+        teams_by_div.setdefault(lg, []).append(t)
+    bf_fx = betfair.fixtures(teams_by_div, list(tm.attack), fixtures)
+    if not bf_fx.empty:
+        fixtures = pd.concat([fixtures, bf_fx], ignore_index=True)
+    if not fixtures.empty:
+        fixtures = fixtures.sort_values(["date", "time", "div"]).reset_index(drop=True)
         preds = [predict_fixture(tm, r, events, weights, bf_index) for _, r in fixtures.iterrows()]
 
     out = {"version": config.VERSION, "generated": run_ts,
            "model_fitted_to": str(tm.fitted_to.date()),
            "min_edge": config.MIN_EDGE, "error": error,
            "weights": {"w_1x2": weights["w_1x2"], "w_ou25": weights["w_ou25"]},
-           "betfair": {"error": bf_error, "fetched": bf_count, "no_betfair_match": bf_index.unmatched[:20]},
+           "betfair": {"error": bf_error, "fetched": bf_count, "no_betfair_match": bf_index.unmatched[:20],
+                       "fixtures_from_betfair": int(len(bf_fx))},
            "home_advantage": {k: round(float(np.exp(v)), 3) for k, v in tm.home_adv.items()},
            "fixtures": preds, "ratings": ratings_table(tm)}
     config.SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
