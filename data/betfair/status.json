@@ -33,11 +33,11 @@
  "days": 2,
  "marketsFollowed": 72,
  "awaitingResult": 0,
- "catalogueAt": "2026-11-20T15:00:36.279Z",
+ "catalogueAt": "2026-11-20T18:30:38.029Z",
  "delayedData": true,
- "betfairCalls": 595,
+ "betfairCalls": 664,
  "errors": 11,
  "lastError": "Unexpected token < in JSON at position 0",
  "lastErrorAt": "2026-11-17T08:59:53.959Z",
- "now": "2026-11-20T15:26:01.710Z"
+ "now": "2026-11-20T18:48:00.713Z"
 }
