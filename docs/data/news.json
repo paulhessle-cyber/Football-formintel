@@ -1,8 +1,68 @@
 {
- "generated": "2026-11-20T09:04+00:00",
- "tagged": 4,
+ "generated": "2026-11-20T09:14+00:00",
+ "tagged": 10,
  "settled": 4,
  "matches": [
+  {
+   "date": "2026-11-21",
+   "home": "Oxford",
+   "away": "Wycombe",
+   "tags": "Wycombe (Danny Ings): injury - main striker out - hamstring in FA Cup v Accrington - Sports Mole 19/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-21",
+   "home": "Leyton Orient",
+   "away": "AFC Wimbledon",
+   "tags": "AFC Wimbledon (Jayden Stockley): suspended - key forward - red card v Blackpool one-match ban - Sports Mole 19/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-21",
+   "home": "Plymouth",
+   "away": "Peterboro",
+   "tags": "Peterboro (Tom O'Connor): injury - first-choice defender out - hamstring at Luton out up to 6 weeks - Sports Mole 19/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-21",
+   "home": "Blackpool",
+   "away": "Wigan",
+   "tags": "Blackpool: manager sacked - interim in charge - Evatt sacked 19/11 Thompson interim - Sports Mole 19/11 | Blackpool (Bailey Peacock-Farrell): doubt - first-choice GK - sickness bug missed last game - Sports Mole 19/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-21",
+   "home": "Reading",
+   "away": "Bromley",
+   "tags": "Reading (Jack Marriott): return - top scorer back - back from injury expected to start - Sports Mole 19/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-20",
+   "home": "Barnsley",
+   "away": "Sheffield Weds",
+   "tags": "Barnsley (Cameron McGeehan): suspended - captain and top scorer - five yellow cards ban - Sports Mole 19/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
   {
    "date": "2026-10-17",
    "home": "Plymouth",
