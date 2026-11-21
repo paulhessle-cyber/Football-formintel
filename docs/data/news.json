@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T03:11+00:00",
+ "generated": "2026-11-21T09:02+00:00",
  "tagged": 10,
  "settled": 4,
  "matches": [
@@ -105,13 +105,13 @@
   }
  ],
  "last_run": {
-  "run_utc": "2026-11-20T09:03",
-  "matches_checked": 51,
-  "previews_found": 12,
-  "tags_added": 7,
-  "note": "51 fixtures 20-24 Nov - SM previews L1 Fri/Sat only - none for L2/NL"
+  "run_utc": "2026-11-21T09:01",
+  "matches_checked": 34,
+  "previews_found": 0,
+  "tags_added": 0,
+  "note": "34 Sat fixtures - L1 tagged 20 Nov - no L2/NL previews - midweek previews not yet out"
  },
- "runs": 4,
+ "runs": 5,
  "moved_our_way_pct": 0.5,
  "capture": -1.48,
  "avg_shift_pts": 3.0
