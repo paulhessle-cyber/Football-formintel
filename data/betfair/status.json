@@ -31,13 +31,13 @@
  ],
  "firstDay": "2026-11-20",
  "days": 2,
- "marketsFollowed": 68,
- "awaitingResult": 0,
- "catalogueAt": "2026-11-21T10:00:47.862Z",
+ "marketsFollowed": 56,
+ "awaitingResult": 1,
+ "catalogueAt": "2026-11-21T14:30:50.352Z",
  "delayedData": true,
- "betfairCalls": 873,
+ "betfairCalls": 1028,
  "errors": 11,
  "lastError": "Unexpected token < in JSON at position 0",
  "lastErrorAt": "2026-11-17T08:59:53.959Z",
- "now": "2026-11-21T10:10:14.774Z"
+ "now": "2026-11-21T14:38:22.214Z"
 }
