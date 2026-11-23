@@ -31,14 +31,14 @@
   "English U21 Pro Development League"
  ],
  "firstDay": "2026-11-20",
- "days": 4,
- "marketsFollowed": 34,
+ "days": 5,
+ "marketsFollowed": 38,
  "awaitingResult": 0,
- "catalogueAt": "2026-11-23T18:01:20.958Z",
+ "catalogueAt": "2026-11-23T22:01:22.196Z",
  "delayedData": true,
- "betfairCalls": 1420,
+ "betfairCalls": 1452,
  "errors": 11,
  "lastError": "Unexpected token < in JSON at position 0",
  "lastErrorAt": "2026-11-17T08:59:53.959Z",
- "now": "2026-11-23T18:05:27.835Z"
+ "now": "2026-11-23T22:12:49.141Z"
 }
