@@ -1,67 +1,67 @@
 {
- "generated": "2026-11-23T11:12+00:00",
+ "generated": "2026-11-23T18:05+00:00",
  "tagged": 10,
- "settled": 4,
+ "settled": 10,
  "matches": [
   {
    "date": "2026-11-21",
    "home": "Oxford",
    "away": "Wycombe",
    "tags": "Wycombe (Danny Ings): injury - main striker out - hamstring in FA Cup v Accrington - Sports Mole 19/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "4-3",
+   "shift": 0.0345,
+   "move": 0.0652
   },
   {
    "date": "2026-11-21",
    "home": "Leyton Orient",
    "away": "AFC Wimbledon",
    "tags": "AFC Wimbledon (Jayden Stockley): suspended - key forward - red card v Blackpool one-match ban - Sports Mole 19/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "4-1",
+   "shift": 0.0229,
+   "move": 0.0314
   },
   {
    "date": "2026-11-21",
    "home": "Plymouth",
    "away": "Peterboro",
    "tags": "Peterboro (Tom O'Connor): injury - first-choice defender out - hamstring at Luton out up to 6 weeks - Sports Mole 19/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "0-2",
+   "shift": 0.0212,
+   "move": -0.0669
   },
   {
    "date": "2026-11-21",
    "home": "Blackpool",
    "away": "Wigan",
    "tags": "Blackpool: manager sacked - interim in charge - Evatt sacked 19/11 Thompson interim - Sports Mole 19/11 | Blackpool (Bailey Peacock-Farrell): doubt - first-choice GK - sickness bug missed last game - Sports Mole 19/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "1-2",
+   "shift": -0.0219,
+   "move": -0.0517
   },
   {
    "date": "2026-11-21",
    "home": "Reading",
    "away": "Bromley",
    "tags": "Reading (Jack Marriott): return - top scorer back - back from injury expected to start - Sports Mole 19/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "0-1",
+   "shift": 0.021,
+   "move": 0.0041
   },
   {
    "date": "2026-11-20",
    "home": "Barnsley",
    "away": "Sheffield Weds",
    "tags": "Barnsley (Cameron McGeehan): suspended - captain and top scorer - five yellow cards ban - Sports Mole 19/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "1-2",
+   "shift": -0.0525,
+   "move": -0.0299
   },
   {
    "date": "2026-10-17",
@@ -112,7 +112,7 @@
   "note": "34 Sat fixtures - L1 tagged 20 Nov - no L2/NL previews - midweek previews not yet out"
  },
  "runs": 5,
- "moved_our_way_pct": 0.5,
- "capture": -1.48,
- "avg_shift_pts": 3.0
+ "moved_our_way_pct": 0.7,
+ "capture": -0.36,
+ "avg_shift_pts": 2.9
 }
