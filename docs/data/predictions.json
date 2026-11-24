@@ -1,6 +1,6 @@
 {
  "version": "0.9",
- "generated": "2026-11-24T08:59+00:00",
+ "generated": "2026-11-24T12:54+00:00",
  "model_fitted_to": "2026-11-24",
  "min_edge": 0.05,
  "error": null,
@@ -12,7 +12,7 @@
   "error": null,
   "fetched": 55,
   "no_betfair_match": [],
-  "fixtures_from_betfair": 19
+  "fixtures_from_betfair": 0
  },
  "home_advantage": {
   "E0": 1.193,
@@ -27,237 +27,11 @@
    "league": "League One",
    "date": "2026-11-24",
    "time": "19:45",
-   "home": "Stevenage",
-   "away": "Sheffield Weds",
-   "xg": {
-    "home": 1.33,
-    "away": 1.24
-   },
-   "xg_model": {
-    "home": 1.34,
-    "away": 0.92
-   },
-   "xg_base": {
-    "home": 1.34,
-    "away": 0.92
-   },
-   "prob": {
-    "h": 0.357,
-    "d": 0.273,
-    "a": 0.369,
-    "o25": 0.519,
-    "u25": 0.481
-   },
-   "prob_base": {
-    "h": 0.462,
-    "d": 0.284,
-    "a": 0.254
-   },
-   "prob_model": {
-    "h": 0.462,
-    "d": 0.284,
-    "a": 0.254,
-    "o25": 0.391,
-    "u25": 0.609
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.357,
-    "d": 0.273,
-    "a": 0.369
-   },
-   "fair": {
-    "h": 2.8,
-    "d": 3.66,
-    "a": 2.71,
-    "o25": 1.93,
-    "u25": 2.08
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 2.94,
-    "d": 3.85,
-    "a": 2.84,
-    "o25": 2.02,
-    "u25": 2.18
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.3575,
-     0.2731,
-     0.3695
-    ],
-    "first": [
-     0.3177,
-     0.2775,
-     0.4048
-    ],
-    "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0751,
-    "mt": 1284,
-    "over": 0.5212
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "E2",
-   "league": "League One",
-   "date": "2026-11-24",
-   "time": "19:45",
-   "home": "Bradford",
-   "away": "Barnsley",
-   "xg": {
-    "home": 1.92,
-    "away": 1.05
-   },
-   "xg_model": {
-    "home": 1.49,
-    "away": 0.98
-   },
-   "xg_base": {
-    "home": 1.49,
-    "away": 0.98
-   },
-   "prob": {
-    "h": 0.605,
-    "d": 0.21,
-    "a": 0.185,
-    "o25": 0.639,
-    "u25": 0.361
-   },
-   "prob_base": {
-    "h": 0.488,
-    "d": 0.266,
-    "a": 0.246
-   },
-   "prob_model": {
-    "h": 0.488,
-    "d": 0.266,
-    "a": 0.246,
-    "o25": 0.448,
-    "u25": 0.552
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.605,
-    "d": 0.21,
-    "a": 0.185
-   },
-   "fair": {
-    "h": 1.65,
-    "d": 4.76,
-    "a": 5.42,
-    "o25": 1.56,
-    "u25": 2.77
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 1.73,
-    "d": 5.0,
-    "a": 5.69,
-    "o25": 1.64,
-    "u25": 2.91
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.6054,
-     0.21,
-     0.1846
-    ],
-    "first": [
-     0.5985,
-     0.2212,
-     0.1803
-    ],
-    "first_at": 1795293053616,
-    "at": 1795509116480,
-    "move": 0.0026,
-    "mt": 1230,
-    "over": 0.6424
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "E2",
-   "league": "League One",
-   "date": "2026-11-24",
-   "time": "19:45",
    "home": "Blackpool",
    "away": "Leicester",
    "xg": {
     "home": 1.2,
-    "away": 1.89
+    "away": 1.91
    },
    "xg_model": {
     "home": 1.23,
@@ -268,11 +42,11 @@
     "away": 1.68
    },
    "prob": {
-    "h": 0.22,
-    "d": 0.223,
-    "a": 0.556,
-    "o25": 0.627,
-    "u25": 0.373
+    "h": 0.218,
+    "d": 0.226,
+    "a": 0.557,
+    "o25": 0.635,
+    "u25": 0.365
    },
    "prob_base": {
     "h": 0.285,
@@ -292,53 +66,63 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.219,
-    "d": 0.219,
+    "h": 0.217,
+    "d": 0.221,
     "a": 0.562
    },
    "fair": {
-    "h": 4.54,
-    "d": 4.48,
+    "h": 4.6,
+    "d": 4.43,
     "a": 1.8,
-    "o25": 1.6,
-    "u25": 2.68
+    "o25": 1.58,
+    "u25": 2.74
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 4.5,
+    "d": 4.5,
+    "a": 1.73,
+    "o25": 1.5,
+    "u25": 2.5
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Bet365",
+    "d": "Sky Bet",
+    "a": "bwin",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 4.5,
+    "d": 4.5,
+    "a": 1.75,
+    "o25": 1.5,
+    "u25": 2.75
    },
    "min_odds": {
-    "h": 4.77,
-    "d": 4.7,
+    "h": 4.83,
+    "d": 4.66,
     "a": 1.89,
-    "o25": 1.68,
-    "u25": 2.81
+    "o25": 1.65,
+    "u25": 2.87
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.021,
+    "d": 0.015,
+    "a": -0.036,
+    "o25": -0.048,
+    "u25": -0.087
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": 0.75,
+    "home_odds": 1.95,
+    "away_odds": 1.9,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.98,
+    "away_fair": 2.02,
+    "home_edge": -0.015,
+    "away_edge": -0.05
+   },
    "news": [
     "Blackpool (Dale Taylor): injury - forward doubt - forced off v Wigan 21/11 - Sports Mole 22/11",
     "Leicester (Will Smallbone): injury - key midfielder out - injured v Huddersfield 21/11 Page replaces - Sports Mole 22/11"
@@ -347,9 +131,9 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.2191,
-     0.2191,
-     0.5618
+     0.2183,
+     0.2159,
+     0.5658
     ],
     "first": [
      0.2671,
@@ -357,12 +141,135 @@
      0.5058
     ],
     "first_at": 1795294853711,
-    "at": 1795509116480,
-    "move": -0.104,
-    "mt": 3507,
-    "over": 0.6458
+    "at": 1795523517731,
+    "move": -0.1088,
+    "mt": 4139,
+    "over": 0.6826
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Bradford",
+   "away": "Barnsley",
+   "xg": {
+    "home": 1.95,
+    "away": 1.05
+   },
+   "xg_model": {
+    "home": 1.49,
+    "away": 0.98
+   },
+   "xg_base": {
+    "home": 1.49,
+    "away": 0.98
+   },
+   "prob": {
+    "h": 0.618,
+    "d": 0.203,
+    "a": 0.179,
+    "o25": 0.651,
+    "u25": 0.349
+   },
+   "prob_base": {
+    "h": 0.488,
+    "d": 0.266,
+    "a": 0.246
+   },
+   "prob_model": {
+    "h": 0.488,
+    "d": 0.266,
+    "a": 0.246,
+    "o25": 0.448,
+    "u25": 0.552
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.618,
+    "d": 0.203,
+    "a": 0.179
+   },
+   "fair": {
+    "h": 1.62,
+    "d": 4.94,
+    "a": 5.58,
+    "o25": 1.54,
+    "u25": 2.87
+   },
+   "odds": {
+    "h": 1.58,
+    "d": 4.75,
+    "a": 5.25,
+    "o25": 1.5,
+    "u25": 2.5
+   },
+   "book": {
+    "h": "bwin",
+    "d": "Sky Bet",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 1.6,
+    "d": 4.75,
+    "a": 5.25,
+    "o25": 1.5,
+    "u25": 2.7
+   },
+   "min_odds": {
+    "h": 1.7,
+    "d": 5.18,
+    "a": 5.86,
+    "o25": 1.61,
+    "u25": 3.01
+   },
+   "edge": {
+    "h": -0.023,
+    "d": -0.038,
+    "a": -0.06,
+    "o25": -0.023,
+    "u25": -0.128
+   },
+   "ah_market": {
+    "line": -1.0,
+    "home_odds": 1.98,
+    "away_odds": 1.88,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.04,
+    "away_fair": 1.96,
+    "home_edge": -0.022,
+    "away_edge": -0.029
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5835,
+     0.2179,
+     0.1986
+    ],
+    "first": [
+     0.5985,
+     0.2212,
+     0.1803
+    ],
+    "first_at": 1795293053616,
+    "at": 1795523517731,
+    "move": -0.0333,
+    "mt": 2083,
+    "over": 0.6333
+   },
+   "market_source": "bookmakers"
   },
   {
    "div": "E2",
@@ -373,7 +280,7 @@
    "away": "Wycombe",
    "xg": {
     "home": 1.26,
-    "away": 1.88
+    "away": 1.87
    },
    "xg_model": {
     "home": 1.37,
@@ -384,11 +291,11 @@
     "away": 1.84
    },
    "prob": {
-    "h": 0.237,
-    "d": 0.239,
-    "a": 0.524,
-    "o25": 0.597,
-    "u25": 0.403
+    "h": 0.242,
+    "d": 0.237,
+    "a": 0.521,
+    "o25": 0.595,
+    "u25": 0.405
    },
    "prob_base": {
     "h": 0.267,
@@ -408,53 +315,63 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.221,
-    "d": 0.239,
-    "a": 0.54
+    "h": 0.226,
+    "d": 0.237,
+    "a": 0.537
    },
    "fair": {
-    "h": 4.22,
-    "d": 4.18,
-    "a": 1.91,
-    "o25": 1.67,
-    "u25": 2.48
+    "h": 4.13,
+    "d": 4.22,
+    "a": 1.92,
+    "o25": 1.68,
+    "u25": 2.47
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 4.33,
+    "d": 4.0,
+    "a": 1.8,
+    "o25": 1.67,
+    "u25": 2.15
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Bet365",
+    "d": "Sky Bet",
+    "a": "bwin",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 4.33,
+    "d": 4.0,
+    "a": 1.83,
+    "o25": 1.67,
+    "u25": 2.25
    },
    "min_odds": {
-    "h": 4.43,
-    "d": 4.39,
-    "a": 2.0,
-    "o25": 1.76,
-    "u25": 2.61
+    "h": 4.34,
+    "d": 4.43,
+    "a": 2.02,
+    "o25": 1.77,
+    "u25": 2.59
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 0.048,
+    "d": -0.052,
+    "a": -0.062,
+    "o25": -0.007,
+    "u25": -0.128
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": 0.5,
+    "home_odds": 2.03,
+    "away_odds": 1.78,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.06,
+    "away_fair": 1.94,
+    "home_edge": -0.016,
+    "away_edge": -0.083
+   },
    "news": [
     "Wycombe (Dan Casey): suspended - first-choice CB - sent off at Oxford 21/11 - Sports Mole 22/11",
     "Wycombe (Luke Leahy): suspended - regular defender - sent off at Oxford 21/11 - Sports Mole 22/11"
@@ -463,9 +380,9 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.2209,
-     0.2391,
-     0.54
+     0.2038,
+     0.2379,
+     0.5583
     ],
     "first": [
      0.236,
@@ -473,50 +390,50 @@
      0.5213
     ],
     "first_at": 1795458681284,
-    "at": 1795509146503,
-    "move": -0.0338,
-    "mt": 404,
-    "over": 0.5798
+    "at": 1795523547715,
+    "move": -0.0692,
+    "mt": 1070,
+    "over": 0.5565
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
   },
   {
-   "div": "E3",
-   "league": "League Two",
+   "div": "E2",
+   "league": "League One",
    "date": "2026-11-24",
    "time": "19:45",
-   "home": "Port Vale",
-   "away": "Northampton",
+   "home": "Stevenage",
+   "away": "Sheffield Weds",
    "xg": {
-    "home": 1.33,
-    "away": 0.96
+    "home": 1.32,
+    "away": 1.24
    },
    "xg_model": {
-    "home": 1.21,
-    "away": 0.91
+    "home": 1.34,
+    "away": 0.92
    },
    "xg_base": {
-    "home": 1.24,
-    "away": 0.91
+    "home": 1.34,
+    "away": 0.92
    },
    "prob": {
-    "h": 0.447,
-    "d": 0.294,
-    "a": 0.258,
-    "o25": 0.421,
-    "u25": 0.579
+    "h": 0.356,
+    "d": 0.27,
+    "a": 0.373,
+    "o25": 0.517,
+    "u25": 0.483
    },
    "prob_base": {
-    "h": 0.436,
-    "d": 0.295,
-    "a": 0.269
+    "h": 0.462,
+    "d": 0.284,
+    "a": 0.254
    },
    "prob_model": {
-    "h": 0.425,
-    "d": 0.299,
-    "a": 0.276,
-    "o25": 0.356,
-    "u25": 0.644
+    "h": 0.462,
+    "d": 0.284,
+    "a": 0.254,
+    "o25": 0.391,
+    "u25": 0.609
    },
    "no_market": false,
    "weights": {
@@ -524,76 +441,84 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.459,
-    "d": 0.29,
-    "a": 0.252
+    "h": 0.356,
+    "d": 0.27,
+    "a": 0.373
    },
    "fair": {
-    "h": 2.23,
-    "d": 3.4,
-    "a": 3.87,
-    "o25": 2.37,
-    "u25": 1.73
+    "h": 2.81,
+    "d": 3.7,
+    "a": 2.68,
+    "o25": 1.93,
+    "u25": 2.07
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 2.65,
+    "d": 3.6,
+    "a": 2.55,
+    "o25": 1.85,
+    "u25": 1.95
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "bwin",
+    "d": "Sky Bet",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 2.75,
+    "d": 3.6,
+    "a": 2.6,
+    "o25": 1.85,
+    "u25": 2.0
    },
    "min_odds": {
-    "h": 2.35,
-    "d": 3.57,
-    "a": 4.06,
-    "o25": 2.49,
-    "u25": 1.81
+    "h": 2.95,
+    "d": 3.88,
+    "a": 2.81,
+    "o25": 2.03,
+    "u25": 2.17
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.056,
+    "d": -0.026,
+    "a": -0.048,
+    "o25": -0.043,
+    "u25": -0.059
    },
-   "ah_market": null,
-   "news": [
-    "Port Vale (Onel Hernandez): suspended - key creative winger - red card at Barnet 21/11 - OneValeFan 23/11"
-   ],
+   "ah_market": {
+    "line": 0.0,
+    "home_odds": 1.93,
+    "away_odds": 1.93,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.04,
+    "away_fair": 1.97,
+    "home_edge": -0.038,
+    "away_edge": -0.013
+   },
+   "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.4585,
-     0.2897,
-     0.2519
+     0.325,
+     0.2815,
+     0.3935
     ],
     "first": [
-     0.3629,
-     0.2742,
-     0.3629
+     0.3177,
+     0.2775,
+     0.4048
     ],
     "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.2066,
-    "mt": 432,
-    "over": 0.4332
+    "at": 1795523517731,
+    "move": 0.0186,
+    "mt": 2559,
+    "over": 0.4813
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
   },
   {
    "div": "E3",
@@ -603,8 +528,8 @@
    "home": "Crawley Town",
    "away": "Barnet",
    "xg": {
-    "home": 1.25,
-    "away": 1.78
+    "home": 1.26,
+    "away": 1.82
    },
    "xg_model": {
     "home": 1.27,
@@ -615,11 +540,11 @@
     "away": 1.62
    },
    "prob": {
-    "h": 0.25,
-    "d": 0.242,
-    "a": 0.508,
-    "o25": 0.603,
-    "u25": 0.397
+    "h": 0.246,
+    "d": 0.237,
+    "a": 0.517,
+    "o25": 0.618,
+    "u25": 0.382
    },
    "prob_base": {
     "h": 0.297,
@@ -639,61 +564,71 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.251,
-    "d": 0.242,
-    "a": 0.508
+    "h": 0.246,
+    "d": 0.237,
+    "a": 0.517
    },
    "fair": {
-    "h": 3.99,
-    "d": 4.14,
-    "a": 1.97,
-    "o25": 1.66,
-    "u25": 2.52
+    "h": 4.06,
+    "d": 4.23,
+    "a": 1.93,
+    "o25": 1.62,
+    "u25": 2.62
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 3.8,
+    "d": 4.0,
+    "a": 1.85,
+    "o25": 1.57,
+    "u25": 2.35
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Paddy Power",
+    "d": "Sky Bet",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 3.8,
+    "d": 4.0,
+    "a": 1.88,
+    "o25": 1.58,
+    "u25": 2.5
    },
    "min_odds": {
-    "h": 4.19,
-    "d": 4.35,
-    "a": 2.07,
-    "o25": 1.74,
-    "u25": 2.64
+    "h": 4.26,
+    "d": 4.44,
+    "a": 2.03,
+    "o25": 1.7,
+    "u25": 2.75
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.064,
+    "d": -0.054,
+    "a": -0.044,
+    "o25": -0.029,
+    "u25": -0.103
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": 0.5,
+    "home_odds": 2.0,
+    "away_odds": 1.85,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.05,
+    "away_fair": 1.95,
+    "home_edge": -0.024,
+    "away_edge": -0.053
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.2505,
-     0.2416,
-     0.508
+     0.2467,
+     0.2393,
+     0.514
     ],
     "first": [
      0.3167,
@@ -701,50 +636,50 @@
      0.3167
     ],
     "first_at": 1795332659604,
-    "at": 1795509116480,
-    "move": -0.2575,
-    "mt": 768,
-    "over": 0.6037
+    "at": 1795523517731,
+    "move": -0.2673,
+    "mt": 1051,
+    "over": 0.6052
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
   },
   {
-   "div": "EC",
-   "league": "National League",
+   "div": "E3",
+   "league": "League Two",
    "date": "2026-11-24",
    "time": "19:45",
-   "home": "Hornchurch",
-   "away": "Sutton",
+   "home": "Port Vale",
+   "away": "Northampton",
    "xg": {
-    "home": 1.32,
-    "away": 1.25
+    "home": 1.31,
+    "away": 0.96
    },
    "xg_model": {
-    "home": 1.33,
-    "away": 1.37
+    "home": 1.21,
+    "away": 0.91
    },
    "xg_base": {
-    "home": 1.33,
-    "away": 1.37
+    "home": 1.24,
+    "away": 0.91
    },
    "prob": {
-    "h": 0.375,
-    "d": 0.297,
-    "a": 0.328,
-    "o25": 0.457,
-    "u25": 0.543
+    "h": 0.446,
+    "d": 0.287,
+    "a": 0.268,
+    "o25": 0.415,
+    "u25": 0.585
    },
    "prob_base": {
-    "h": 0.358,
-    "d": 0.263,
-    "a": 0.379
+    "h": 0.436,
+    "d": 0.295,
+    "a": 0.269
    },
    "prob_model": {
-    "h": 0.358,
-    "d": 0.263,
-    "a": 0.379,
-    "o25": 0.506,
-    "u25": 0.494
+    "h": 0.425,
+    "d": 0.299,
+    "a": 0.276,
+    "o25": 0.356,
+    "u25": 0.644
    },
    "no_market": false,
    "weights": {
@@ -752,639 +687,86 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.375,
-    "d": 0.297,
-    "a": 0.328
+    "h": 0.457,
+    "d": 0.283,
+    "a": 0.261
    },
    "fair": {
-    "h": 2.67,
-    "d": 3.37,
-    "a": 3.05,
-    "o25": 2.19,
-    "u25": 1.84
+    "h": 2.24,
+    "d": 3.49,
+    "a": 3.74,
+    "o25": 2.41,
+    "u25": 1.71
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 2.05,
+    "d": 3.4,
+    "a": 3.6,
+    "o25": 2.15,
+    "u25": 1.67
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Bet365",
+    "d": "Sky Bet",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 2.15,
+    "d": 3.4,
+    "a": 3.6,
+    "o25": 2.2,
+    "u25": 1.67
    },
    "min_odds": {
-    "h": 2.8,
-    "d": 3.54,
-    "a": 3.2,
-    "o25": 2.3,
-    "u25": 1.94
+    "h": 2.36,
+    "d": 3.66,
+    "a": 3.92,
+    "o25": 2.53,
+    "u25": 1.8
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.087,
+    "d": -0.024,
+    "a": -0.037,
+    "o25": -0.107,
+    "u25": -0.024
    },
-   "ah_market": null,
-   "news": [],
+   "ah_market": {
+    "line": -0.5,
+    "home_odds": 2.08,
+    "away_odds": 1.73,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.28,
+    "away_fair": 1.78,
+    "home_edge": -0.089,
+    "away_edge": -0.028
+   },
+   "news": [
+    "Port Vale (Onel Hernandez): suspended - key creative winger - red card at Barnet 21/11 - OneValeFan 23/11"
+   ],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.3751,
-     0.297,
-     0.3279
+     0.4606,
+     0.2896,
+     0.2498
     ],
     "first": [
-     0.3598,
-     0.2839,
-     0.3563
+     0.3629,
+     0.2742,
+     0.3629
     ],
     "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0437,
-    "mt": 12,
-    "over": 0.4566
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-11-24",
-   "time": "19:45",
-   "home": "Forest Green",
-   "away": "Southend",
-   "xg": {
-    "home": 1.71,
-    "away": 1.58
-   },
-   "xg_model": {
-    "home": 1.54,
-    "away": 1.48
-   },
-   "xg_base": {
-    "home": 1.54,
-    "away": 1.48
-   },
-   "prob": {
-    "h": 0.414,
-    "d": 0.237,
-    "a": 0.349,
-    "o25": 0.68,
-    "u25": 0.32
-   },
-   "prob_base": {
-    "h": 0.389,
-    "d": 0.247,
-    "a": 0.365
-   },
-   "prob_model": {
-    "h": 0.389,
-    "d": 0.247,
-    "a": 0.365,
-    "o25": 0.581,
-    "u25": 0.419
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.414,
-    "d": 0.237,
-    "a": 0.349
-   },
-   "fair": {
-    "h": 2.41,
-    "d": 4.22,
-    "a": 2.87,
-    "o25": 1.47,
-    "u25": 3.12
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 2.53,
-    "d": 4.43,
-    "a": 3.01,
-    "o25": 1.54,
-    "u25": 3.28
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.4145,
-     0.2368,
-     0.3487
-    ],
-    "first": [
-     0.4899,
-     0.0201,
-     0.4899
-    ],
-    "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0658,
-    "mt": 30,
-    "over": 0.6814
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-11-24",
-   "time": "19:45",
-   "home": "Eastleigh",
-   "away": "Yeovil",
-   "xg": {
-    "home": 1.38,
-    "away": 1.59
-   },
-   "xg_model": {
-    "home": 1.39,
-    "away": 1.36
-   },
-   "xg_base": {
-    "home": 1.39,
-    "away": 1.36
-   },
-   "prob": {
-    "h": 0.314,
-    "d": 0.246,
-    "a": 0.44,
-    "o25": 0.6,
-    "u25": 0.4
-   },
-   "prob_base": {
-    "h": 0.375,
-    "d": 0.261,
-    "a": 0.364
-   },
-   "prob_model": {
-    "h": 0.375,
-    "d": 0.261,
-    "a": 0.364,
-    "o25": 0.517,
-    "u25": 0.483
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.314,
-    "d": 0.246,
-    "a": 0.44
-   },
-   "fair": {
-    "h": 3.18,
-    "d": 4.07,
-    "a": 2.27,
-    "o25": 1.67,
-    "u25": 2.5
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 3.34,
-    "d": 4.27,
-    "a": 2.39,
-    "o25": 1.75,
-    "u25": 2.63
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.3141,
-     0.2457,
-     0.4402
-    ],
-    "first": [
-     0.4928,
-     0.0144,
-     0.4928
-    ],
-    "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": -0.1261,
-    "mt": 49,
-    "over": 0.6017
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-11-24",
-   "time": "19:45",
-   "home": "Woking",
-   "away": "Worthing",
-   "xg": {
-    "home": 1.72,
-    "away": 1.52
-   },
-   "xg_model": {
-    "home": 1.8,
-    "away": 1.47
-   },
-   "xg_base": {
-    "home": 1.8,
-    "away": 1.47
-   },
-   "prob": {
-    "h": 0.41,
-    "d": 0.249,
-    "a": 0.341,
-    "o25": 0.625,
-    "u25": 0.375
-   },
-   "prob_base": {
-    "h": 0.452,
-    "d": 0.233,
-    "a": 0.315
-   },
-   "prob_model": {
-    "h": 0.452,
-    "d": 0.233,
-    "a": 0.315,
-    "o25": 0.633,
-    "u25": 0.367
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.41,
-    "d": 0.249,
-    "a": 0.341
-   },
-   "fair": {
-    "h": 2.44,
-    "d": 4.01,
-    "a": 2.94,
-    "o25": 1.6,
-    "u25": 2.67
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 2.56,
-    "d": 4.22,
-    "a": 3.08,
-    "o25": 1.68,
-    "u25": 2.8
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.4103,
-     0.2491,
-     0.3407
-    ],
-    "first": [
-     0.4139,
-     0.2442,
-     0.3419
-    ],
-    "first_at": 1795422676415,
-    "at": 1795509146503,
-    "move": -0.0024,
-    "mt": 370,
-    "over": 0.6251
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-11-24",
-   "time": "19:45",
-   "home": "Carlisle",
-   "away": "Tamworth",
-   "xg": {
-    "home": 2.41,
-    "away": 1.08
-   },
-   "xg_model": {
-    "home": 2.3,
-    "away": 1.16
-   },
-   "xg_base": {
-    "home": 2.3,
-    "away": 1.16
-   },
-   "prob": {
-    "h": 0.683,
-    "d": 0.182,
-    "a": 0.135,
-    "o25": 0.68,
-    "u25": 0.32
-   },
-   "prob_base": {
-    "h": 0.629,
-    "d": 0.194,
-    "a": 0.177
-   },
-   "prob_model": {
-    "h": 0.629,
-    "d": 0.194,
-    "a": 0.177,
-    "o25": 0.672,
-    "u25": 0.328
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.683,
-    "d": 0.182,
-    "a": 0.135
-   },
-   "fair": {
-    "h": 1.46,
-    "d": 5.49,
-    "a": 7.39,
-    "o25": 1.47,
-    "u25": 3.12
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 1.54,
-    "d": 5.77,
-    "a": 7.76,
-    "o25": 1.54,
-    "u25": 3.28
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.6826,
-     0.1821,
-     0.1353
-    ],
-    "first": [
-     0.6539,
-     0.192,
-     0.1541
-    ],
-    "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0475,
-    "mt": 209,
-    "over": 0.68
-   },
-   "market_source": "betfair"
-  },
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-11-24",
-   "time": "19:45",
-   "home": "Boston Utd",
-   "away": "Barrow",
-   "xg": {
-    "home": 1.42,
-    "away": 1.56
-   },
-   "xg_model": {
-    "home": 1.46,
-    "away": 1.4
-   },
-   "xg_base": {
-    "home": 1.46,
-    "away": 1.4
-   },
-   "prob": {
-    "h": 0.327,
-    "d": 0.258,
-    "a": 0.415,
-    "o25": 0.591,
-    "u25": 0.409
-   },
-   "prob_base": {
-    "h": 0.387,
-    "d": 0.254,
-    "a": 0.359
-   },
-   "prob_model": {
-    "h": 0.387,
-    "d": 0.254,
-    "a": 0.359,
-    "o25": 0.546,
-    "u25": 0.454
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.327,
-    "d": 0.258,
-    "a": 0.415
-   },
-   "fair": {
-    "h": 3.06,
-    "d": 3.87,
-    "a": 2.41,
-    "o25": 1.69,
-    "u25": 2.44
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 3.22,
-    "d": 4.07,
-    "a": 2.53,
-    "o25": 1.78,
-    "u25": 2.57
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.3265,
-     0.2583,
-     0.4152
-    ],
-    "first": [
-     0.3307,
-     0.2495,
-     0.4198
-    ],
-    "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0004,
-    "mt": 43,
-    "over": 0.5917
-   },
-   "market_source": "betfair"
+    "at": 1795523517731,
+    "move": 0.2108,
+    "mt": 956,
+    "over": 0.4315
+   },
+   "market_source": "bookmakers"
   },
   {
    "div": "EC",
@@ -1394,8 +776,8 @@
    "home": "Altrincham",
    "away": "Wealdstone",
    "xg": {
-    "home": 1.82,
-    "away": 1.27
+    "home": 1.84,
+    "away": 1.29
    },
    "xg_model": {
     "home": 1.7,
@@ -1406,11 +788,11 @@
     "away": 1.32
    },
    "prob": {
-    "h": 0.509,
-    "d": 0.243,
-    "a": 0.249,
-    "o25": 0.606,
-    "u25": 0.394
+    "h": 0.511,
+    "d": 0.237,
+    "a": 0.252,
+    "o25": 0.621,
+    "u25": 0.379
    },
    "prob_base": {
     "h": 0.461,
@@ -1430,61 +812,71 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.509,
-    "d": 0.243,
-    "a": 0.249
+    "h": 0.511,
+    "d": 0.237,
+    "a": 0.252
    },
    "fair": {
-    "h": 1.97,
-    "d": 4.12,
-    "a": 4.02,
-    "o25": 1.65,
-    "u25": 2.54
+    "h": 1.96,
+    "d": 4.22,
+    "a": 3.97,
+    "o25": 1.61,
+    "u25": 2.64
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.85,
+    "d": 3.75,
+    "a": 3.6,
+    "o25": 1.57,
+    "u25": 2.35
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Bet365",
+    "d": "Bet365",
+    "a": "Betfred",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.88,
+    "d": 3.9,
+    "a": 3.6,
+    "o25": 1.57,
+    "u25": 2.5
    },
    "min_odds": {
     "h": 2.06,
-    "d": 4.33,
-    "a": 4.22,
-    "o25": 1.73,
-    "u25": 2.66
+    "d": 4.43,
+    "a": 4.16,
+    "o25": 1.69,
+    "u25": 2.77
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.055,
+    "d": -0.111,
+    "a": -0.092,
+    "o25": -0.024,
+    "u25": -0.11
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": -0.5,
+    "home_odds": 1.88,
+    "away_odds": 1.93,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.98,
+    "away_fair": 2.02,
+    "home_edge": -0.051,
+    "away_edge": -0.044
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.5088,
-     0.2426,
-     0.2486
+     0.5107,
+     0.2417,
+     0.2476
     ],
     "first": [
      0.4983,
@@ -1492,50 +884,50 @@
      0.2544
     ],
     "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0163,
-    "mt": 34,
-    "over": 0.6062
+    "at": 1795523517731,
+    "move": 0.0192,
+    "mt": 163,
+    "over": 0.6028
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
   },
   {
    "div": "EC",
    "league": "National League",
    "date": "2026-11-24",
    "time": "19:45",
-   "home": "Scunthorpe",
-   "away": "Gateshead",
+   "home": "Boston Utd",
+   "away": "Barrow",
    "xg": {
-    "home": 2.24,
-    "away": 1.05
+    "home": 1.43,
+    "away": 1.58
    },
    "xg_model": {
-    "home": 2.06,
-    "away": 1.08
+    "home": 1.46,
+    "away": 1.4
    },
    "xg_base": {
-    "home": 2.06,
-    "away": 1.08
+    "home": 1.46,
+    "away": 1.4
    },
    "prob": {
-    "h": 0.661,
-    "d": 0.188,
-    "a": 0.15,
-    "o25": 0.659,
-    "u25": 0.341
+    "h": 0.324,
+    "d": 0.257,
+    "a": 0.419,
+    "o25": 0.599,
+    "u25": 0.401
    },
    "prob_base": {
-    "h": 0.598,
-    "d": 0.212,
-    "a": 0.19
+    "h": 0.387,
+    "d": 0.254,
+    "a": 0.359
    },
    "prob_model": {
-    "h": 0.598,
-    "d": 0.212,
-    "a": 0.19,
-    "o25": 0.607,
-    "u25": 0.393
+    "h": 0.387,
+    "d": 0.254,
+    "a": 0.359,
+    "o25": 0.546,
+    "u25": 0.454
    },
    "no_market": false,
    "weights": {
@@ -1543,74 +935,453 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.661,
-    "d": 0.188,
-    "a": 0.15
+    "h": 0.324,
+    "d": 0.257,
+    "a": 0.419
    },
    "fair": {
-    "h": 1.51,
-    "d": 5.31,
-    "a": 6.64,
-    "o25": 1.52,
-    "u25": 2.93
+    "h": 3.09,
+    "d": 3.88,
+    "a": 2.39,
+    "o25": 1.67,
+    "u25": 2.5
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 2.88,
+    "d": 3.5,
+    "a": 2.25,
+    "o25": 1.67,
+    "u25": 2.15
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Betfred",
+    "d": "Bet365",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 2.88,
+    "d": 3.5,
+    "a": 2.25,
+    "o25": 1.67,
+    "u25": 2.4
    },
    "min_odds": {
-    "h": 1.59,
-    "d": 5.57,
-    "a": 6.98,
-    "o25": 1.59,
-    "u25": 3.08
+    "h": 3.24,
+    "d": 4.08,
+    "a": 2.51,
+    "o25": 1.75,
+    "u25": 2.62
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.067,
+    "d": -0.099,
+    "a": -0.058,
+    "o25": 0.001,
+    "u25": -0.139
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": 0.25,
+    "home_odds": 1.8,
+    "away_odds": 2.0,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.9,
+    "away_fair": 2.11,
+    "home_edge": -0.047,
+    "away_edge": -0.045
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.6611,
-     0.1884,
-     0.1505
+     0.3271,
+     0.2589,
+     0.4139
     ],
     "first": [
-     0.6353,
-     0.2013,
-     0.1634
+     0.3307,
+     0.2495,
+     0.4198
     ],
     "first_at": 1795291253461,
-    "at": 1795509116480,
-    "move": 0.0387,
-    "mt": 58,
-    "over": 0.6601
+    "at": 1795523517731,
+    "move": 0.0023,
+    "mt": 212,
+    "over": 0.5841
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Carlisle",
+   "away": "Tamworth",
+   "xg": {
+    "home": 2.44,
+    "away": 1.11
+   },
+   "xg_model": {
+    "home": 2.3,
+    "away": 1.16
+   },
+   "xg_base": {
+    "home": 2.3,
+    "away": 1.16
+   },
+   "prob": {
+    "h": 0.684,
+    "d": 0.174,
+    "a": 0.142,
+    "o25": 0.698,
+    "u25": 0.302
+   },
+   "prob_base": {
+    "h": 0.629,
+    "d": 0.194,
+    "a": 0.177
+   },
+   "prob_model": {
+    "h": 0.629,
+    "d": 0.194,
+    "a": 0.177,
+    "o25": 0.672,
+    "u25": 0.328
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.684,
+    "d": 0.174,
+    "a": 0.142
+   },
+   "fair": {
+    "h": 1.46,
+    "d": 5.75,
+    "a": 7.07,
+    "o25": 1.43,
+    "u25": 3.32
+   },
+   "odds": {
+    "h": 1.41,
+    "d": 4.75,
+    "a": 6.0,
+    "o25": 1.4,
+    "u25": 2.88
+   },
+   "book": {
+    "h": "bwin",
+    "d": "Bet365",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 1.42,
+    "d": 5.0,
+    "a": 6.0,
+    "o25": 1.4,
+    "u25": 3.1
+   },
+   "min_odds": {
+    "h": 1.53,
+    "d": 6.03,
+    "a": 7.42,
+    "o25": 1.5,
+    "u25": 3.48
+   },
+   "edge": {
+    "h": -0.035,
+    "d": -0.173,
+    "a": -0.151,
+    "o25": -0.022,
+    "u25": -0.131
+   },
+   "ah_market": {
+    "line": -1.25,
+    "home_odds": 1.88,
+    "away_odds": 1.93,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.97,
+    "away_fair": 2.03,
+    "home_edge": -0.04,
+    "away_edge": -0.044
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.6907,
+     0.1789,
+     0.1305
+    ],
+    "first": [
+     0.6539,
+     0.192,
+     0.1541
+    ],
+    "first_at": 1795291253461,
+    "at": 1795523517731,
+    "move": 0.0604,
+    "mt": 403,
+    "over": 0.6776
+   },
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Eastleigh",
+   "away": "Yeovil",
+   "xg": {
+    "home": 1.39,
+    "away": 1.6
+   },
+   "xg_model": {
+    "home": 1.39,
+    "away": 1.36
+   },
+   "xg_base": {
+    "home": 1.39,
+    "away": 1.36
+   },
+   "prob": {
+    "h": 0.313,
+    "d": 0.247,
+    "a": 0.44,
+    "o25": 0.609,
+    "u25": 0.391
+   },
+   "prob_base": {
+    "h": 0.375,
+    "d": 0.261,
+    "a": 0.364
+   },
+   "prob_model": {
+    "h": 0.375,
+    "d": 0.261,
+    "a": 0.364,
+    "o25": 0.517,
+    "u25": 0.483
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.313,
+    "d": 0.247,
+    "a": 0.44
+   },
+   "fair": {
+    "h": 3.19,
+    "d": 4.05,
+    "a": 2.27,
+    "o25": 1.64,
+    "u25": 2.56
+   },
+   "odds": {
+    "h": 2.9,
+    "d": 3.75,
+    "a": 2.15,
+    "o25": 1.57,
+    "u25": 2.35
+   },
+   "book": {
+    "h": "Bet365",
+    "d": "Paddy Power",
+    "a": "Betfred",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 2.9,
+    "d": 3.8,
+    "a": 2.2,
+    "o25": 1.58,
+    "u25": 2.4
+   },
+   "min_odds": {
+    "h": 3.35,
+    "d": 4.25,
+    "a": 2.39,
+    "o25": 1.72,
+    "u25": 2.68
+   },
+   "edge": {
+    "h": -0.091,
+    "d": -0.073,
+    "a": -0.055,
+    "o25": -0.044,
+    "u25": -0.081
+   },
+   "ah_market": {
+    "line": 0.25,
+    "home_odds": 1.9,
+    "away_odds": 1.9,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.0,
+    "away_fair": 2.0,
+    "home_edge": -0.044,
+    "away_edge": -0.044
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3148,
+     0.2469,
+     0.4384
+    ],
+    "first": [
+     0.4928,
+     0.0144,
+     0.4928
+    ],
+    "first_at": 1795291253461,
+    "at": 1795523517731,
+    "move": -0.1236,
+    "mt": 131,
+    "over": 0.6096
+   },
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Forest Green",
+   "away": "Southend",
+   "xg": {
+    "home": 1.75,
+    "away": 1.6
+   },
+   "xg_model": {
+    "home": 1.54,
+    "away": 1.48
+   },
+   "xg_base": {
+    "home": 1.54,
+    "away": 1.48
+   },
+   "prob": {
+    "h": 0.42,
+    "d": 0.235,
+    "a": 0.345,
+    "o25": 0.697,
+    "u25": 0.303
+   },
+   "prob_base": {
+    "h": 0.389,
+    "d": 0.247,
+    "a": 0.365
+   },
+   "prob_model": {
+    "h": 0.389,
+    "d": 0.247,
+    "a": 0.365,
+    "o25": 0.581,
+    "u25": 0.419
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.42,
+    "d": 0.235,
+    "a": 0.345
+   },
+   "fair": {
+    "h": 2.38,
+    "d": 4.25,
+    "a": 2.9,
+    "o25": 1.43,
+    "u25": 3.31
+   },
+   "odds": {
+    "h": 2.25,
+    "d": 3.9,
+    "a": 2.75,
+    "o25": 1.4,
+    "u25": 2.88
+   },
+   "book": {
+    "h": "Betfred",
+    "d": "BetVictor",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 2.25,
+    "d": 3.9,
+    "a": 2.75,
+    "o25": 1.4,
+    "u25": 3.1
+   },
+   "min_odds": {
+    "h": 2.5,
+    "d": 4.46,
+    "a": 3.04,
+    "o25": 1.51,
+    "u25": 3.47
+   },
+   "edge": {
+    "h": -0.056,
+    "d": -0.082,
+    "a": -0.052,
+    "o25": -0.024,
+    "u25": -0.129
+   },
+   "ah_market": {
+    "line": -0.25,
+    "home_odds": 1.95,
+    "away_odds": 1.85,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.1,
+    "away_fair": 1.91,
+    "home_edge": -0.061,
+    "away_edge": -0.029
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.421,
+     0.2308,
+     0.3481
+    ],
+    "first": [
+     0.4899,
+     0.0201,
+     0.4899
+    ],
+    "first_at": 1795291253461,
+    "at": 1795523517731,
+    "move": 0.0729,
+    "mt": 178,
+    "over": 0.6825
+   },
+   "market_source": "bookmakers"
   },
   {
    "div": "EC",
@@ -1620,8 +1391,8 @@
    "home": "Fylde",
    "away": "Halifax",
    "xg": {
-    "home": 1.89,
-    "away": 1.45
+    "home": 1.9,
+    "away": 1.47
    },
    "xg_model": {
     "home": 1.56,
@@ -1632,11 +1403,11 @@
     "away": 1.53
    },
    "prob": {
-    "h": 0.51,
-    "d": 0.221,
-    "a": 0.27,
-    "o25": 0.683,
-    "u25": 0.317
+    "h": 0.502,
+    "d": 0.226,
+    "a": 0.272,
+    "o25": 0.695,
+    "u25": 0.305
    },
    "prob_base": {
     "h": 0.385,
@@ -1656,61 +1427,71 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.51,
-    "d": 0.221,
-    "a": 0.27
+    "h": 0.502,
+    "d": 0.226,
+    "a": 0.272
    },
    "fair": {
-    "h": 1.96,
-    "d": 4.53,
-    "a": 3.71,
-    "o25": 1.47,
-    "u25": 3.15
+    "h": 1.99,
+    "d": 4.42,
+    "a": 3.68,
+    "o25": 1.44,
+    "u25": 3.28
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.87,
+    "d": 4.0,
+    "a": 3.4,
+    "o25": 1.4,
+    "u25": 2.88
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "bwin",
+    "d": "Betfred",
+    "a": "BetVictor",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.93,
+    "d": 4.0,
+    "a": 3.4,
+    "o25": 1.42,
+    "u25": 3.0
    },
    "min_odds": {
-    "h": 2.06,
-    "d": 4.76,
-    "a": 3.9,
-    "o25": 1.54,
-    "u25": 3.31
+    "h": 2.09,
+    "d": 4.64,
+    "a": 3.86,
+    "o25": 1.51,
+    "u25": 3.44
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.062,
+    "d": -0.094,
+    "a": -0.075,
+    "o25": -0.027,
+    "u25": -0.121
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": -0.5,
+    "home_odds": 1.88,
+    "away_odds": 1.93,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.01,
+    "away_fair": 1.99,
+    "home_edge": -0.063,
+    "away_edge": -0.032
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.5098,
-     0.2207,
-     0.2695
+     0.508,
+     0.219,
+     0.273
     ],
     "first": [
      0.3167,
@@ -1718,12 +1499,381 @@
      0.3167
     ],
     "first_at": 1795300254510,
-    "at": 1795509116480,
-    "move": 0.2403,
-    "mt": 260,
-    "over": 0.6839
+    "at": 1795523517731,
+    "move": 0.235,
+    "mt": 450,
+    "over": 0.679
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Hornchurch",
+   "away": "Sutton",
+   "xg": {
+    "home": 1.34,
+    "away": 1.27
+   },
+   "xg_model": {
+    "home": 1.33,
+    "away": 1.37
+   },
+   "xg_base": {
+    "home": 1.33,
+    "away": 1.37
+   },
+   "prob": {
+    "h": 0.381,
+    "d": 0.283,
+    "a": 0.336,
+    "o25": 0.473,
+    "u25": 0.527
+   },
+   "prob_base": {
+    "h": 0.358,
+    "d": 0.263,
+    "a": 0.379
+   },
+   "prob_model": {
+    "h": 0.358,
+    "d": 0.263,
+    "a": 0.379,
+    "o25": 0.506,
+    "u25": 0.494
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.381,
+    "d": 0.283,
+    "a": 0.336
+   },
+   "fair": {
+    "h": 2.63,
+    "d": 3.53,
+    "a": 2.97,
+    "o25": 2.11,
+    "u25": 1.9
+   },
+   "odds": {
+    "h": 2.45,
+    "d": 3.25,
+    "a": 2.75,
+    "o25": 2.05,
+    "u25": 1.75
+   },
+   "book": {
+    "h": "Bet365",
+    "d": "Bet365",
+    "a": "Betfred",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 2.45,
+    "d": 3.25,
+    "a": 2.8,
+    "o25": 2.05,
+    "u25": 1.8
+   },
+   "min_odds": {
+    "h": 2.76,
+    "d": 3.71,
+    "a": 3.12,
+    "o25": 2.22,
+    "u25": 1.99
+   },
+   "edge": {
+    "h": -0.067,
+    "d": -0.081,
+    "a": -0.075,
+    "o25": -0.029,
+    "u25": -0.079
+   },
+   "ah_market": {
+    "line": 0.0,
+    "home_odds": 1.8,
+    "away_odds": 2.0,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.88,
+    "away_fair": 2.14,
+    "home_edge": -0.031,
+    "away_edge": -0.046
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3742,
+     0.2961,
+     0.3296
+    ],
+    "first": [
+     0.3598,
+     0.2839,
+     0.3563
+    ],
+    "first_at": 1795291253461,
+    "at": 1795523517731,
+    "move": 0.0411,
+    "mt": 146,
+    "over": 0.4609
+   },
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Scunthorpe",
+   "away": "Gateshead",
+   "xg": {
+    "home": 2.28,
+    "away": 1.04
+   },
+   "xg_model": {
+    "home": 2.06,
+    "away": 1.08
+   },
+   "xg_base": {
+    "home": 2.06,
+    "away": 1.08
+   },
+   "prob": {
+    "h": 0.674,
+    "d": 0.182,
+    "a": 0.144,
+    "o25": 0.671,
+    "u25": 0.329
+   },
+   "prob_base": {
+    "h": 0.598,
+    "d": 0.212,
+    "a": 0.19
+   },
+   "prob_model": {
+    "h": 0.598,
+    "d": 0.212,
+    "a": 0.19,
+    "o25": 0.607,
+    "u25": 0.393
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.674,
+    "d": 0.182,
+    "a": 0.144
+   },
+   "fair": {
+    "h": 1.48,
+    "d": 5.5,
+    "a": 6.95,
+    "o25": 1.49,
+    "u25": 3.04
+   },
+   "odds": {
+    "h": 1.44,
+    "d": 4.75,
+    "a": 6.0,
+    "o25": 1.44,
+    "u25": 2.7
+   },
+   "book": {
+    "h": "Bet365",
+    "d": "Paddy Power",
+    "a": "BetVictor",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 1.45,
+    "d": 4.75,
+    "a": 6.0,
+    "o25": 1.45,
+    "u25": 2.8
+   },
+   "min_odds": {
+    "h": 1.56,
+    "d": 5.78,
+    "a": 7.29,
+    "o25": 1.57,
+    "u25": 3.19
+   },
+   "edge": {
+    "h": -0.029,
+    "d": -0.137,
+    "a": -0.136,
+    "o25": -0.034,
+    "u25": -0.111
+   },
+   "ah_market": {
+    "line": -1.25,
+    "home_odds": 1.95,
+    "away_odds": 1.85,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.04,
+    "away_fair": 1.96,
+    "home_edge": -0.04,
+    "away_edge": -0.048
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.6626,
+     0.1876,
+     0.1498
+    ],
+    "first": [
+     0.6353,
+     0.2013,
+     0.1634
+    ],
+    "first_at": 1795291253461,
+    "at": 1795523517731,
+    "move": 0.0409,
+    "mt": 155,
+    "over": 0.6542
+   },
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-24",
+   "time": "19:45",
+   "home": "Woking",
+   "away": "Worthing",
+   "xg": {
+    "home": 1.74,
+    "away": 1.52
+   },
+   "xg_model": {
+    "home": 1.8,
+    "away": 1.47
+   },
+   "xg_base": {
+    "home": 1.8,
+    "away": 1.47
+   },
+   "prob": {
+    "h": 0.415,
+    "d": 0.25,
+    "a": 0.335,
+    "o25": 0.632,
+    "u25": 0.368
+   },
+   "prob_base": {
+    "h": 0.452,
+    "d": 0.233,
+    "a": 0.315
+   },
+   "prob_model": {
+    "h": 0.452,
+    "d": 0.233,
+    "a": 0.315,
+    "o25": 0.633,
+    "u25": 0.367
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.415,
+    "d": 0.25,
+    "a": 0.335
+   },
+   "fair": {
+    "h": 2.41,
+    "d": 3.99,
+    "a": 2.99,
+    "o25": 1.58,
+    "u25": 2.72
+   },
+   "odds": {
+    "h": 2.25,
+    "d": 3.7,
+    "a": 2.75,
+    "o25": 1.53,
+    "u25": 2.4
+   },
+   "book": {
+    "h": "Bet365",
+    "d": "Bet365",
+    "a": "Betfred",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 2.3,
+    "d": 3.7,
+    "a": 2.75,
+    "o25": 1.54,
+    "u25": 2.5
+   },
+   "min_odds": {
+    "h": 2.53,
+    "d": 4.19,
+    "a": 3.14,
+    "o25": 1.66,
+    "u25": 2.85
+   },
+   "edge": {
+    "h": -0.067,
+    "d": -0.073,
+    "a": -0.079,
+    "o25": -0.033,
+    "u25": -0.117
+   },
+   "ah_market": {
+    "line": -0.25,
+    "home_odds": 2.03,
+    "away_odds": 1.78,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 2.14,
+    "away_fair": 1.88,
+    "home_edge": -0.044,
+    "away_edge": -0.047
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4059,
+     0.2482,
+     0.3459
+    ],
+    "first": [
+     0.4139,
+     0.2442,
+     0.3419
+    ],
+    "first_at": 1795422676415,
+    "at": 1795523547715,
+    "move": -0.012,
+    "mt": 446,
+    "over": 0.6251
+   },
+   "market_source": "bookmakers"
   },
   {
    "div": "EC",
@@ -1733,8 +1883,8 @@
    "home": "Boreham Wood",
    "away": "Aldershot",
    "xg": {
-    "home": 2.91,
-    "away": 0.94
+    "home": 2.97,
+    "away": 0.92
    },
    "xg_model": {
     "home": 2.71,
@@ -1745,11 +1895,11 @@
     "away": 1.01
    },
    "prob": {
-    "h": 0.809,
-    "d": 0.119,
-    "a": 0.072,
-    "o25": 0.752,
-    "u25": 0.248
+    "h": 0.832,
+    "d": 0.105,
+    "a": 0.063,
+    "o25": 0.765,
+    "u25": 0.235
    },
    "prob_base": {
     "h": 0.73,
@@ -1769,61 +1919,71 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.809,
-    "d": 0.119,
-    "a": 0.072
+    "h": 0.832,
+    "d": 0.105,
+    "a": 0.063
    },
    "fair": {
-    "h": 1.24,
-    "d": 8.37,
-    "a": 13.91,
-    "o25": 1.33,
-    "u25": 4.03
+    "h": 1.2,
+    "d": 9.51,
+    "a": 15.95,
+    "o25": 1.31,
+    "u25": 4.26
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.19,
+    "d": 7.5,
+    "a": 12.0,
+    "o25": 1.29,
+    "u25": 3.6
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "bwin",
+    "d": "Paddy Power",
+    "a": "Bet365",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.19,
+    "d": 7.5,
+    "a": 12.0,
+    "o25": 1.29,
+    "u25": 3.8
    },
    "min_odds": {
-    "h": 1.3,
-    "d": 8.79,
-    "a": 14.6,
-    "o25": 1.4,
-    "u25": 4.23
+    "h": 1.26,
+    "d": 9.99,
+    "a": 16.75,
+    "o25": 1.37,
+    "u25": 4.47
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.01,
+    "d": -0.212,
+    "a": -0.248,
+    "o25": -0.013,
+    "u25": -0.155
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": -2.0,
+    "home_odds": 1.78,
+    "away_odds": 2.03,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.89,
+    "away_fair": 2.13,
+    "home_edge": -0.044,
+    "away_edge": -0.036
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.8086,
-     0.1195,
-     0.0719
+     0.809,
+     0.1201,
+     0.0709
     ],
     "first": [
      0.3167,
@@ -1831,125 +1991,12 @@
      0.3167
     ],
     "first_at": 1795374067072,
-    "at": 1795509116480,
-    "move": 0.7367,
-    "mt": 60,
-    "over": 0.7522
+    "at": 1795523517731,
+    "move": 0.7381,
+    "mt": 71,
+    "over": 0.7377
    },
-   "market_source": "betfair"
-  },
-  {
-   "div": "EC",
-   "league": "National League",
-   "date": "2026-11-25",
-   "time": "19:45",
-   "home": "Hartlepool",
-   "away": "Solihull",
-   "xg": {
-    "home": 1.64,
-    "away": 1.3
-   },
-   "xg_model": {
-    "home": 1.6,
-    "away": 1.27
-   },
-   "xg_base": {
-    "home": 1.6,
-    "away": 1.27
-   },
-   "prob": {
-    "h": 0.448,
-    "d": 0.253,
-    "a": 0.3,
-    "o25": 0.571,
-    "u25": 0.429
-   },
-   "prob_base": {
-    "h": 0.45,
-    "d": 0.25,
-    "a": 0.3
-   },
-   "prob_model": {
-    "h": 0.45,
-    "d": 0.25,
-    "a": 0.3,
-    "o25": 0.547,
-    "u25": 0.453
-   },
-   "no_market": false,
-   "weights": {
-    "w_1x2": 0.0,
-    "w_ou25": 0.017
-   },
-   "prob_market": {
-    "h": 0.448,
-    "d": 0.253,
-    "a": 0.3
-   },
-   "fair": {
-    "h": 2.23,
-    "d": 3.96,
-    "a": 3.34,
-    "o25": 1.75,
-    "u25": 2.33
-   },
-   "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
-   },
-   "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "min_odds": {
-    "h": 2.35,
-    "d": 4.16,
-    "a": 3.5,
-    "o25": 1.84,
-    "u25": 2.45
-   },
-   "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
-   },
-   "ah_market": null,
-   "news": [],
-   "value": [],
-   "unknown_team": [],
-   "betfair": {
-    "now": [
-     0.4476,
-     0.2527,
-     0.2997
-    ],
-    "first": [
-     0.4581,
-     0.2392,
-     0.3027
-    ],
-    "first_at": 1795377667808,
-    "at": 1795509176492,
-    "move": -0.0075,
-    "mt": 0,
-    "over": 0.571
-   },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
   },
   {
    "div": "EC",
@@ -1959,8 +2006,8 @@
    "home": "Harrogate",
    "away": "Kidderminster",
    "xg": {
-    "home": 1.76,
-    "away": 0.88
+    "home": 1.77,
+    "away": 0.9
    },
    "xg_model": {
     "home": 1.41,
@@ -1972,10 +2019,10 @@
    },
    "prob": {
     "h": 0.602,
-    "d": 0.231,
-    "a": 0.168,
-    "o25": 0.543,
-    "u25": 0.457
+    "d": 0.223,
+    "a": 0.175,
+    "o25": 0.554,
+    "u25": 0.446
    },
    "prob_base": {
     "h": 0.504,
@@ -1996,60 +2043,70 @@
    },
    "prob_market": {
     "h": 0.602,
-    "d": 0.231,
-    "a": 0.168
+    "d": 0.223,
+    "a": 0.175
    },
    "fair": {
     "h": 1.66,
-    "d": 4.33,
-    "a": 5.97,
-    "o25": 1.84,
-    "u25": 2.19
+    "d": 4.49,
+    "a": 5.71,
+    "o25": 1.8,
+    "u25": 2.24
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.62,
+    "d": 4.0,
+    "a": 5.0,
+    "o25": 1.7,
+    "u25": 2.1
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Bet365",
+    "d": "Paddy Power",
+    "a": "Betfred",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 1.62,
+    "d": 4.0,
+    "a": 5.33,
+    "o25": 1.7,
+    "u25": 2.1
    },
    "min_odds": {
-    "h": 1.75,
-    "d": 4.55,
-    "a": 6.26,
-    "o25": 1.93,
-    "u25": 2.3
+    "h": 1.74,
+    "d": 4.71,
+    "a": 6.0,
+    "o25": 1.89,
+    "u25": 2.36
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.025,
+    "d": -0.109,
+    "a": -0.125,
+    "o25": -0.058,
+    "u25": -0.064
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": -0.75,
+    "home_odds": 1.8,
+    "away_odds": 2.0,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.85,
+    "away_fair": 2.17,
+    "home_edge": -0.025,
+    "away_edge": -0.067
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.6015,
-     0.2309,
-     0.1676
+     0.605,
+     0.229,
+     0.166
     ],
     "first": [
      0.59,
@@ -2057,12 +2114,135 @@
      0.1701
     ],
     "first_at": 1795377667748,
-    "at": 1795509116480,
-    "move": 0.014,
-    "mt": 44,
-    "over": 0.5461
+    "at": 1795523517731,
+    "move": 0.0191,
+    "mt": 92,
+    "over": 0.5444
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-25",
+   "time": "19:45",
+   "home": "Hartlepool",
+   "away": "Solihull",
+   "xg": {
+    "home": 1.66,
+    "away": 1.31
+   },
+   "xg_model": {
+    "home": 1.6,
+    "away": 1.27
+   },
+   "xg_base": {
+    "home": 1.6,
+    "away": 1.27
+   },
+   "prob": {
+    "h": 0.452,
+    "d": 0.246,
+    "a": 0.301,
+    "o25": 0.583,
+    "u25": 0.417
+   },
+   "prob_base": {
+    "h": 0.45,
+    "d": 0.25,
+    "a": 0.3
+   },
+   "prob_model": {
+    "h": 0.45,
+    "d": 0.25,
+    "a": 0.3,
+    "o25": 0.547,
+    "u25": 0.453
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.452,
+    "d": 0.246,
+    "a": 0.301
+   },
+   "fair": {
+    "h": 2.21,
+    "d": 4.06,
+    "a": 3.32,
+    "o25": 1.72,
+    "u25": 2.4
+   },
+   "odds": {
+    "h": 2.1,
+    "d": 3.7,
+    "a": 3.1,
+    "o25": 1.67,
+    "u25": 2.15
+   },
+   "book": {
+    "h": "Bet365",
+    "d": "Paddy Power",
+    "a": "BetVictor",
+    "o25": "Bet365",
+    "u25": "Bet365"
+   },
+   "odds_max": {
+    "h": 2.1,
+    "d": 3.8,
+    "a": 3.1,
+    "o25": 1.67,
+    "u25": 2.2
+   },
+   "min_odds": {
+    "h": 2.32,
+    "d": 4.26,
+    "a": 3.48,
+    "o25": 1.8,
+    "u25": 2.52
+   },
+   "edge": {
+    "h": -0.05,
+    "d": -0.088,
+    "a": -0.066,
+    "o25": -0.026,
+    "u25": -0.103
+   },
+   "ah_market": {
+    "line": -0.25,
+    "home_odds": 1.85,
+    "away_odds": 1.95,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.94,
+    "away_fair": 2.06,
+    "home_edge": -0.041,
+    "away_edge": -0.048
+   },
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4469,
+     0.2585,
+     0.2947
+    ],
+    "first": [
+     0.4581,
+     0.2392,
+     0.3027
+    ],
+    "first_at": 1795377667808,
+    "at": 1795523577719,
+    "move": -0.0032,
+    "mt": 0,
+    "over": 0.572
+   },
+   "market_source": "bookmakers"
   },
   {
    "div": "E2",
@@ -2084,11 +2264,11 @@
     "away": 1.57
    },
    "prob": {
-    "h": 0.223,
-    "d": 0.221,
-    "a": 0.556,
-    "o25": 0.615,
-    "u25": 0.385
+    "h": 0.219,
+    "d": 0.224,
+    "a": 0.557,
+    "o25": 0.616,
+    "u25": 0.384
    },
    "prob_base": {
     "h": 0.288,
@@ -2108,61 +2288,71 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.223,
-    "d": 0.221,
-    "a": 0.556
+    "h": 0.219,
+    "d": 0.224,
+    "a": 0.557
    },
    "fair": {
-    "h": 4.48,
-    "d": 4.53,
+    "h": 4.56,
+    "d": 4.47,
     "a": 1.8,
     "o25": 1.62,
     "u25": 2.6
    },
    "odds": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 4.5,
+    "d": 4.2,
+    "a": 1.75,
+    "o25": 1.6,
+    "u25": 2.3
    },
    "book": {
-    "h": "",
-    "d": "",
-    "a": "",
-    "o25": "",
-    "u25": ""
+    "h": "Bet365",
+    "d": "Paddy Power",
+    "a": "bwin",
+    "o25": "Bet365",
+    "u25": "Bet365"
    },
    "odds_max": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": 4.5,
+    "d": 4.33,
+    "a": 1.8,
+    "o25": 1.6,
+    "u25": 2.5
    },
    "min_odds": {
-    "h": 4.7,
-    "d": 4.76,
-    "a": 1.89,
+    "h": 4.79,
+    "d": 4.7,
+    "a": 1.88,
     "o25": 1.71,
     "u25": 2.73
    },
    "edge": {
-    "h": null,
-    "d": null,
-    "a": null,
-    "o25": null,
-    "u25": null
+    "h": -0.013,
+    "d": -0.061,
+    "a": -0.025,
+    "o25": -0.015,
+    "u25": -0.116
    },
-   "ah_market": null,
+   "ah_market": {
+    "line": 0.75,
+    "home_odds": 1.9,
+    "away_odds": 1.95,
+    "home_book": "Bet365",
+    "away_book": "Bet365",
+    "home_fair": 1.97,
+    "away_fair": 2.03,
+    "home_edge": -0.031,
+    "away_edge": -0.034
+   },
    "news": [],
    "value": [],
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.2232,
-     0.2206,
-     0.5562
+     0.2161,
+     0.2231,
+     0.5607
     ],
     "first": [
      0.2306,
@@ -2170,12 +2360,12 @@
      0.5363
     ],
     "first_at": 1795464081870,
-    "at": 1795509146503,
-    "move": -0.0273,
-    "mt": 224,
-    "over": 0.617
+    "at": 1795523547715,
+    "move": -0.0389,
+    "mt": 249,
+    "over": 0.6103
    },
-   "market_source": "betfair"
+   "market_source": "bookmakers"
   }
  ],
  "ratings": [
