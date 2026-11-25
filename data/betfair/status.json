@@ -21,24 +21,20 @@
   "English FA Cup",
   "English Football League Cup",
   "English National League",
-  "English National League North",
-  "English National League South",
   "English Premier League",
   "English Sky Bet Championship",
   "English Sky Bet League 1",
-  "English Sky Bet League 2",
-  "English U21 Premier League Cup",
-  "English U21 Pro Development League"
+  "English Sky Bet League 2"
  ],
  "firstDay": "2026-11-20",
  "days": 6,
  "marketsFollowed": 10,
- "awaitingResult": 30,
- "catalogueAt": "2026-11-24T20:31:30.512Z",
+ "awaitingResult": 0,
+ "catalogueAt": "2026-11-25T04:31:33.437Z",
  "delayedData": true,
- "betfairCalls": 1713,
+ "betfairCalls": 1796,
  "errors": 11,
  "lastError": "Unexpected token < in JSON at position 0",
  "lastErrorAt": "2026-11-17T08:59:53.959Z",
- "now": "2026-11-24T20:51:27.289Z"
+ "now": "2026-11-25T04:53:03.806Z"
 }
