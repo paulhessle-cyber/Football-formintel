@@ -1,6 +1,6 @@
 {
  "version": "0.9",
- "generated": "2026-11-25T11:41+00:00",
+ "generated": "2026-11-25T17:11+00:00",
  "model_fitted_to": "2026-11-24",
  "min_edge": 0.05,
  "error": null,
@@ -10,9 +10,9 @@
  },
  "betfair": {
   "error": null,
-  "fetched": 56,
+  "fetched": 88,
   "no_betfair_match": [],
-  "fixtures_from_betfair": 1
+  "fixtures_from_betfair": 33
  },
  "home_advantage": {
   "E0": 1.193,
@@ -128,9 +128,9 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.8117,
-     0.1218,
-     0.0665
+     0.804,
+     0.1234,
+     0.0726
     ],
     "first": [
      0.3167,
@@ -138,10 +138,10 @@
      0.3167
     ],
     "first_at": 1795374067072,
-    "at": 1795606325915,
-    "move": 0.7452,
-    "mt": 1323,
-    "over": 0.7424
+    "at": 1795626307586,
+    "move": 0.7314,
+    "mt": 3643,
+    "over": 0.7581
    },
    "market_source": "bookmakers"
   },
@@ -251,9 +251,9 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.6054,
-     0.2269,
-     0.1676
+     0.6041,
+     0.2276,
+     0.1683
     ],
     "first": [
      0.59,
@@ -261,10 +261,10 @@
      0.1701
     ],
     "first_at": 1795377667748,
-    "at": 1795606325915,
-    "move": 0.0179,
-    "mt": 299,
-    "over": 0.553
+    "at": 1795626577574,
+    "move": 0.0159,
+    "mt": 791,
+    "over": 0.5487
    },
    "market_source": "bookmakers"
   },
@@ -374,9 +374,9 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.4504,
-     0.2532,
-     0.2964
+     0.4511,
+     0.254,
+     0.2949
     ],
     "first": [
      0.4581,
@@ -384,10 +384,10 @@
      0.3027
     ],
     "first_at": 1795377667808,
-    "at": 1795606385922,
-    "move": -0.0014,
-    "mt": 181,
-    "over": 0.5737
+    "at": 1795626577574,
+    "move": 0.0008,
+    "mt": 287,
+    "over": 0.5729
    },
    "market_source": "bookmakers"
   },
@@ -497,9 +497,9 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.2197,
-     0.222,
-     0.5584
+     0.2123,
+     0.2217,
+     0.566
     ],
     "first": [
      0.2306,
@@ -507,10 +507,10 @@
      0.5363
     ],
     "first_at": 1795464081870,
-    "at": 1795606355943,
-    "move": -0.033,
-    "mt": 504,
-    "over": 0.6017
+    "at": 1795626157541,
+    "move": -0.048,
+    "mt": 604,
+    "over": 0.5959
    },
    "market_source": "bookmakers"
   },
@@ -522,8 +522,8 @@
    "home": "Scunthorpe",
    "away": "Wealdstone",
    "xg": {
-    "home": 1.72,
-    "away": 1.48
+    "home": 1.78,
+    "away": 1.5
    },
    "xg_model": {
     "home": 1.87,
@@ -534,11 +534,11 @@
     "away": 1.32
    },
    "prob": {
-    "h": 0.415,
-    "d": 0.23,
-    "a": 0.355,
-    "o25": 0.624,
-    "u25": 0.376
+    "h": 0.422,
+    "d": 0.233,
+    "a": 0.345,
+    "o25": 0.651,
+    "u25": 0.349
    },
    "prob_base": {
     "h": 0.503,
@@ -558,16 +558,3293 @@
     "w_ou25": 0.017
    },
    "prob_market": {
-    "h": 0.415,
-    "d": 0.23,
+    "h": 0.422,
+    "d": 0.233,
+    "a": 0.345
+   },
+   "fair": {
+    "h": 2.37,
+    "d": 4.3,
+    "a": 2.9,
+    "o25": 1.54,
+    "u25": 2.87
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.49,
+    "d": 4.51,
+    "a": 3.04,
+    "o25": 1.61,
+    "u25": 3.01
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4224,
+     0.2326,
+     0.345
+    ],
+    "first": [
+     0.377,
+     0.246,
+     0.377
+    ],
+    "first_at": 1795550490418,
+    "at": 1795626127542,
+    "move": 0.0774,
+    "mt": 75,
+    "over": 0.6518
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "12:30",
+   "home": "Milton Keynes Dons",
+   "away": "Notts County",
+   "xg": {
+    "home": 1.67,
+    "away": 1.18
+   },
+   "xg_model": {
+    "home": 1.45,
+    "away": 1.23
+   },
+   "xg_base": {
+    "home": 1.45,
+    "away": 1.23
+   },
+   "prob": {
+    "h": 0.503,
+    "d": 0.252,
+    "a": 0.245,
+    "o25": 0.566,
+    "u25": 0.434
+   },
+   "prob_base": {
+    "h": 0.42,
+    "d": 0.263,
+    "a": 0.317
+   },
+   "prob_model": {
+    "h": 0.42,
+    "d": 0.263,
+    "a": 0.317,
+    "o25": 0.501,
+    "u25": 0.499
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.503,
+    "d": 0.252,
+    "a": 0.245
+   },
+   "fair": {
+    "h": 1.99,
+    "d": 3.97,
+    "a": 4.08,
+    "o25": 1.77,
+    "u25": 2.31
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.09,
+    "d": 4.17,
+    "a": 4.29,
+    "o25": 1.85,
+    "u25": 2.42
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5033,
+     0.2516,
+     0.245
+    ],
+    "first": [
+     0.4938,
+     0.2457,
+     0.2605
+    ],
+    "first_at": 1795609896207,
+    "at": 1795626097642,
+    "move": 0.025,
+    "mt": 112,
+    "over": 0.5673
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "12:30",
+   "home": "Peterboro",
+   "away": "Cambridge",
+   "xg": {
+    "home": 1.55,
+    "away": 1.41
+   },
+   "xg_model": {
+    "home": 1.29,
+    "away": 1.32
+   },
+   "xg_base": {
+    "home": 1.29,
+    "away": 1.32
+   },
+   "prob": {
+    "h": 0.42,
+    "d": 0.245,
+    "a": 0.335,
+    "o25": 0.619,
+    "u25": 0.381
+   },
+   "prob_base": {
+    "h": 0.359,
+    "d": 0.268,
+    "a": 0.373
+   },
+   "prob_model": {
+    "h": 0.359,
+    "d": 0.268,
+    "a": 0.373,
+    "o25": 0.484,
+    "u25": 0.516
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.42,
+    "d": 0.245,
+    "a": 0.335
+   },
+   "fair": {
+    "h": 2.38,
+    "d": 4.08,
+    "a": 2.99,
+    "o25": 1.61,
+    "u25": 2.63
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.5,
+    "d": 4.28,
+    "a": 3.14,
+    "o25": 1.7,
+    "u25": 2.76
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4199,
+     0.2452,
+     0.3348
+    ],
+    "first": [
+     0.4238,
+     0.2454,
+     0.3308
+    ],
+    "first_at": 1795609896207,
+    "at": 1795626097642,
+    "move": -0.0079,
+    "mt": 112,
+    "over": 0.6217
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "12:30",
+   "home": "Bristol Rvs",
+   "away": "Tranmere",
+   "xg": {
+    "home": 1.6,
+    "away": 1.1
+   },
+   "xg_model": {
+    "home": 1.52,
+    "away": 1.14
+   },
+   "xg_base": {
+    "home": 1.52,
+    "away": 1.14
+   },
+   "prob": {
+    "h": 0.489,
+    "d": 0.267,
+    "a": 0.244,
+    "o25": 0.508,
+    "u25": 0.492
+   },
+   "prob_base": {
+    "h": 0.457,
+    "d": 0.26,
+    "a": 0.283
+   },
+   "prob_model": {
+    "h": 0.457,
+    "d": 0.26,
+    "a": 0.283,
+    "o25": 0.496,
+    "u25": 0.504
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.489,
+    "d": 0.267,
+    "a": 0.244
+   },
+   "fair": {
+    "h": 2.05,
+    "d": 3.75,
+    "a": 4.1,
+    "o25": 1.97,
+    "u25": 2.03
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.15,
+    "d": 3.93,
+    "a": 4.3,
+    "o25": 2.07,
+    "u25": 2.14
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4889,
+     0.267,
+     0.2441
+    ],
+    "first": [
+     0.4936,
+     0.2562,
+     0.2502
+    ],
+    "first_at": 1795609896207,
+    "at": 1795626097642,
+    "move": 0.0014,
+    "mt": 6,
+    "over": 0.5086
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "12:30",
+   "home": "Exeter",
+   "away": "Crawley Town",
+   "xg": {
+    "home": 1.59,
+    "away": 1.0
+   },
+   "xg_model": {
+    "home": 1.42,
+    "away": 1.07
+   },
+   "xg_base": {
+    "home": 1.42,
+    "away": 1.07
+   },
+   "prob": {
+    "h": 0.526,
+    "d": 0.256,
+    "a": 0.218,
+    "o25": 0.493,
+    "u25": 0.507
+   },
+   "prob_base": {
+    "h": 0.447,
+    "d": 0.271,
+    "a": 0.282
+   },
+   "prob_model": {
+    "h": 0.447,
+    "d": 0.271,
+    "a": 0.282,
+    "o25": 0.453,
+    "u25": 0.547
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.526,
+    "d": 0.256,
+    "a": 0.218
+   },
+   "fair": {
+    "h": 1.9,
+    "d": 3.9,
+    "a": 4.59,
+    "o25": 2.03,
+    "u25": 1.97
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.0,
+    "d": 4.1,
+    "a": 4.81,
+    "o25": 2.13,
+    "u25": 2.07
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5257,
+     0.2562,
+     0.2181
+    ],
+    "first": [
+     0.5187,
+     0.2591,
+     0.2222
+    ],
+    "first_at": 1795609896207,
+    "at": 1795626097642,
+    "move": 0.0111,
+    "mt": 379,
+    "over": 0.4932
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "12:30",
+   "home": "Woking",
+   "away": "Barrow",
+   "xg": {
+    "home": 1.44,
+    "away": 1.42
+   },
+   "xg_model": {
+    "home": 1.51,
+    "away": 1.19
+   },
+   "xg_base": {
+    "home": 1.51,
+    "away": 1.19
+   },
+   "prob": {
+    "h": 0.341,
+    "d": 0.282,
+    "a": 0.377,
+    "o25": 0.568,
+    "u25": 0.432
+   },
+   "prob_base": {
+    "h": 0.444,
+    "d": 0.259,
+    "a": 0.297
+   },
+   "prob_model": {
+    "h": 0.444,
+    "d": 0.259,
+    "a": 0.297,
+    "o25": 0.507,
+    "u25": 0.493
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.341,
+    "d": 0.282,
+    "a": 0.377
+   },
+   "fair": {
+    "h": 2.93,
+    "d": 3.55,
+    "a": 2.65,
+    "o25": 1.76,
+    "u25": 2.31
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.08,
+    "d": 3.72,
+    "a": 2.79,
+    "o25": 1.85,
+    "u25": 2.43
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3412,
+     0.2819,
+     0.3769
+    ],
+    "first": [
+     0.3752,
+     0.2756,
+     0.3492
+    ],
+    "first_at": 1795609896207,
+    "at": 1795626097642,
+    "move": -0.0617,
+    "mt": 0,
+    "over": 0.5686
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "12:30",
+   "home": "Fylde",
+   "away": "Aldershot",
+   "xg": {
+    "home": 1.67,
+    "away": 1.53
+   },
+   "xg_model": {
+    "home": 2.07,
+    "away": 1.35
+   },
+   "xg_base": {
+    "home": 2.07,
+    "away": 1.35
+   },
+   "prob": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333,
+    "o25": 0.595,
+    "u25": 0.405
+   },
+   "prob_base": {
+    "h": 0.539,
+    "d": 0.216,
+    "a": 0.246
+   },
+   "prob_model": {
+    "h": 0.539,
+    "d": 0.216,
+    "a": 0.246,
+    "o25": 0.662,
+    "u25": 0.338
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333
+   },
+   "fair": {
+    "h": 3.0,
+    "d": 3.0,
+    "a": 3.0,
+    "o25": 1.68,
+    "u25": 2.47
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.15,
+    "d": 3.15,
+    "a": 3.15,
+    "o25": 1.77,
+    "u25": 2.59
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first_at": 1795609896207,
+    "at": 1795626097642,
+    "move": 0.0,
+    "mt": 0,
+    "over": 0.5933
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Wigan",
+   "away": "Plymouth",
+   "xg": {
+    "home": 1.4,
+    "away": 1.4
+   },
+   "xg_model": {
+    "home": 1.18,
+    "away": 1.34
+   },
+   "xg_base": {
+    "home": 1.18,
+    "away": 1.34
+   },
+   "prob": {
+    "h": 0.378,
+    "d": 0.266,
+    "a": 0.355,
+    "o25": 0.569,
+    "u25": 0.431
+   },
+   "prob_base": {
+    "h": 0.325,
+    "d": 0.273,
+    "a": 0.402
+   },
+   "prob_model": {
+    "h": 0.325,
+    "d": 0.273,
+    "a": 0.402,
+    "o25": 0.462,
+    "u25": 0.538
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.378,
+    "d": 0.266,
     "a": 0.355
    },
    "fair": {
+    "h": 2.64,
+    "d": 3.76,
+    "a": 2.81,
+    "o25": 1.76,
+    "u25": 2.32
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.78,
+    "d": 3.94,
+    "a": 2.95,
+    "o25": 1.85,
+    "u25": 2.44
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3782,
+     0.2663,
+     0.3555
+    ],
+    "first": [
+     0.3809,
+     0.2674,
+     0.3517
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0065,
+    "mt": 0,
+    "over": 0.5709
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Stockport",
+   "away": "Leyton Orient",
+   "xg": {
+    "home": 2.17,
+    "away": 0.97
+   },
+   "xg_model": {
+    "home": 1.87,
+    "away": 1.05
+   },
+   "xg_base": {
+    "home": 1.87,
+    "away": 1.05
+   },
+   "prob": {
+    "h": 0.678,
+    "d": 0.192,
+    "a": 0.13,
+    "o25": 0.634,
+    "u25": 0.366
+   },
+   "prob_base": {
+    "h": 0.564,
+    "d": 0.229,
+    "a": 0.208
+   },
+   "prob_model": {
+    "h": 0.564,
+    "d": 0.229,
+    "a": 0.208,
+    "o25": 0.56,
+    "u25": 0.44
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.678,
+    "d": 0.192,
+    "a": 0.13
+   },
+   "fair": {
+    "h": 1.47,
+    "d": 5.21,
+    "a": 7.7,
+    "o25": 1.58,
+    "u25": 2.73
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.55,
+    "d": 5.47,
+    "a": 8.08,
+    "o25": 1.66,
+    "u25": 2.87
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.678,
+     0.1921,
+     0.1299
+    ],
+    "first": [
+     0.6158,
+     0.2505,
+     0.1337
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": 0.066,
+    "mt": 33,
+    "over": 0.6354
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Bromley",
+   "away": "Burton",
+   "xg": {
+    "home": 1.5,
+    "away": 1.32
+   },
+   "xg_model": {
+    "home": 1.37,
+    "away": 1.39
+   },
+   "xg_base": {
+    "home": 1.37,
+    "away": 1.39
+   },
+   "prob": {
+    "h": 0.421,
+    "d": 0.268,
+    "a": 0.311,
+    "o25": 0.543,
+    "u25": 0.457
+   },
+   "prob_base": {
+    "h": 0.365,
+    "d": 0.26,
+    "a": 0.375
+   },
+   "prob_model": {
+    "h": 0.365,
+    "d": 0.26,
+    "a": 0.375,
+    "o25": 0.52,
+    "u25": 0.48
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.421,
+    "d": 0.268,
+    "a": 0.311
+   },
+   "fair": {
+    "h": 2.37,
+    "d": 3.74,
+    "a": 3.22,
+    "o25": 1.84,
+    "u25": 2.19
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.49,
+    "d": 3.92,
+    "a": 3.38,
+    "o25": 1.93,
+    "u25": 2.3
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4213,
+     0.2677,
+     0.311
+    ],
+    "first": [
+     0.4227,
+     0.2676,
+     0.3097
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": -0.0027,
+    "mt": 0,
+    "over": 0.5436
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Stevenage",
+   "away": "Blackpool",
+   "xg": {
+    "home": 1.67,
+    "away": 1.01
+   },
+   "xg_model": {
+    "home": 1.46,
+    "away": 0.89
+   },
+   "xg_base": {
+    "home": 1.46,
+    "away": 0.89
+   },
+   "prob": {
+    "h": 0.531,
+    "d": 0.242,
+    "a": 0.227,
+    "o25": 0.549,
+    "u25": 0.451
+   },
+   "prob_base": {
+    "h": 0.502,
+    "d": 0.271,
+    "a": 0.227
+   },
+   "prob_model": {
+    "h": 0.502,
+    "d": 0.271,
+    "a": 0.227,
+    "o25": 0.417,
+    "u25": 0.583
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.531,
+    "d": 0.242,
+    "a": 0.227
+   },
+   "fair": {
+    "h": 1.88,
+    "d": 4.14,
+    "a": 4.4,
+    "o25": 1.82,
+    "u25": 2.22
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.98,
+    "d": 4.35,
+    "a": 4.62,
+    "o25": 1.91,
+    "u25": 2.33
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5313,
+     0.2416,
+     0.2271
+    ],
+    "first": [
+     0.5302,
+     0.2406,
+     0.2292
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0032,
+    "mt": 2336,
+    "over": 0.5512
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Wycombe",
+   "away": "Bradford",
+   "xg": {
+    "home": 1.45,
+    "away": 1.19
+   },
+   "xg_model": {
+    "home": 1.29,
+    "away": 1.06
+   },
+   "xg_base": {
+    "home": 1.29,
+    "away": 1.06
+   },
+   "prob": {
+    "h": 0.427,
+    "d": 0.267,
+    "a": 0.305,
+    "o25": 0.528,
+    "u25": 0.472
+   },
+   "prob_base": {
+    "h": 0.414,
+    "d": 0.283,
+    "a": 0.303
+   },
+   "prob_model": {
+    "h": 0.414,
+    "d": 0.283,
+    "a": 0.303,
+    "o25": 0.417,
+    "u25": 0.583
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.427,
+    "d": 0.267,
+    "a": 0.305
+   },
+   "fair": {
+    "h": 2.34,
+    "d": 3.74,
+    "a": 3.28,
+    "o25": 1.89,
+    "u25": 2.12
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.46,
+    "d": 3.93,
+    "a": 3.44,
+    "o25": 1.99,
+    "u25": 2.23
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4275,
+     0.2673,
+     0.3052
+    ],
+    "first": [
+     0.4275,
+     0.2673,
+     0.3052
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0,
+    "mt": 65,
+    "over": 0.5301
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Luton",
+   "away": "Oxford",
+   "xg": {
+    "home": 1.75,
+    "away": 1.19
+   },
+   "xg_model": {
+    "home": 1.43,
+    "away": 1.24
+   },
+   "xg_base": {
+    "home": 1.43,
+    "away": 1.24
+   },
+   "prob": {
+    "h": 0.53,
+    "d": 0.241,
+    "a": 0.229,
+    "o25": 0.598,
+    "u25": 0.402
+   },
+   "prob_base": {
+    "h": 0.412,
+    "d": 0.263,
+    "a": 0.325
+   },
+   "prob_model": {
+    "h": 0.412,
+    "d": 0.263,
+    "a": 0.325,
+    "o25": 0.501,
+    "u25": 0.499
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.53,
+    "d": 0.241,
+    "a": 0.229
+   },
+   "fair": {
+    "h": 1.89,
+    "d": 4.15,
+    "a": 4.37,
+    "o25": 1.67,
+    "u25": 2.49
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.98,
+    "d": 4.36,
+    "a": 4.59,
+    "o25": 1.75,
+    "u25": 2.61
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5302,
+     0.2408,
+     0.229
+    ],
+    "first": [
+     0.5243,
+     0.2536,
+     0.2221
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": -0.001,
+    "mt": 6,
+    "over": 0.6
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "AFC Wimbledon",
+   "away": "Barnsley",
+   "xg": {
+    "home": 1.41,
+    "away": 1.58
+   },
+   "xg_model": {
+    "home": 1.25,
+    "away": 1.4
+   },
+   "xg_base": {
+    "home": 1.25,
+    "away": 1.4
+   },
+   "prob": {
+    "h": 0.34,
+    "d": 0.249,
+    "a": 0.411,
+    "o25": 0.621,
+    "u25": 0.379
+   },
+   "prob_base": {
+    "h": 0.334,
+    "d": 0.265,
+    "a": 0.401
+   },
+   "prob_model": {
+    "h": 0.334,
+    "d": 0.265,
+    "a": 0.401,
+    "o25": 0.495,
+    "u25": 0.505
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.34,
+    "d": 0.249,
+    "a": 0.411
+   },
+   "fair": {
+    "h": 2.94,
+    "d": 4.02,
+    "a": 2.43,
+    "o25": 1.61,
+    "u25": 2.64
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.09,
+    "d": 4.22,
+    "a": 2.55,
+    "o25": 1.69,
+    "u25": 2.77
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3397,
+     0.2489,
+     0.4114
+    ],
+    "first": [
+     0.3438,
+     0.1946,
+     0.4616
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0461,
+    "mt": 0,
+    "over": 0.6233
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Sheffield Weds",
+   "away": "Reading",
+   "xg": {
+    "home": 1.5,
+    "away": 1.44
+   },
+   "xg_model": {
+    "home": 1.48,
+    "away": 1.35
+   },
+   "xg_base": {
+    "home": 1.48,
+    "away": 1.35
+   },
+   "prob": {
+    "h": 0.383,
+    "d": 0.251,
+    "a": 0.367,
+    "o25": 0.577,
+    "u25": 0.423
+   },
+   "prob_base": {
+    "h": 0.401,
+    "d": 0.255,
+    "a": 0.344
+   },
+   "prob_model": {
+    "h": 0.401,
+    "d": 0.255,
+    "a": 0.344,
+    "o25": 0.538,
+    "u25": 0.462
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.383,
+    "d": 0.251,
+    "a": 0.367
+   },
+   "fair": {
+    "h": 2.61,
+    "d": 3.99,
+    "a": 2.73,
+    "o25": 1.73,
+    "u25": 2.36
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.74,
+    "d": 4.19,
+    "a": 2.86,
+    "o25": 1.82,
+    "u25": 2.48
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3825,
+     0.2506,
+     0.3668
+    ],
+    "first": [
+     0.3934,
+     0.2532,
+     0.3535
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0242,
+    "mt": 29,
+    "over": 0.5778
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E2",
+   "league": "League One",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Leicester",
+   "away": "Mansfield",
+   "xg": {
+    "home": 2.06,
+    "away": 1.05
+   },
+   "xg_model": {
+    "home": 1.71,
+    "away": 1.08
+   },
+   "xg_base": {
+    "home": 1.71,
+    "away": 1.08
+   },
+   "prob": {
+    "h": 0.638,
+    "d": 0.199,
+    "a": 0.163,
+    "o25": 0.648,
+    "u25": 0.352
+   },
+   "prob_base": {
+    "h": 0.519,
+    "d": 0.244,
+    "a": 0.237
+   },
+   "prob_model": {
+    "h": 0.519,
+    "d": 0.244,
+    "a": 0.237,
+    "o25": 0.527,
+    "u25": 0.473
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.638,
+    "d": 0.199,
+    "a": 0.163
+   },
+   "fair": {
+    "h": 1.57,
+    "d": 5.03,
+    "a": 6.12,
+    "o25": 1.54,
+    "u25": 2.84
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.65,
+    "d": 5.28,
+    "a": 6.43,
+    "o25": 1.62,
+    "u25": 2.98
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.6377,
+     0.199,
+     0.1633
+    ],
+    "first": [
+     0.6289,
+     0.1912,
+     0.1798
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0253,
+    "mt": 255,
+    "over": 0.6499
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Salford",
+   "away": "Gillingham",
+   "xg": {
+    "home": 2.03,
+    "away": 0.91
+   },
+   "xg_model": {
+    "home": 1.72,
+    "away": 1.0
+   },
+   "xg_base": {
+    "home": 1.72,
+    "away": 1.0
+   },
+   "prob": {
+    "h": 0.668,
+    "d": 0.2,
+    "a": 0.132,
+    "o25": 0.588,
+    "u25": 0.412
+   },
+   "prob_base": {
+    "h": 0.54,
+    "d": 0.243,
+    "a": 0.217
+   },
+   "prob_model": {
+    "h": 0.54,
+    "d": 0.243,
+    "a": 0.217,
+    "o25": 0.512,
+    "u25": 0.488
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.668,
+    "d": 0.2,
+    "a": 0.132
+   },
+   "fair": {
+    "h": 1.5,
+    "d": 5.01,
+    "a": 7.59,
+    "o25": 1.7,
+    "u25": 2.43
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.57,
+    "d": 5.26,
+    "a": 7.97,
+    "o25": 1.79,
+    "u25": 2.55
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.6685,
+     0.1998,
+     0.1317
+    ],
+    "first": [
+     0.6655,
+     0.2078,
+     0.1267
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": -0.002,
+    "mt": 49,
+    "over": 0.5891
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Rotherham",
+   "away": "Oldham",
+   "xg": {
+    "home": 1.24,
+    "away": 1.35
+   },
+   "xg_model": {
+    "home": 1.21,
+    "away": 1.2
+   },
+   "xg_base": {
+    "home": 1.21,
+    "away": 1.2
+   },
+   "prob": {
+    "h": 0.327,
+    "d": 0.281,
+    "a": 0.391,
+    "o25": 0.503,
+    "u25": 0.497
+   },
+   "prob_base": {
+    "h": 0.363,
+    "d": 0.281,
+    "a": 0.355
+   },
+   "prob_model": {
+    "h": 0.363,
+    "d": 0.281,
+    "a": 0.355,
+    "o25": 0.432,
+    "u25": 0.568
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.327,
+    "d": 0.281,
+    "a": 0.391
+   },
+   "fair": {
+    "h": 3.05,
+    "d": 3.56,
+    "a": 2.55,
+    "o25": 1.99,
+    "u25": 2.01
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.21,
+    "d": 3.73,
+    "a": 2.68,
+    "o25": 2.09,
+    "u25": 2.11
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3273,
+     0.2812,
+     0.3914
+    ],
+    "first": [
+     0.3643,
+     0.2774,
+     0.3583
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0701,
+    "mt": 30,
+    "over": 0.5043
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Shrewsbury",
+   "away": "Cheltenham",
+   "xg": {
+    "home": 1.63,
+    "away": 0.97
+   },
+   "xg_model": {
+    "home": 1.56,
+    "away": 1.03
+   },
+   "xg_base": {
+    "home": 1.56,
+    "away": 1.03
+   },
+   "prob": {
+    "h": 0.529,
+    "d": 0.266,
+    "a": 0.205,
+    "o25": 0.48,
+    "u25": 0.52
+   },
+   "prob_base": {
+    "h": 0.494,
+    "d": 0.258,
+    "a": 0.248
+   },
+   "prob_model": {
+    "h": 0.494,
+    "d": 0.258,
+    "a": 0.248,
+    "o25": 0.48,
+    "u25": 0.52
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.529,
+    "d": 0.266,
+    "a": 0.205
+   },
+   "fair": {
+    "h": 1.89,
+    "d": 3.77,
+    "a": 4.88,
+    "o25": 2.09,
+    "u25": 1.92
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.98,
+    "d": 3.95,
+    "a": 5.12,
+    "o25": 2.19,
+    "u25": 2.02
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5294,
+     0.2655,
+     0.2051
+    ],
+    "first": [
+     0.5257,
+     0.2631,
+     0.2112
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0098,
+    "mt": 2148,
+    "over": 0.4795
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Fleetwood Town",
+   "away": "Accrington",
+   "xg": {
+    "home": 1.43,
+    "away": 1.14
+   },
+   "xg_model": {
+    "home": 1.4,
+    "away": 1.06
+   },
+   "xg_base": {
+    "home": 1.4,
+    "away": 1.06
+   },
+   "prob": {
+    "h": 0.426,
+    "d": 0.274,
+    "a": 0.3,
+    "o25": 0.486,
+    "u25": 0.514
+   },
+   "prob_base": {
+    "h": 0.444,
+    "d": 0.273,
+    "a": 0.283
+   },
+   "prob_model": {
+    "h": 0.444,
+    "d": 0.273,
+    "a": 0.283,
+    "o25": 0.447,
+    "u25": 0.553
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.426,
+    "d": 0.274,
+    "a": 0.3
+   },
+   "fair": {
+    "h": 2.35,
+    "d": 3.65,
+    "a": 3.33,
+    "o25": 2.06,
+    "u25": 1.95
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.47,
+    "d": 3.83,
+    "a": 3.5,
+    "o25": 2.16,
+    "u25": 2.04
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4258,
+     0.2739,
+     0.3003
+    ],
+    "first": [
+     0.4294,
+     0.2697,
+     0.3009
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.003,
+    "mt": 8,
+    "over": 0.4871
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Port Vale",
+   "away": "Newport County",
+   "xg": {
+    "home": 1.52,
+    "away": 0.94
+   },
+   "xg_model": {
+    "home": 1.42,
+    "away": 0.9
+   },
+   "xg_base": {
+    "home": 1.42,
+    "away": 0.9
+   },
+   "prob": {
+    "h": 0.506,
+    "d": 0.268,
+    "a": 0.226,
+    "o25": 0.461,
+    "u25": 0.539
+   },
+   "prob_base": {
+    "h": 0.49,
+    "d": 0.275,
+    "a": 0.235
+   },
+   "prob_model": {
+    "h": 0.49,
+    "d": 0.275,
+    "a": 0.235,
+    "o25": 0.409,
+    "u25": 0.591
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.506,
+    "d": 0.268,
+    "a": 0.226
+   },
+   "fair": {
+    "h": 1.98,
+    "d": 3.73,
+    "a": 4.42,
+    "o25": 2.17,
+    "u25": 1.85
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.08,
+    "d": 3.92,
+    "a": 4.64,
+    "o25": 2.28,
+    "u25": 1.95
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.5058,
+     0.268,
+     0.2262
+    ],
+    "first": [
+     0.5076,
+     0.2719,
+     0.2205
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0075,
+    "mt": 159,
+    "over": 0.4618
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Walsall",
+   "away": "Northampton",
+   "xg": {
+    "home": 1.47,
+    "away": 1.24
+   },
+   "xg_model": {
+    "home": 1.42,
+    "away": 1.05
+   },
+   "xg_base": {
+    "home": 1.42,
+    "away": 1.05
+   },
+   "prob": {
+    "h": 0.409,
+    "d": 0.266,
+    "a": 0.325,
+    "o25": 0.546,
+    "u25": 0.454
+   },
+   "prob_base": {
+    "h": 0.452,
+    "d": 0.272,
+    "a": 0.276
+   },
+   "prob_model": {
+    "h": 0.452,
+    "d": 0.272,
+    "a": 0.276,
+    "o25": 0.447,
+    "u25": 0.553
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.409,
+    "d": 0.266,
+    "a": 0.325
+   },
+   "fair": {
+    "h": 2.45,
+    "d": 3.76,
+    "a": 3.07,
+    "o25": 1.83,
+    "u25": 2.2
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 2.57,
+    "d": 3.95,
+    "a": 3.23,
+    "o25": 1.92,
+    "u25": 2.31
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.4086,
+     0.2659,
+     0.3254
+    ],
+    "first": [
+     0.4073,
+     0.2687,
+     0.3241
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0,
+    "mt": 7,
+    "over": 0.5478
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Crewe",
+   "away": "Grimsby",
+   "xg": {
+    "home": 1.23,
+    "away": 1.59
+   },
+   "xg_model": {
+    "home": 1.14,
+    "away": 1.44
+   },
+   "xg_base": {
+    "home": 1.14,
+    "away": 1.44
+   },
+   "prob": {
+    "h": 0.285,
+    "d": 0.26,
+    "a": 0.454,
+    "o25": 0.565,
+    "u25": 0.435
+   },
+   "prob_base": {
+    "h": 0.297,
+    "d": 0.267,
+    "a": 0.436
+   },
+   "prob_model": {
+    "h": 0.297,
+    "d": 0.267,
+    "a": 0.436,
+    "o25": 0.475,
+    "u25": 0.525
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.285,
+    "d": 0.26,
+    "a": 0.454
+   },
+   "fair": {
+    "h": 3.5,
+    "d": 3.84,
+    "a": 2.2,
+    "o25": 1.77,
+    "u25": 2.3
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.68,
+    "d": 4.03,
+    "a": 2.31,
+    "o25": 1.86,
+    "u25": 2.41
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.2854,
+     0.2604,
+     0.4542
+    ],
+    "first": [
+     0.2978,
+     0.2543,
+     0.4479
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0187,
+    "mt": 38,
+    "over": 0.5667
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Rochdale",
+   "away": "Barnet",
+   "xg": {
+    "home": 1.21,
+    "away": 1.76
+   },
+   "xg_model": {
+    "home": 1.22,
+    "away": 1.54
+   },
+   "xg_base": {
+    "home": 1.22,
+    "away": 1.54
+   },
+   "prob": {
+    "h": 0.244,
+    "d": 0.241,
+    "a": 0.515,
+    "o25": 0.6,
+    "u25": 0.4
+   },
+   "prob_base": {
+    "h": 0.3,
+    "d": 0.256,
+    "a": 0.443
+   },
+   "prob_model": {
+    "h": 0.3,
+    "d": 0.256,
+    "a": 0.443,
+    "o25": 0.521,
+    "u25": 0.479
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.244,
+    "d": 0.241,
+    "a": 0.515
+   },
+   "fair": {
+    "h": 4.1,
+    "d": 4.15,
+    "a": 1.94,
+    "o25": 1.67,
+    "u25": 2.5
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 4.3,
+    "d": 4.36,
+    "a": 2.04,
+    "o25": 1.75,
+    "u25": 2.62
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.244,
+     0.2408,
+     0.5153
+    ],
+    "first": [
+     0.2621,
+     0.2575,
+     0.4805
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0529,
+    "mt": 0,
+    "over": 0.6011
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "E3",
+   "league": "League Two",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Swindon",
+   "away": "Chesterfield",
+   "xg": {
+    "home": 1.2,
+    "away": 1.87
+   },
+   "xg_model": {
+    "home": 1.33,
+    "away": 1.6
+   },
+   "xg_base": {
+    "home": 1.33,
+    "away": 1.6
+   },
+   "prob": {
+    "h": 0.212,
+    "d": 0.228,
+    "a": 0.56,
+    "o25": 0.611,
+    "u25": 0.389
+   },
+   "prob_base": {
+    "h": 0.316,
+    "d": 0.248,
+    "a": 0.436
+   },
+   "prob_model": {
+    "h": 0.316,
+    "d": 0.248,
+    "a": 0.436,
+    "o25": 0.561,
+    "u25": 0.439
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.212,
+    "d": 0.228,
+    "a": 0.56
+   },
+   "fair": {
+    "h": 4.71,
+    "d": 4.39,
+    "a": 1.79,
+    "o25": 1.64,
+    "u25": 2.57
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 4.95,
+    "d": 4.61,
+    "a": 1.88,
+    "o25": 1.72,
+    "u25": 2.7
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.2122,
+     0.228,
+     0.5598
+    ],
+    "first": [
+     0.2247,
+     0.2562,
+     0.5191
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": -0.0532,
+    "mt": 2,
+    "over": 0.6118
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Forest Green",
+   "away": "Tamworth",
+   "xg": {
+    "home": 2.23,
+    "away": 1.19
+   },
+   "xg_model": {
+    "home": 2.06,
+    "away": 1.21
+   },
+   "xg_base": {
+    "home": 2.06,
+    "away": 1.21
+   },
+   "prob": {
+    "h": 0.628,
+    "d": 0.184,
+    "a": 0.187,
+    "o25": 0.686,
+    "u25": 0.314
+   },
+   "prob_base": {
+    "h": 0.568,
+    "d": 0.215,
+    "a": 0.217
+   },
+   "prob_model": {
+    "h": 0.568,
+    "d": 0.215,
+    "a": 0.217,
+    "o25": 0.635,
+    "u25": 0.365
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.628,
+    "d": 0.184,
+    "a": 0.187
+   },
+   "fair": {
+    "h": 1.59,
+    "d": 5.42,
+    "a": 5.35,
+    "o25": 1.46,
+    "u25": 3.19
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.67,
+    "d": 5.69,
+    "a": 5.61,
+    "o25": 1.53,
+    "u25": 3.34
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.6285,
+     0.1845,
+     0.187
+    ],
+    "first": [
+     0.4128,
+     0.1744,
+     0.4128
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": 0.4415,
+    "mt": 0,
+    "over": 0.6869
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Eastleigh",
+   "away": "Halifax",
+   "xg": {
+    "home": 1.19,
+    "away": 1.75
+   },
+   "xg_model": {
+    "home": 1.2,
+    "away": 1.6
+   },
+   "xg_base": {
+    "home": 1.2,
+    "away": 1.6
+   },
+   "prob": {
+    "h": 0.265,
+    "d": 0.209,
+    "a": 0.526,
+    "o25": 0.583,
+    "u25": 0.417
+   },
+   "prob_base": {
+    "h": 0.284,
+    "d": 0.252,
+    "a": 0.464
+   },
+   "prob_model": {
+    "h": 0.284,
+    "d": 0.252,
+    "a": 0.464,
+    "o25": 0.529,
+    "u25": 0.471
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.265,
+    "d": 0.209,
+    "a": 0.526
+   },
+   "fair": {
+    "h": 3.78,
+    "d": 4.79,
+    "a": 1.9,
+    "o25": 1.72,
+    "u25": 2.4
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.96,
+    "d": 5.03,
+    "a": 1.99,
+    "o25": 1.8,
+    "u25": 2.52
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.2649,
+     0.2086,
+     0.5265
+    ],
+    "first": [
+     0.4896,
+     0.0209,
+     0.4896
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": -0.2616,
+    "mt": 0,
+    "over": 0.5838
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Hornchurch",
+   "away": "Solihull",
+   "xg": {
+    "home": 1.55,
+    "away": 1.57
+   },
+   "xg_model": {
+    "home": 1.54,
+    "away": 1.61
+   },
+   "xg_base": {
+    "home": 1.54,
+    "away": 1.61
+   },
+   "prob": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333,
+    "o25": 0.594,
+    "u25": 0.406
+   },
+   "prob_base": {
+    "h": 0.365,
+    "d": 0.24,
+    "a": 0.394
+   },
+   "prob_model": {
+    "h": 0.365,
+    "d": 0.24,
+    "a": 0.394,
+    "o25": 0.61,
+    "u25": 0.39
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333
+   },
+   "fair": {
+    "h": 3.0,
+    "d": 3.0,
+    "a": 3.0,
+    "o25": 1.68,
+    "u25": 2.46
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.15,
+    "d": 3.15,
+    "a": 3.15,
+    "o25": 1.77,
+    "u25": 2.58
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097692,
+    "move": 0.0,
+    "mt": 0,
+    "over": 0.5933
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Boreham Wood",
+   "away": "Gateshead",
+   "xg": {
+    "home": 1.82,
+    "away": 1.37
+   },
+   "xg_model": {
+    "home": 2.89,
+    "away": 0.85
+   },
+   "xg_base": {
+    "home": 2.89,
+    "away": 0.85
+   },
+   "prob": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333,
+    "o25": 0.596,
+    "u25": 0.404
+   },
+   "prob_base": {
+    "h": 0.789,
+    "d": 0.132,
+    "a": 0.08
+   },
+   "prob_model": {
+    "h": 0.789,
+    "d": 0.132,
+    "a": 0.08,
+    "o25": 0.722,
+    "u25": 0.278
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333
+   },
+   "fair": {
+    "h": 3.0,
+    "d": 3.0,
+    "a": 3.0,
+    "o25": 1.68,
+    "u25": 2.47
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.15,
+    "d": 3.15,
+    "a": 3.15,
+    "o25": 1.76,
+    "u25": 2.6
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": 0.0,
+    "mt": 0,
+    "over": 0.5933
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Altrincham",
+   "away": "Worthing",
+   "xg": {
+    "home": 1.74,
+    "away": 1.61
+   },
+   "xg_model": {
+    "home": 1.63,
+    "away": 1.69
+   },
+   "xg_base": {
+    "home": 1.63,
+    "away": 1.69
+   },
+   "prob": {
+    "h": 0.415,
+    "d": 0.248,
+    "a": 0.337,
+    "o25": 0.656,
+    "u25": 0.344
+   },
+   "prob_base": {
+    "h": 0.371,
+    "d": 0.233,
+    "a": 0.395
+   },
+   "prob_model": {
+    "h": 0.371,
+    "d": 0.233,
+    "a": 0.395,
+    "o25": 0.644,
+    "u25": 0.356
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.415,
+    "d": 0.248,
+    "a": 0.337
+   },
+   "fair": {
     "h": 2.41,
-    "d": 4.34,
-    "a": 2.82,
-    "o25": 1.6,
-    "u25": 2.66
+    "d": 4.04,
+    "a": 2.97,
+    "o25": 1.52,
+    "u25": 2.91
    },
    "odds": {
     "h": null,
@@ -592,10 +3869,10 @@
    },
    "min_odds": {
     "h": 2.53,
-    "d": 4.56,
-    "a": 2.96,
-    "o25": 1.68,
-    "u25": 2.79
+    "d": 4.24,
+    "a": 3.11,
+    "o25": 1.6,
+    "u25": 3.06
    },
    "edge": {
     "h": null,
@@ -610,20 +3887,359 @@
    "unknown_team": [],
    "betfair": {
     "now": [
-     0.4149,
-     0.2303,
-     0.3548
+     0.4152,
+     0.2477,
+     0.3372
     ],
     "first": [
-     0.377,
-     0.246,
-     0.377
+     0.4925,
+     0.0151,
+     0.4925
     ],
-    "first_at": 1795550490418,
-    "at": 1795606325915,
-    "move": 0.0601,
-    "mt": 75,
-    "over": 0.6244
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": 0.078,
+    "mt": 0,
+    "over": 0.6567
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Boston Utd",
+   "away": "Kidderminster",
+   "xg": {
+    "home": 1.4,
+    "away": 1.36
+   },
+   "xg_model": {
+    "home": 1.2,
+    "away": 1.05
+   },
+   "xg_base": {
+    "home": 1.2,
+    "away": 1.05
+   },
+   "prob": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333,
+    "o25": 0.59,
+    "u25": 0.41
+   },
+   "prob_base": {
+    "h": 0.392,
+    "d": 0.292,
+    "a": 0.317
+   },
+   "prob_model": {
+    "h": 0.392,
+    "d": 0.292,
+    "a": 0.317,
+    "o25": 0.391,
+    "u25": 0.609
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333
+   },
+   "fair": {
+    "h": 3.0,
+    "d": 3.0,
+    "a": 3.0,
+    "o25": 1.7,
+    "u25": 2.44
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.15,
+    "d": 3.15,
+    "a": 3.15,
+    "o25": 1.78,
+    "u25": 2.56
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097642,
+    "move": 0.0,
+    "mt": 0,
+    "over": 0.5933
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Harrogate",
+   "away": "Yeovil",
+   "xg": {
+    "home": 1.6,
+    "away": 1.39
+   },
+   "xg_model": {
+    "home": 1.91,
+    "away": 1.01
+   },
+   "xg_base": {
+    "home": 1.91,
+    "away": 1.01
+   },
+   "prob": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333,
+    "o25": 0.593,
+    "u25": 0.407
+   },
+   "prob_base": {
+    "h": 0.582,
+    "d": 0.224,
+    "a": 0.194
+   },
+   "prob_model": {
+    "h": 0.582,
+    "d": 0.224,
+    "a": 0.194,
+    "o25": 0.56,
+    "u25": 0.44
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.333,
+    "d": 0.333,
+    "a": 0.333
+   },
+   "fair": {
+    "h": 3.0,
+    "d": 3.0,
+    "a": 3.0,
+    "o25": 1.69,
+    "u25": 2.46
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 3.15,
+    "d": 3.15,
+    "a": 3.15,
+    "o25": 1.77,
+    "u25": 2.58
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first": [
+     0.3333,
+     0.3333,
+     0.3333
+    ],
+    "first_at": 1795618897160,
+    "at": 1795626097642,
+    "move": 0.0,
+    "mt": 0,
+    "over": 0.5933
+   },
+   "market_source": "betfair"
+  },
+  {
+   "div": "EC",
+   "league": "National League",
+   "date": "2026-11-28",
+   "time": "15:00",
+   "home": "Carlisle",
+   "away": "Sutton",
+   "xg": {
+    "home": 2.12,
+    "away": 0.96
+   },
+   "xg_model": {
+    "home": 2.07,
+    "away": 0.93
+   },
+   "xg_base": {
+    "home": 2.07,
+    "away": 0.93
+   },
+   "prob": {
+    "h": 0.634,
+    "d": 0.213,
+    "a": 0.154,
+    "o25": 0.607,
+    "u25": 0.393
+   },
+   "prob_base": {
+    "h": 0.635,
+    "d": 0.207,
+    "a": 0.158
+   },
+   "prob_model": {
+    "h": 0.635,
+    "d": 0.207,
+    "a": 0.158,
+    "o25": 0.577,
+    "u25": 0.423
+   },
+   "no_market": false,
+   "weights": {
+    "w_1x2": 0.0,
+    "w_ou25": 0.017
+   },
+   "prob_market": {
+    "h": 0.634,
+    "d": 0.213,
+    "a": 0.154
+   },
+   "fair": {
+    "h": 1.58,
+    "d": 4.7,
+    "a": 6.5,
+    "o25": 1.65,
+    "u25": 2.54
+   },
+   "odds": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "book": {
+    "h": "",
+    "d": "",
+    "a": "",
+    "o25": "",
+    "u25": ""
+   },
+   "odds_max": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "min_odds": {
+    "h": 1.66,
+    "d": 4.94,
+    "a": 6.83,
+    "o25": 1.73,
+    "u25": 2.67
+   },
+   "edge": {
+    "h": null,
+    "d": null,
+    "a": null,
+    "o25": null,
+    "u25": null
+   },
+   "ah_market": null,
+   "news": [],
+   "value": [],
+   "unknown_team": [],
+   "betfair": {
+    "now": [
+     0.6336,
+     0.2126,
+     0.1538
+    ],
+    "first": [
+     0.5838,
+     0.2274,
+     0.1888
+    ],
+    "first_at": 1795618897101,
+    "at": 1795626097642,
+    "move": 0.0848,
+    "mt": 20,
+    "over": 0.6075
    },
    "market_source": "betfair"
   }
