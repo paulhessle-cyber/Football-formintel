@@ -24,17 +24,18 @@
   "English Premier League",
   "English Sky Bet Championship",
   "English Sky Bet League 1",
-  "English Sky Bet League 2"
+  "English Sky Bet League 2",
+  "English U21 Premier League Cup"
  ],
  "firstDay": "2026-11-20",
  "days": 7,
  "marketsFollowed": 72,
- "awaitingResult": 5,
- "catalogueAt": "2026-11-25T20:01:38.319Z",
+ "awaitingResult": 0,
+ "catalogueAt": "2026-11-26T04:01:41.096Z",
  "delayedData": true,
- "betfairCalls": 2044,
+ "betfairCalls": 2149,
  "errors": 11,
  "lastError": "Unexpected token < in JSON at position 0",
  "lastErrorAt": "2026-11-17T08:59:53.959Z",
- "now": "2026-11-25T20:08:57.506Z"
+ "now": "2026-11-26T04:08:06.849Z"
 }
