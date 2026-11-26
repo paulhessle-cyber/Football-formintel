@@ -1,37 +1,37 @@
 {
- "generated": "2026-11-26T04:08+00:00",
+ "generated": "2026-11-26T11:27+00:00",
  "tagged": 13,
- "settled": 10,
+ "settled": 13,
  "matches": [
   {
    "date": "2026-11-24",
    "home": "Blackpool",
    "away": "Leicester",
    "tags": "Blackpool (Dale Taylor): injury - forward doubt - forced off v Wigan 21/11 - Sports Mole 22/11 | Leicester (Will Smallbone): injury - key midfielder out - injured v Huddersfield 21/11 Page replaces - Sports Mole 22/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "1-1",
+   "shift": 0.0067,
+   "move": -0.0384
   },
   {
    "date": "2026-11-24",
    "home": "Bromley",
    "away": "Wycombe",
    "tags": "Wycombe (Dan Casey): suspended - first-choice CB - sent off at Oxford 21/11 - Sports Mole 22/11 | Wycombe (Luke Leahy): suspended - regular defender - sent off at Oxford 21/11 - Sports Mole 22/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "1-1",
+   "shift": 0.0321,
+   "move": -0.1076
   },
   {
    "date": "2026-11-24",
    "home": "Port Vale",
    "away": "Northampton",
    "tags": "Port Vale (Onel Hernandez): suspended - key creative winger - red card at Barnet 21/11 - OneValeFan 23/11",
-   "status": "open",
-   "result": null,
-   "shift": null,
-   "move": null
+   "status": "settled",
+   "result": "1-1",
+   "shift": -0.0176,
+   "move": -0.0372
   },
   {
    "date": "2026-11-21",
@@ -142,7 +142,7 @@
   "note": "7 EFL + 12 NL fixtures 24-28 Nov - SM previews L1 Tue only - no NL previews"
  },
  "runs": 6,
- "moved_our_way_pct": 0.7,
- "capture": -0.36,
- "avg_shift_pts": 2.9
+ "moved_our_way_pct": 0.615,
+ "capture": -0.56,
+ "avg_shift_pts": 2.7
 }
