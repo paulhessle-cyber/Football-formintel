@@ -1,8 +1,68 @@
 {
- "generated": "2026-11-27T04:12+00:00",
- "tagged": 13,
+ "generated": "2026-11-27T09:04+00:00",
+ "tagged": 19,
  "settled": 13,
  "matches": [
+  {
+   "date": "2026-11-28",
+   "home": "Bromley",
+   "away": "Burton",
+   "tags": "Burton (Joe Lewis): injury - first-choice defender out - forced off v Luton expected to miss - Sports Mole 26/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-28",
+   "home": "Wycombe",
+   "away": "Bradford",
+   "tags": "Bradford (Ibou Touray): suspended - regular defender - yellow card accumulation - Sports Mole 26/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-28",
+   "home": "Luton",
+   "away": "Oxford",
+   "tags": "Luton (Jordan Clark): injury - regular attacking midfielder out - forced off v Burton expected to miss - Sports Mole 26/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-28",
+   "home": "Leicester",
+   "away": "Mansfield",
+   "tags": "Leicester (Will Smallbone): injury - key midfielder out - still out after Huddersfield injury 21/11 - Sports Mole 26/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-28",
+   "home": "Swindon",
+   "away": "Chesterfield",
+   "tags": "Swindon: manager sacked - caretakers in charge - Holloway sacked 23/11 Gunning and Mildenhall interim - LiveScore 26/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
+  {
+   "date": "2026-11-28",
+   "home": "Peterboro",
+   "away": "Cambridge",
+   "tags": "Cambridge (Kelland Watts): doubt - first-choice CB - forced off v Stockport - Sports Mole 26/11",
+   "status": "open",
+   "result": null,
+   "shift": null,
+   "move": null
+  },
   {
    "date": "2026-11-24",
    "home": "Blackpool",
@@ -135,13 +195,13 @@
   }
  ],
  "last_run": {
-  "run_utc": "2026-11-24T08:58",
-  "matches_checked": 19,
-  "previews_found": 5,
-  "tags_added": 5,
-  "note": "7 EFL + 12 NL fixtures 24-28 Nov - SM previews L1 Tue only - no NL previews"
+  "run_utc": "2026-11-27T09:03",
+  "matches_checked": 35,
+  "previews_found": 10,
+  "tags_added": 6,
+  "note": "35 fixtures 27-28 Nov - SM previews all L1 except Wimbledon v Barnsley - L2 roundup only - no NL previews"
  },
- "runs": 6,
+ "runs": 7,
  "moved_our_way_pct": 0.615,
  "capture": -0.56,
  "avg_shift_pts": 2.7
