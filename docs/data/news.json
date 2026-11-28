@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T03:52+00:00",
+ "generated": "2026-11-28T08:58+00:00",
  "tagged": 19,
  "settled": 13,
  "matches": [
@@ -195,13 +195,13 @@
   }
  ],
  "last_run": {
-  "run_utc": "2026-11-27T09:03",
-  "matches_checked": 35,
-  "previews_found": 10,
-  "tags_added": 6,
-  "note": "35 fixtures 27-28 Nov - SM previews all L1 except Wimbledon v Barnsley - L2 roundup only - no NL previews"
+  "run_utc": "2026-11-28T08:58",
+  "matches_checked": 46,
+  "previews_found": 0,
+  "tags_added": 0,
+  "note": "34 Sat fixtures tagged 27 Nov + 12 L1 Tue 1 Dec from FWP - no new previews - L2 Tue fixtures unknown"
  },
- "runs": 7,
+ "runs": 8,
  "moved_our_way_pct": 0.615,
  "capture": -0.56,
  "avg_shift_pts": 2.7
